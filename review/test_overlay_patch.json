@@ -1,0 +1,23 @@
+{
+  "run_id": "2025-10-11T14:44:43.074286",
+  "overlay_id": "ovl_2025_10_11_14",
+  "created_at": "2025-10-11T14:45:00.000Z",
+  "reviewer": "test_reviewer",
+  "actions": [
+    {
+      "op": "approve",
+      "id": "demo_005"
+    },
+    {
+      "op": "remove",
+      "id": "demo_017",
+      "reason": "wrong_color,off_topic"
+    }
+  ],
+  "metadata": {
+    "total_reviewed": 2,
+    "approved_count": 1,
+    "rejected_count": 1,
+    "needs_fix_count": 0
+  }
+}

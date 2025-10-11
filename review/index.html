@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Borderline Review UI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body{font:14px/1.4 system-ui,Arial,sans-serif;margin:24px;max-width:1200px;background:#fafbfc}
+  .header{background:#fff;padding:20px;border-radius:8px;margin-bottom:20px;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+  th,td{padding:12px;border-bottom:1px solid #eee;text-align:left}
+  th{position:sticky;top:0;background:#f8f9fa;font-weight:600;color:#495057}
+  tr:hover{background:#f8f9fa}
+  .marg{font-variant-numeric:tabular-nums;font-weight:bold}
+  .chip{padding:3px 8px;border-radius:16px;background:#e9ecef;color:#495057;margin:2px 2px 2px 0;display:inline-block;font-size:12px}
+  .domain-chip{background:#007bff;color:white;font-weight:500}
+  .ok{color:#28a745}
+  .warn{color:#ffc107}
+  .bad{color:#dc3545}
+  .btn{padding:8px 12px;border:1px solid #dee2e6;border-radius:6px;background:#fff;margin:2px;cursor:pointer;font-size:12px;transition:all 0.2s}
+  .btn:hover{background:#f8f9fa;border-color:#adb5bd}
+  .btn.active{background:#007bff;color:white;border-color:#007bff}
+  .btn.reject.active{background:#dc3545;border-color:#dc3545}
+  .btn.approve.active{background:#28a745;border-color:#28a745}
+  .btn.needs-fix.active{background:#ffc107;border-color:#ffc107;color:#212529}
+  .reason-btn{font-size:11px;padding:4px 8px}
+  .controls{margin:12px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .filter-input{padding:8px 12px;border:1px solid #dee2e6;border-radius:6px;font-size:14px}
+  .export-btn{background:#28a745;color:white;border:none;padding:10px 16px;border-radius:6px;font-weight:500}
+  .export-btn:hover{background:#218838}
+  .stats{display:flex;gap:20px;font-size:13px;color:#6c757d}
+  .thumbnail{border-radius:8px;object-fit:cover;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+  .id-badge{background:#6f42c1;color:white;font-family:monospace;font-size:11px}
+  .progress{background:#e9ecef;height:4px;border-radius:2px;margin:10px 0;overflow:hidden}
+  .progress-bar{background:#007bff;height:100%;transition:width 0.3s}
+  .keyboard-help{font-size:12px;color:#6c757d;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="header">
+  <h2>🔍 Borderline Review UI <span id="meta"></span></h2>
+  <div class="progress">
+    <div class="progress-bar" id="progress"></div>
+  </div>
+  <div class="controls">
+    <label>Filter domain: <input id="f-domain" class="filter-input" placeholder="e.g. gold, blue, red" /></label>
+    <label>Min margin: <input id="f-margin" class="filter-input" type="number" step="0.001" placeholder="0.10" style="width:80px" /></label>
+    <button class="export-btn" id="exportCsv">📋 Export CSV</button>
+    <button class="export-btn" id="exportPatch">⚙️ Export Overlay Patch</button>
+    <div class="stats">
+      <span id="stats-total">0 items</span>
+      <span id="stats-reviewed">0 reviewed</span>
+      <span id="stats-approved">0 approved</span>
+      <span id="stats-rejected">0 rejected</span>
+    </div>
+  </div>
+  <div class="keyboard-help">
+    💡 Keyboard shortcuts: <kbd>A</kbd> approve • <kbd>R</kbd> reject • <kbd>N</kbd> needs fix • <kbd>1-8</kbd> toggle reason tags
+  </div>
+</div>
+
+<table id="tbl">
+  <thead>
+    <tr>
+      <th style="width:120px">Thumbnail</th>
+      <th>Item Details</th>
+      <th style="width:80px">Margin</th>
+      <th>Detected Objects</th>
+      <th style="width:200px">Decision</th>
+      <th>Reason Tags</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+let data=[], decisions={}, run_id="", overlay_id="";
+const DECISIONS=["APPROVE","REJECT","NEEDS_FIX"];
+const REASONS=["off_topic","duplicate","broken_url","wrong_color","missing_garnish","no_glass","nsfw","other"];
+
+// Load items and initialize
+fetch("items.json")
+  .then(r=>r.json())
+  .then(items=>{
+    data = items.sort((a,b)=>a.clip_margin-b.clip_margin).slice(0,50);
+    run_id = data[0]?.run_id || new Date().toISOString();
+    overlay_id = data[0]?.overlay_id || `ovl_${new Date().toISOString().slice(0,10).replace(/-/g,'_')}`;
+    document.getElementById("meta").textContent = `— ${data.length} items • run=${run_id.slice(0,19)}`;
+    render();
+    updateStats();
+  })
+  .catch(err=>{
+    document.getElementById("meta").textContent = "— Error loading items.json";
+    console.error("Failed to load items:", err);
+  });
+
+function render(){
+  const domFilter = document.getElementById("f-domain").value.trim().toLowerCase();
+  const marginFilter = parseFloat(document.getElementById("f-margin").value) || 0;
+  const tb = document.querySelector("#tbl tbody");
+  tb.innerHTML="";
+  
+  let visibleCount = 0;
+  
+  for(const it of data){
+    // Apply filters
+    if(domFilter && !it.domain.toLowerCase().includes(domFilter)) continue;
+    if(it.clip_margin < marginFilter) continue;
+    
+    visibleCount++;
+    const tr = document.createElement("tr");
+    tr.dataset.itemId = it.id;
+
+    // Thumbnail
+    const td0 = document.createElement("td");
+    td0.innerHTML = `
+      <a href="${it.url}" target="_blank" title="Open full image">
+        <img src="${it.thumb_url||it.url}" width="96" height="96" class="thumbnail" loading="lazy"/>
+      </a>
+    `;
+    tr.appendChild(td0);
+
+    // Item details
+    const td1 = document.createElement("td");
+    td1.innerHTML = `
+      <div><span class="chip domain-chip">${it.domain}</span></div>
+      <div><span class="chip id-badge">${it.id}</span></div>
+      <div style="color:#495057;margin-top:4px;line-height:1.3">${it.query}</div>
+    `;
+    tr.appendChild(td1);
+
+    // Margin
+    const td2 = document.createElement("td"); 
+    const m = it.clip_margin;
+    const cls = m<0.15?"bad":(m<0.2?"warn":"ok");
+    td2.innerHTML = `<span class="marg ${cls}">${m.toFixed(3)}</span>`;
+    tr.appendChild(td2);
+
+    // Detected objects
+    const td3 = document.createElement("td");
+    td3.innerHTML = (it.detected_objects||[]).map(x=>`<span class="chip">${x}</span>`).join("");
+    tr.appendChild(td3);
+
+    // Decision buttons
+    const td4 = document.createElement("td");
+    const d = decisions[it.id]?.decision || "";
+    td4.innerHTML = DECISIONS.map(decision=>{
+      const active = d===decision ? 'active' : '';
+      const className = decision.toLowerCase().replace('_','-');
+      return `<button class="btn ${className} ${active}" onclick="setDecision('${it.id}','${decision}',${it.clip_margin})">${decision}</button>`;
+    }).join("");
+    tr.appendChild(td4);
+
+    // Reason tags
+    const td5 = document.createElement("td");
+    const chosen = new Set(decisions[it.id]?.reasons||[]);
+    td5.innerHTML = REASONS.map((reason,i)=>{
+      const on = chosen.has(reason) ? "active":"";
+      return `<button class="btn reason-btn ${on}" onclick="toggleReason('${it.id}','${reason}')" title="Keyboard: ${i+1}">${reason}</button>`;
+    }).join("");
+    tr.appendChild(td5);
+
+    tb.appendChild(tr);
+  }
+  
+  // Update visible count
+  if(domFilter || marginFilter > 0){
+    document.getElementById("meta").textContent = `— ${visibleCount}/${data.length} items shown • run=${run_id.slice(0,19)}`;
+  }
+}
+
+function setDecision(id, decision, margin){
+  decisions[id] = decisions[id]||{reasons:[]};
+  decisions[id].decision = decision;
+  decisions[id].clip_margin = margin;
+  decisions[id].ts = new Date().toISOString();
+  decisions[id].reviewer = window.REVIEWER || "anon";
+  render();
+  updateStats();
+  
+  // Auto-scroll to next item
+  setTimeout(scrollToNextUnreviewed, 100);
+}
+
+function toggleReason(id, reason){
+  decisions[id] = decisions[id]||{reasons:[]};
+  const s = new Set(decisions[id].reasons);
+  s.has(reason) ? s.delete(reason) : s.add(reason);
+  decisions[id].reasons = [...s];
+  render();
+}
+
+function updateStats(){
+  const total = data.length;
+  const reviewed = Object.keys(decisions).length;
+  const approved = Object.values(decisions).filter(d=>d.decision==="APPROVE").length;
+  const rejected = Object.values(decisions).filter(d=>d.decision==="REJECT").length;
+  
+  document.getElementById("stats-total").textContent = `${total} items`;
+  document.getElementById("stats-reviewed").textContent = `${reviewed} reviewed`;
+  document.getElementById("stats-approved").textContent = `${approved} approved`;
+  document.getElementById("stats-rejected").textContent = `${rejected} rejected`;
+  
+  // Update progress bar
+  const progress = total > 0 ? (reviewed / total) * 100 : 0;
+  document.getElementById("progress").style.width = `${progress}%`;
+}
+
+function scrollToNextUnreviewed(){
+  const rows = [...document.querySelectorAll("#tbl tbody tr")];
+  for(const row of rows){
+    const id = row.dataset.itemId;
+    if(!decisions[id]){
+      row.scrollIntoView({behavior:'smooth', block:'center'});
+      break;
+    }
+  }
+}
+
+function getTopVisibleItem(){
+  const rows = [...document.querySelectorAll("#tbl tbody tr")];
+  for(const row of rows){
+    const rect = row.getBoundingClientRect();
+    if(rect.top >= 0) return row.dataset.itemId;
+  }
+  return rows[0]?.dataset.itemId;
+}
+
+// Keyboard shortcuts
+document.addEventListener("keydown", e=>{
+  if(e.target.tagName === 'INPUT') return; // Don't interfere with typing
+  
+  const key = e.key.toLowerCase();
+  const topId = getTopVisibleItem();
+  if(!topId) return;
+  
+  const topItem = data.find(it => it.id === topId);
+  if(!topItem) return;
+  
+  if(key==="a") setDecision(topId,"APPROVE", topItem.clip_margin);
+  if(key==="r") setDecision(topId,"REJECT", topItem.clip_margin);  
+  if(key==="n") setDecision(topId,"NEEDS_FIX", topItem.clip_margin);
+  
+  // Number keys for reason tags
+  const num = parseInt(key);
+  if(num >= 1 && num <= REASONS.length){
+    toggleReason(topId, REASONS[num-1]);
+  }
+});
+
+function exportCSV(){
+  const lines = ["run_id,overlay_id,id,domain,decision,reasons,clip_margin,reviewer,ts"];
+  for(const it of data){
+    const d = decisions[it.id];
+    if(!d || !d.decision) continue;
+    
+    const row = [
+      run_id,
+      overlay_id, 
+      it.id,
+      it.domain,
+      d.decision,
+      (d.reasons||[]).join(";"),
+      (d.clip_margin ?? it.clip_margin).toFixed(3),
+      d.reviewer || "anon",
+      d.ts || ""
+    ].map(x=>`"${String(x).replace(/"/g,'""')}"`).join(",");
+    lines.push(row);
+  }
+  
+  if(lines.length === 1){
+    alert("No decisions to export. Please review some items first.");
+    return;
+  }
+  
+  download("decisions.csv", lines.join("\n"));
+}
+
+function exportPatch(){
+  const actions = [];
+  let hasDecisions = false;
+  
+  for(const it of data){
+    const d = decisions[it.id];
+    if(!d || !d.decision) continue;
+    
+    hasDecisions = true;
+    const reasonStr = (d.reasons||[]).join(",") || "manual";
+    
+    if(d.decision==="APPROVE"){
+      actions.push({op:"approve", id: it.id});
+    }
+    else if(d.decision==="REJECT"){
+      actions.push({op:"remove", id: it.id, reason: reasonStr});
+    }
+    else if(d.decision==="NEEDS_FIX"){
+      actions.push({op:"fix", id: it.id, fields: {}, reason: reasonStr});
+    }
+  }
+  
+  if(!hasDecisions){
+    alert("No decisions to export. Please review some items first.");
+    return;
+  }
+  
+  const patch = {
+    run_id: run_id,
+    overlay_id: overlay_id,
+    created_at: new Date().toISOString(),
+    reviewer: window.REVIEWER || "anon",
+    actions: actions,
+    metadata: {
+      total_reviewed: Object.keys(decisions).length,
+      approved_count: actions.filter(a=>a.op==="approve").length,
+      rejected_count: actions.filter(a=>a.op==="remove").length,
+      needs_fix_count: actions.filter(a=>a.op==="fix").length
+    }
+  };
+  
+  download("overlay_patch.json", JSON.stringify(patch, null, 2));
+}
+
+function download(filename, text){
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([text], {type:"text/plain"}));
+  a.download = filename;
+  a.click();
+}
+
+// Event listeners
+document.getElementById("exportCsv").onclick = exportCSV;
+document.getElementById("exportPatch").onclick = exportPatch;
+document.getElementById("f-domain").oninput = render;
+document.getElementById("f-margin").oninput = render;
+
+// Set reviewer name (can be customized)
+window.REVIEWER = "reviewer_" + Math.random().toString(36).substr(2,5);
+</script>
+</body>
+</html>
