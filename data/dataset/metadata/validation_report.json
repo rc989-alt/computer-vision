@@ -1,0 +1,674 @@
+{
+  "total_images": 30,
+  "accessible": 13,
+  "inaccessible": 12,
+  "cocktail_valid": 7,
+  "cocktail_invalid": 6,
+  "duplicate_urls": 5,
+  "exclusions": [
+    {
+      "id": "demo_001",
+      "reason": "failed cocktail validation (heuristic analysis)"
+    },
+    {
+      "id": "demo_002",
+      "reason": "failed cocktail validation (heuristic analysis)"
+    },
+    {
+      "id": "demo_003",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_006",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_007",
+      "reason": "duplicate-url (same as other IDs in dataset)"
+    },
+    {
+      "id": "demo_008",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_009",
+      "reason": "failed cocktail validation (heuristic analysis)"
+    },
+    {
+      "id": "demo_011",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_012",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_014",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_016",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_018",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_019",
+      "reason": "failed cocktail validation (heuristic analysis)"
+    },
+    {
+      "id": "demo_021",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_022",
+      "reason": "failed cocktail validation (heuristic analysis)"
+    },
+    {
+      "id": "demo_023",
+      "reason": "failed cocktail validation (heuristic analysis)"
+    },
+    {
+      "id": "demo_024",
+      "reason": "duplicate-url (same as other IDs in dataset)"
+    },
+    {
+      "id": "demo_025",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_026",
+      "reason": "duplicate-url (same as other IDs in dataset)"
+    },
+    {
+      "id": "demo_027",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_028",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_029",
+      "reason": "duplicate-url (same as other IDs in dataset)"
+    },
+    {
+      "id": "demo_030",
+      "reason": "duplicate-url (same as other IDs in dataset)"
+    }
+  ],
+  "validation_details": {
+    "demo_001": {
+      "id": "demo_001",
+      "url": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a",
+      "query": "pink floral cocktail with rose petals",
+      "description": "Pink cocktail with rose petals garnish in crystal coupe glass",
+      "url_hash": "8a4e712dbca0de7b587b9fda1c8f58f92c561f2b3be3a7094ba3ac1794d4e814",
+      "accessible": true,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          2761,
+          3451
+        ],
+        "description_analysis": {
+          "positive_terms": 4,
+          "negative_terms": 1,
+          "contains_glass": true,
+          "contains_drink": true
+        },
+        "is_cocktail": false,
+        "confidence": 0.9
+      },
+      "exclusion_reason": "not-a-cocktail"
+    },
+    "demo_002": {
+      "id": "demo_002",
+      "url": "https://images.unsplash.com/photo-1544145945-f90425340c7e",
+      "query": "pink floral cocktail with rose petals",
+      "description": "Ros\u00e9 cocktail with dried rose buds and gold rim",
+      "url_hash": "f130c84a94fb672f72ffd46cedd96ac9d2379e1eaa83c27149a2537bff0a3bec",
+      "accessible": true,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          4000,
+          6000
+        ],
+        "description_analysis": {
+          "positive_terms": 1,
+          "negative_terms": 0,
+          "contains_glass": false,
+          "contains_drink": true
+        },
+        "is_cocktail": false,
+        "confidence": 0.7
+      },
+      "exclusion_reason": "not-a-cocktail"
+    },
+    "demo_003": {
+      "id": "demo_003",
+      "url": "https://images.unsplash.com/photo-1572778492740-03e4c8f5d5eb",
+      "query": "golden whiskey old fashioned with orange peel",
+      "description": "Golden whiskey old fashioned in crystal rocks glass with orange peel",
+      "url_hash": "5c35b92209c7757989aa2663fb26ed25dc5491d8d08379735b8867e0596a7854",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {},
+      "exclusion_reason": "inaccessible-url"
+    },
+    "demo_004": {
+      "id": "demo_004",
+      "url": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0",
+      "query": "golden whiskey old fashioned with orange peel",
+      "description": "Amber whiskey cocktail with large ice cube and citrus twist",
+      "url_hash": "9d35219540e5c4516097a5a81aa99c49e612766469277949938fc4e191c98679",
+      "accessible": true,
+      "is_cocktail": true,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          5616,
+          3744
+        ],
+        "description_analysis": {
+          "positive_terms": 3,
+          "negative_terms": 0,
+          "contains_glass": false,
+          "contains_drink": true
+        },
+        "is_cocktail": true,
+        "confidence": 0.9
+      }
+    },
+    "demo_005": {
+      "id": "demo_005",
+      "url": "https://images.unsplash.com/photo-1546171753-97d7676e4602",
+      "query": "blue tropical cocktail with pineapple garnish",
+      "description": "Electric blue cocktail with pineapple wedge and umbrella garnish",
+      "url_hash": "0e55d99de0a7242adb7160ad246be648afd8dafc9011cc07a76faaf9a078cdd3",
+      "accessible": true,
+      "is_cocktail": true,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          3456,
+          5184
+        ],
+        "description_analysis": {
+          "positive_terms": 2,
+          "negative_terms": 0,
+          "contains_glass": false,
+          "contains_drink": true
+        },
+        "is_cocktail": true,
+        "confidence": 0.9
+      }
+    },
+    "demo_006": {
+      "id": "demo_006",
+      "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b",
+      "query": "blue tropical cocktail with pineapple garnish",
+      "description": "Turquoise layered drink with fresh pineapple and mint",
+      "url_hash": "0a917636d6a73aee43067948889c923c109b318d1c9fb5e85b28c5c21765059d",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {},
+      "exclusion_reason": "inaccessible-url"
+    },
+    "demo_007": {
+      "id": "demo_007",
+      "url": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a",
+      "query": "green mint mojito with fresh herbs",
+      "description": "Fresh mojito with muddled mint leaves and lime wedges",
+      "url_hash": "08c16b566f40689e2f4553dfdc14be47aaa232afdfceb55c658bc9d0ef40d2cc",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": true,
+      "details": {},
+      "exclusion_reason": "duplicate-url"
+    },
+    "demo_008": {
+      "id": "demo_008",
+      "url": "https://images.unsplash.com/photo-1574708575293-ed8ac61f5a8d",
+      "query": "green mint mojito with fresh herbs",
+      "description": "Green herb-infused cocktail with basil and mint garnish",
+      "url_hash": "80bb46389daeb7bf9ea3da52933e30a81ade5aa6e355de521a50463801bd4e5e",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {},
+      "exclusion_reason": "inaccessible-url"
+    },
+    "demo_009": {
+      "id": "demo_009",
+      "url": "https://images.unsplash.com/photo-1561149877-84d268ba65b8",
+      "query": "red strawberry margarita with salt rim",
+      "description": "Bright red strawberry margarita with salt rim and fresh strawberry",
+      "url_hash": "20eb95525cbe1239babd9ba262fb021f607bf5643ceb170a25a268ea200541c9",
+      "accessible": true,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          3024,
+          4032
+        ],
+        "description_analysis": {
+          "positive_terms": 0,
+          "negative_terms": 0,
+          "contains_glass": false,
+          "contains_drink": false
+        },
+        "is_cocktail": false,
+        "confidence": 0.5
+      },
+      "exclusion_reason": "not-a-cocktail"
+    },
+    "demo_010": {
+      "id": "demo_010",
+      "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+      "query": "red strawberry margarita with salt rim",
+      "description": "Ruby red cocktail with sugared rim and berry garnish",
+      "url_hash": "a7667ceeb80484b50d23d7273baeecf8c57ab824353510902c054fe315e15ab9",
+      "accessible": true,
+      "is_cocktail": true,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          8256,
+          5504
+        ],
+        "description_analysis": {
+          "positive_terms": 2,
+          "negative_terms": 0,
+          "contains_glass": false,
+          "contains_drink": true
+        },
+        "is_cocktail": true,
+        "confidence": 0.9
+      }
+    },
+    "demo_011": {
+      "id": "demo_011",
+      "url": "https://images.unsplash.com/photo-1542090087-7d3e0d86b6ba",
+      "query": "purple lavender gin cocktail with dried flowers",
+      "description": "Purple gin cocktail with dried lavender sprig and crystal glass",
+      "url_hash": "e381d7ac4fd16092ac1a7c8d0c5d81883e18ded806324e57197ba71f1da43686",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {},
+      "exclusion_reason": "inaccessible-url"
+    },
+    "demo_012": {
+      "id": "demo_012",
+      "url": "https://images.unsplash.com/photo-1571982270044-4e8fe68b69a2",
+      "query": "purple lavender gin cocktail with dried flowers",
+      "description": "Lavender-hued cocktail with edible flowers and frosted rim",
+      "url_hash": "e1ce8f864e7c09b5e6d4e14bc17e16ef3ee471671a8848bb456849153eea8739",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {},
+      "exclusion_reason": "inaccessible-url"
+    },
+    "demo_013": {
+      "id": "demo_013",
+      "url": "https://images.unsplash.com/photo-1578319439584-104c94d37305",
+      "query": "clear martini with olive garnish",
+      "description": "Crystal clear martini with green olive on cocktail pick",
+      "url_hash": "194ae7cb345ab8a63a95f198cee8e3f9606526342dbecf485a0acefbe46718a0",
+      "accessible": true,
+      "is_cocktail": true,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          7952,
+          5304
+        ],
+        "description_analysis": {
+          "positive_terms": 3,
+          "negative_terms": 0,
+          "contains_glass": true,
+          "contains_drink": true
+        },
+        "is_cocktail": true,
+        "confidence": 0.9
+      }
+    },
+    "demo_014": {
+      "id": "demo_014",
+      "url": "https://images.unsplash.com/photo-1519734472571-8b6c5ab20c5c",
+      "query": "clear martini with olive garnish",
+      "description": "Pristine gin martini with three olives in martini glass",
+      "url_hash": "3b041a9399dc85ea76c707c66475bf4b9a981b54b6527f5420584da7999b1990",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {},
+      "exclusion_reason": "inaccessible-url"
+    },
+    "demo_015": {
+      "id": "demo_015",
+      "url": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3",
+      "query": "orange creamsicle cocktail with vanilla foam",
+      "description": "Orange creamy cocktail with white foam and orange zest",
+      "url_hash": "c539dfe7bd520e9eed5c411a97e96632dab357e709670fe06e903d18d5c039bc",
+      "accessible": true,
+      "is_cocktail": true,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          7500,
+          4997
+        ],
+        "description_analysis": {
+          "positive_terms": 2,
+          "negative_terms": 0,
+          "contains_glass": false,
+          "contains_drink": true
+        },
+        "is_cocktail": true,
+        "confidence": 0.9
+      }
+    },
+    "demo_016": {
+      "id": "demo_016",
+      "url": "https://images.unsplash.com/photo-1596185002959-0d9c0b7e8f6a",
+      "query": "orange creamsicle cocktail with vanilla foam",
+      "description": "Sunset orange drink with cream foam and candied orange peel",
+      "url_hash": "d581e6d4a0bd4c29a5e0111069424874b1aa672a38d1c6c088edab0e2c045f4f",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {},
+      "exclusion_reason": "inaccessible-url"
+    },
+    "demo_017": {
+      "id": "demo_017",
+      "url": "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae",
+      "query": "black charcoal cocktail with activated carbon",
+      "description": "Jet black cocktail with silver garnish and dramatic lighting",
+      "url_hash": "1f7aecbf51de525467ce4e3ee526533ea29d10969230f382616ff422a6cb8107",
+      "accessible": true,
+      "is_cocktail": true,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          5184,
+          3456
+        ],
+        "description_analysis": {
+          "positive_terms": 2,
+          "negative_terms": 0,
+          "contains_glass": false,
+          "contains_drink": true
+        },
+        "is_cocktail": true,
+        "confidence": 0.9
+      }
+    },
+    "demo_018": {
+      "id": "demo_018",
+      "url": "https://images.unsplash.com/photo-1611865734837-de0bece3de76",
+      "query": "black charcoal cocktail with activated carbon",
+      "description": "Charcoal-dark cocktail with foam top and modern glass",
+      "url_hash": "3b3d9f7dca67e88eb140bc693b9b1638e53ff70f68f8968eca35700b76d98621",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {},
+      "exclusion_reason": "inaccessible-url"
+    },
+    "demo_019": {
+      "id": "demo_019",
+      "url": "https://images.unsplash.com/photo-1565299507177-b0ac66763828",
+      "query": "yellow lemon drop with sugar rim",
+      "description": "Bright yellow lemon drop with sugared rim and lemon twist",
+      "url_hash": "2571c712210aa46d1e3067b98e4fe6e60e1273161b9a5380c6bc00cf0cb738f6",
+      "accessible": true,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          3183,
+          4384
+        ],
+        "description_analysis": {
+          "positive_terms": 1,
+          "negative_terms": 0,
+          "contains_glass": false,
+          "contains_drink": false
+        },
+        "is_cocktail": false,
+        "confidence": 0.7
+      },
+      "exclusion_reason": "not-a-cocktail"
+    },
+    "demo_020": {
+      "id": "demo_020",
+      "url": "https://images.unsplash.com/photo-1536935338788-846bb9981813",
+      "query": "yellow lemon drop with sugar rim",
+      "description": "Golden citrus cocktail with candied lemon wheel and crystal sugar",
+      "url_hash": "9a7f5a60db62909113b1fcc88d766db5437378088e5004c55d56f7a1b7a0e1c2",
+      "accessible": true,
+      "is_cocktail": true,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          5003,
+          3648
+        ],
+        "description_analysis": {
+          "positive_terms": 2,
+          "negative_terms": 0,
+          "contains_glass": false,
+          "contains_drink": true
+        },
+        "is_cocktail": true,
+        "confidence": 0.9
+      }
+    },
+    "demo_021": {
+      "id": "demo_021",
+      "url": "https://images.unsplash.com/photo-1571115764595-644a1f56a55c",
+      "query": "burgundy wine cocktail with dark berries",
+      "description": "Deep burgundy cocktail with blackberries and wine glass",
+      "url_hash": "a536d6825e0b035627b4714c5e85025324255a52104d25ee08df4e1276f699c0",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {},
+      "exclusion_reason": "inaccessible-url"
+    },
+    "demo_022": {
+      "id": "demo_022",
+      "url": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91",
+      "query": "burgundy wine cocktail with dark berries",
+      "description": "Dark red wine cocktail with fresh berry medley",
+      "url_hash": "d3080c4b95891b60f0ecf2124a69ee3a5d19abd77c07f02648816c6c0e3cde96",
+      "accessible": true,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          3569,
+          4461
+        ],
+        "description_analysis": {
+          "positive_terms": 1,
+          "negative_terms": 0,
+          "contains_glass": false,
+          "contains_drink": true
+        },
+        "is_cocktail": false,
+        "confidence": 0.7
+      },
+      "exclusion_reason": "not-a-cocktail"
+    },
+    "demo_023": {
+      "id": "demo_023",
+      "url": "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f",
+      "query": "white coconut pi\u00f1a colada with pineapple",
+      "description": "Creamy white pi\u00f1a colada with pineapple wedge and toasted coconut",
+      "url_hash": "99dff0a597e45461a323195d8662db2500966eb7003c52f501db008b7088357b",
+      "accessible": true,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {
+        "method": "heuristic",
+        "image_size": [
+          4000,
+          6000
+        ],
+        "description_analysis": {
+          "positive_terms": 0,
+          "negative_terms": 0,
+          "contains_glass": false,
+          "contains_drink": false
+        },
+        "is_cocktail": false,
+        "confidence": 0.5
+      },
+      "exclusion_reason": "not-a-cocktail"
+    },
+    "demo_024": {
+      "id": "demo_024",
+      "url": "https://images.unsplash.com/photo-1546171753-97d7676e4602",
+      "query": "white coconut pi\u00f1a colada with pineapple",
+      "description": "Tropical white cocktail with coconut shavings and fresh fruit",
+      "url_hash": "5d7c5ff5fe9f1f16dd5e9e2b421d7bbbcf1e062f7c3208335015c2fe21014076",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": true,
+      "details": {},
+      "exclusion_reason": "duplicate-url"
+    },
+    "demo_025": {
+      "id": "demo_025",
+      "url": "https://images.unsplash.com/photo-1609873814058-56b82c175161",
+      "query": "silver metallic cocktail with edible glitter",
+      "description": "Silver shimmering cocktail with edible glitter and metallic rim",
+      "url_hash": "a2e73a7174b0f53aba1419ba78a3de1c6ea5cc736d21340211742656815e0693",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {},
+      "exclusion_reason": "inaccessible-url"
+    },
+    "demo_026": {
+      "id": "demo_026",
+      "url": "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae",
+      "query": "silver metallic cocktail with edible glitter",
+      "description": "Reflective cocktail with pearl dust and silver garnish",
+      "url_hash": "0059586bbaa09ffd77737af970b3db5b5b8b10821f2131a9157bb8cd8c7c0e74",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": true,
+      "details": {},
+      "exclusion_reason": "duplicate-url"
+    },
+    "demo_027": {
+      "id": "demo_027",
+      "url": "https://images.unsplash.com/photo-1582145701337-fa9c5b9aab2c",
+      "query": "smoky mezcal cocktail with chili rim",
+      "description": "Smoky amber mezcal with chili salt rim and lime wedge",
+      "url_hash": "83913153c237b5966301e27d856c8b21d21099852c839a4049108beba3aaed30",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {},
+      "exclusion_reason": "inaccessible-url"
+    },
+    "demo_028": {
+      "id": "demo_028",
+      "url": "https://images.unsplash.com/photo-1629208764118-73b1c7d5bb02",
+      "query": "smoky mezcal cocktail with chili rim",
+      "description": "Artisanal mezcal cocktail with smoked garnish and spiced rim",
+      "url_hash": "7f72ff88c3e197de8e180337bb569e360ab4de96bb64720a9f33ca46714090fd",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": false,
+      "details": {},
+      "exclusion_reason": "inaccessible-url"
+    },
+    "demo_029": {
+      "id": "demo_029",
+      "url": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a",
+      "query": "rainbow layered cocktail with multiple colors",
+      "description": "Perfect rainbow layered cocktail with distinct color bands",
+      "url_hash": "41dfbe5a57715e20a1061aab2c56285e66e8fcf9c22c75c471343ee3a851229a",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": true,
+      "details": {},
+      "exclusion_reason": "duplicate-url"
+    },
+    "demo_030": {
+      "id": "demo_030",
+      "url": "https://images.unsplash.com/photo-1571982270044-4e8fe68b69a2",
+      "query": "rainbow layered cocktail with multiple colors",
+      "description": "Gradient cocktail with smooth color transitions and fruit garnish",
+      "url_hash": "fdf6bc7ad2d47069cba389927812f06f080665ce900ede8da72a8e97e5e11b82",
+      "accessible": false,
+      "is_cocktail": false,
+      "is_duplicate_url": true,
+      "details": {},
+      "exclusion_reason": "duplicate-url"
+    }
+  },
+  "duplicate_groups": [
+    {
+      "url": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a",
+      "ids": [
+        "demo_001",
+        "demo_007",
+        "demo_029"
+      ],
+      "count": 3
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1546171753-97d7676e4602",
+      "ids": [
+        "demo_005",
+        "demo_024"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1571982270044-4e8fe68b69a2",
+      "ids": [
+        "demo_012",
+        "demo_030"
+      ],
+      "count": 2
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae",
+      "ids": [
+        "demo_017",
+        "demo_026"
+      ],
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "report_metadata": {
+    "generated_at": "2025-10-11T12:41:44.462832",
+    "dataset_path": "data/dataset",
+    "analyzer_version": "1.0.0"
+  },
+  "dataset_overview": {
+    "basic_stats": {
+      "total_items": 7,
+      "unique_queries": 7,
+      "avg_candidates_per_query": 1.0
+    },
+    "score_analysis": {
+      "baseline_mean": 0.7214285714285714,
+      "baseline_std": 0.05459809869356604,
+      "enhanced_mean": 0.8828571428571428,
+      "enhanced_std": 0.030394235042348464,
+      "improvement_mean": 0.16142857142857142,
+      "improvement_std": 0.026726124191242432,
+      "improvement_median": 0.17000000000000004,
+      "items_improved": 7,
+      "items_degraded": 0,
+      "items_unchanged": 0
+    },
+    "domain_distribution": {
+      "color_golden": 2,
+      "color_blue": 1,
+      "color_red": 1,
+      "color_green": 1,
+      "color_orange": 1,
+      "color_black": 1
+    },
+    "query_distribution": {
+      "golden whiskey old fashioned with orange peel": 1,
+      "blue tropical cocktail with pineapple garnish": 1,
+      "red strawberry margarita with salt rim": 1,
+      "clear martini with olive garnish": 1,
+      "orange creamsicle cocktail with vanilla foam": 1,
+      "black charcoal cocktail with activated carbon": 1,
+      "yellow lemon drop with sugar rim": 1
+    }
+  },
+  "quality_metrics": {
+    "url_quality": {
+      "valid_https_urls": 7,
+      "total_urls": 7,
+      "url_validity_rate": 1.0,
+      "unique_urls": 7,
+      "url_uniqueness_rate": 1.0
+    },
+    "description_quality": {
+      "items_with_alt_description": 7,
+      "alt_description_coverage": 1.0,
+      "avg_alt_description_length": 58.42857142857143
+    },
+    "score_quality": {
+      "items_with_both_scores": 7,
+      "score_completeness": 1.0
+    }
+  },
+  "provenance_info": {
+    "data_lineage": {
+      "original_snapshot_items": 30,
+      "clean_dataset_items": 7,
+      "items_excluded": 23,
+      "exclusion_rate": 0.7666666666666667
+    },
+    "overlay_provenance": {
+      "overlays_applied": 1,
+      "overlay_details": [
+        {
+          "version": "v1.1-overlay",
+          "created_at": "2025-10-11T12:36:12.288899",
+          "exclusions_count": 23,
+          "replacements_count": 0
+        }
+      ]
+    },
+    "validation_metadata": {
+      "overlay_applied": true,
+      "original_total_images": 30,
+      "final_total_images": 7,
+      "total_exclusions": 23,
+      "total_replacements": 0
+    }
+  },
+  "improvement_analysis": {
+    "domain_improvements": {
+      "color_black": {
+        "improvement_mean": 0.19,
+        "improvement_std": NaN,
+        "improvement_median": 0.19,
+        "count": 1,
+        "baseline_mean": 0.66,
+        "enhanced_mean": 0.85
+      },
+      "color_blue": {
+        "improvement_mean": 0.17,
+        "improvement_std": NaN,
+        "improvement_median": 0.17,
+        "count": 1,
+        "baseline_mean": 0.71,
+        "enhanced_mean": 0.88
+      },
+      "color_golden": {
+        "improvement_mean": 0.145,
+        "improvement_std": 0.021,
+        "improvement_median": 0.145,
+        "count": 2,
+        "baseline_mean": 0.74,
+        "enhanced_mean": 0.885
+      },
+      "color_green": {
+        "improvement_mean": 0.12,
+        "improvement_std": NaN,
+        "improvement_median": 0.12,
+        "count": 1,
+        "baseline_mean": 0.82,
+        "enhanced_mean": 0.94
+      },
+      "color_orange": {
+        "improvement_mean": 0.18,
+        "improvement_std": NaN,
+        "improvement_median": 0.18,
+        "count": 1,
+        "baseline_mean": 0.71,
+        "enhanced_mean": 0.89
+      },
+      "color_red": {
+        "improvement_mean": 0.18,
+        "improvement_std": NaN,
+        "improvement_median": 0.18,
+        "count": 1,
+        "baseline_mean": 0.67,
+        "enhanced_mean": 0.85
+      }
+    },
+    "query_improvements": {
+      "black charcoal cocktail with activated carbon": {
+        "improvement_mean": 0.19,
+        "improvement_std": NaN,
+        "improvement_median": 0.19,
+        "count": 1,
+        "baseline_mean": 0.66,
+        "enhanced_mean": 0.85
+      },
+      "blue tropical cocktail with pineapple garnish": {
+        "improvement_mean": 0.17,
+        "improvement_std": NaN,
+        "improvement_median": 0.17,
+        "count": 1,
+        "baseline_mean": 0.71,
+        "enhanced_mean": 0.88
+      },
+      "clear martini with olive garnish": {
+        "improvement_mean": 0.12,
+        "improvement_std": NaN,
+        "improvement_median": 0.12,
+        "count": 1,
+        "baseline_mean": 0.82,
+        "enhanced_mean": 0.94
+      },
+      "golden whiskey old fashioned with orange peel": {
+        "improvement_mean": 0.13,
+        "improvement_std": NaN,
+        "improvement_median": 0.13,
+        "count": 1,
+        "baseline_mean": 0.76,
+        "enhanced_mean": 0.89
+      },
+      "orange creamsicle cocktail with vanilla foam": {
+        "improvement_mean": 0.18,
+        "improvement_std": NaN,
+        "improvement_median": 0.18,
+        "count": 1,
+        "baseline_mean": 0.71,
+        "enhanced_mean": 0.89
+      },
+      "red strawberry margarita with salt rim": {
+        "improvement_mean": 0.18,
+        "improvement_std": NaN,
+        "improvement_median": 0.18,
+        "count": 1,
+        "baseline_mean": 0.67,
+        "enhanced_mean": 0.85
+      },
+      "yellow lemon drop with sugar rim": {
+        "improvement_mean": 0.16,
+        "improvement_std": NaN,
+        "improvement_median": 0.16,
+        "count": 1,
+        "baseline_mean": 0.72,
+        "enhanced_mean": 0.88
+      }
+    },
+    "overall_improvement": {
+      "mean": 0.16142857142857142,
+      "median": 0.17000000000000004,
+      "std": 0.026726124191242432,
+      "best_improvement": 0.18999999999999995,
+      "worst_improvement": 0.12
+    }
+  }
+}

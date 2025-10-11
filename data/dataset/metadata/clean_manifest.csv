@@ -1,0 +1,8 @@
+id,url,query,alt_description,score_baseline,score_enhanced,kept_excluded_replaced,domain_classification,validation_status
+demo_004,https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0,golden whiskey old fashioned with orange peel,Amber whiskey cocktail with large ice cube and citrus twist,0.76,0.89,kept,color_golden,validated
+demo_005,https://images.unsplash.com/photo-1546171753-97d7676e4602,blue tropical cocktail with pineapple garnish,Electric blue cocktail with pineapple wedge and umbrella garnish,0.71,0.88,kept,color_blue,validated
+demo_010,https://images.unsplash.com/photo-1578662996442-48f60103fc96,red strawberry margarita with salt rim,Ruby red cocktail with sugared rim and berry garnish,0.67,0.85,kept,color_red,validated
+demo_013,https://images.unsplash.com/photo-1578319439584-104c94d37305,clear martini with olive garnish,Crystal clear martini with green olive on cocktail pick,0.82,0.94,kept,color_green,validated
+demo_015,https://images.unsplash.com/photo-1581833971358-2c8b550f87b3,orange creamsicle cocktail with vanilla foam,Orange creamy cocktail with white foam and orange zest,0.71,0.89,kept,color_orange,validated
+demo_017,https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae,black charcoal cocktail with activated carbon,Jet black cocktail with silver garnish and dramatic lighting,0.66,0.85,kept,color_black,validated
+demo_020,https://images.unsplash.com/photo-1536935338788-846bb9981813,yellow lemon drop with sugar rim,Golden citrus cocktail with candied lemon wheel and crystal sugar,0.72,0.88,kept,color_golden,validated

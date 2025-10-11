@@ -1,0 +1,110 @@
+{
+  "parent_snapshot_sha256": "5bf1a3b12433026cc594b6887e0e8c516dd317109c59ea2c6c10a0ca7e6e8194",
+  "version": "v1.1-overlay",
+  "created_at": "2025-10-11T12:36:12.288899",
+  "validation_summary": {
+    "total_images": 30,
+    "excluded_images": 23,
+    "exclusion_reasons": {
+      "failed": 6,
+      "broken": 12,
+      "duplicate-url": 5
+    }
+  },
+  "exclusions": [
+    {
+      "id": "demo_001",
+      "reason": "failed cocktail validation (heuristic analysis)"
+    },
+    {
+      "id": "demo_002",
+      "reason": "failed cocktail validation (heuristic analysis)"
+    },
+    {
+      "id": "demo_003",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_006",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_007",
+      "reason": "duplicate-url (same as other IDs in dataset)"
+    },
+    {
+      "id": "demo_008",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_009",
+      "reason": "failed cocktail validation (heuristic analysis)"
+    },
+    {
+      "id": "demo_011",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_012",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_014",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_016",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_018",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_019",
+      "reason": "failed cocktail validation (heuristic analysis)"
+    },
+    {
+      "id": "demo_021",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_022",
+      "reason": "failed cocktail validation (heuristic analysis)"
+    },
+    {
+      "id": "demo_023",
+      "reason": "failed cocktail validation (heuristic analysis)"
+    },
+    {
+      "id": "demo_024",
+      "reason": "duplicate-url (same as other IDs in dataset)"
+    },
+    {
+      "id": "demo_025",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_026",
+      "reason": "duplicate-url (same as other IDs in dataset)"
+    },
+    {
+      "id": "demo_027",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_028",
+      "reason": "broken or inaccessible URL"
+    },
+    {
+      "id": "demo_029",
+      "reason": "duplicate-url (same as other IDs in dataset)"
+    },
+    {
+      "id": "demo_030",
+      "reason": "duplicate-url (same as other IDs in dataset)"
+    }
+  ],
+  "replacements": [],
+  "notes": "Automated validation: removed inaccessible URLs, duplicate URLs, and non-cocktail images using heuristic analysis."
+}

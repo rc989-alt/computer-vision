@@ -586,6 +586,62 @@ class DatasetManager:
             'warnings': warnings,
             'is_valid': len(issues) == 0
         }
+    
+    def load_dataset(self, use_overlay: bool = True) -> List[Dict[str, Any]]:
+        """
+        Load dataset with optional overlay corrections.
+        
+        Args:
+            use_overlay: If True, apply overlay corrections on top of frozen snapshot
+            
+        Returns:
+            List of dataset items with metadata
+        """
+        if use_overlay:
+            # Use overlay loader for clean dataset
+            try:
+                from overlay_loader import OverlayDatasetLoader
+                overlay_loader = OverlayDatasetLoader(str(self.base_path))
+                clean_dataset = overlay_loader.load_clean_dataset()
+                
+                # Convert to flat list of items
+                items = []
+                for inspiration in clean_dataset['inspirations']:
+                    query = inspiration['query']
+                    for candidate in inspiration['candidates']:
+                        item = candidate.copy()
+                        item['query'] = query
+                        item['description'] = inspiration.get('description', '')
+                        items.append(item)
+                
+                logger.info(f"Loaded {len(items)} items with overlay corrections")
+                return items
+                
+            except ImportError:
+                logger.warning("Overlay loader not available, falling back to frozen snapshot")
+                use_overlay = False
+        
+        if not use_overlay:
+            # Load original frozen snapshot
+            if not self.snapshot_path.exists():
+                logger.error("No frozen snapshot found")
+                return []
+                
+            with open(self.snapshot_path, 'r') as f:
+                snapshot = json.load(f)
+            
+            # Convert to flat list of items
+            items = []
+            for inspiration in snapshot['data']['inspirations']:
+                query = inspiration['query']
+                for candidate in inspiration['candidates']:
+                    item = candidate.copy()
+                    item['query'] = query
+                    item['description'] = inspiration.get('description', '')
+                    items.append(item)
+            
+            logger.info(f"Loaded {len(items)} items from frozen snapshot (no overlay)")
+            return items
 
 def main():
     """Main function for dataset management."""
