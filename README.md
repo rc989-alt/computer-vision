@@ -32,6 +32,8 @@ Our 10-minute demo on 15 diverse cocktail queries shows significant improvements
 
 *Complete demo results available in `demo/samples.json` and `runs/report/`*
 
+📊 **View Results**: [`metrics.csv`](runs/report/metrics.csv) • [`summary.md`](runs/report/summary.md) • [`grid_*.png`](runs/report/)
+
 ## Quick Start
 
 ### 1. Setup
