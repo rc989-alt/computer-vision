@@ -1,0 +1,153 @@
+{
+  "split": "train",
+  "count": 21,
+  "images": [
+    {
+      "image_id": "demo_001",
+      "url": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a",
+      "local_path": null,
+      "domain": "color_pink",
+      "sub_domain": "floral"
+    },
+    {
+      "image_id": "demo_003",
+      "url": "https://images.unsplash.com/photo-1572778492740-03e4c8f5d5eb",
+      "local_path": null,
+      "domain": "color_golden",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_004",
+      "url": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0",
+      "local_path": null,
+      "domain": "color_golden",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_006",
+      "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b",
+      "local_path": null,
+      "domain": "color_blue",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_007",
+      "url": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a",
+      "local_path": null,
+      "domain": "color_green",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_009",
+      "url": "https://images.unsplash.com/photo-1561149877-84d268ba65b8",
+      "local_path": null,
+      "domain": "color_red",
+      "sub_domain": "citrus"
+    },
+    {
+      "image_id": "demo_010",
+      "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+      "local_path": null,
+      "domain": "color_red",
+      "sub_domain": "citrus"
+    },
+    {
+      "image_id": "demo_012",
+      "url": "https://images.unsplash.com/photo-1571982270044-4e8fe68b69a2",
+      "local_path": null,
+      "domain": "color_purple",
+      "sub_domain": "floral"
+    },
+    {
+      "image_id": "demo_013",
+      "url": "https://images.unsplash.com/photo-1578319439584-104c94d37305",
+      "local_path": null,
+      "domain": "color_green",
+      "sub_domain": "classic"
+    },
+    {
+      "image_id": "demo_014",
+      "url": "https://images.unsplash.com/photo-1519734472571-8b6c5ab20c5c",
+      "local_path": null,
+      "domain": "color_clear",
+      "sub_domain": "classic"
+    },
+    {
+      "image_id": "demo_016",
+      "url": "https://images.unsplash.com/photo-1596185002959-0d9c0b7e8f6a",
+      "local_path": null,
+      "domain": "color_orange",
+      "sub_domain": "modern"
+    },
+    {
+      "image_id": "demo_017",
+      "url": "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae",
+      "local_path": null,
+      "domain": "color_black",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_019",
+      "url": "https://images.unsplash.com/photo-1565299507177-b0ac66763828",
+      "local_path": null,
+      "domain": "color_golden",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_020",
+      "url": "https://images.unsplash.com/photo-1536935338788-846bb9981813",
+      "local_path": null,
+      "domain": "color_golden",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_022",
+      "url": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91",
+      "local_path": null,
+      "domain": "color_red",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_023",
+      "url": "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f",
+      "local_path": null,
+      "domain": "color_white",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_024",
+      "url": "https://images.unsplash.com/photo-1546171753-97d7676e4602",
+      "local_path": null,
+      "domain": "color_white",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_026",
+      "url": "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae",
+      "local_path": null,
+      "domain": "color_silver",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_027",
+      "url": "https://images.unsplash.com/photo-1582145701337-fa9c5b9aab2c",
+      "local_path": null,
+      "domain": "color_golden",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_029",
+      "url": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a",
+      "local_path": null,
+      "domain": "color_red",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_030",
+      "url": "https://images.unsplash.com/photo-1571982270044-4e8fe68b69a2",
+      "local_path": null,
+      "domain": "color_red",
+      "sub_domain": "unspecified"
+    }
+  ]
+}

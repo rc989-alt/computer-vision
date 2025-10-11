@@ -1,0 +1,41 @@
+{
+  "split": "val",
+  "count": 5,
+  "images": [
+    {
+      "image_id": "demo_002",
+      "url": "https://images.unsplash.com/photo-1544145945-f90425340c7e",
+      "local_path": null,
+      "domain": "color_pink",
+      "sub_domain": "floral"
+    },
+    {
+      "image_id": "demo_008",
+      "url": "https://images.unsplash.com/photo-1574708575293-ed8ac61f5a8d",
+      "local_path": null,
+      "domain": "color_green",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_015",
+      "url": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3",
+      "local_path": null,
+      "domain": "color_orange",
+      "sub_domain": "modern"
+    },
+    {
+      "image_id": "demo_025",
+      "url": "https://images.unsplash.com/photo-1609873814058-56b82c175161",
+      "local_path": null,
+      "domain": "color_silver",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_028",
+      "url": "https://images.unsplash.com/photo-1629208764118-73b1c7d5bb02",
+      "local_path": null,
+      "domain": "cocktail_type",
+      "sub_domain": "modern"
+    }
+  ]
+}

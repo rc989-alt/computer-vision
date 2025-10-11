@@ -1,0 +1,24 @@
+{
+  "inspirations": [
+    {
+      "query": "pink floral cocktail with rose petals",
+      "description": "Elegant rose-garnished cocktail in feminine pink hues",
+      "candidates": [
+        {
+          "id": "demo_001",
+          "regular": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a",
+          "alt_description": "Pink cocktail with rose petals garnish in crystal coupe glass",
+          "score": 0.92,
+          "baseline_score": 0.73
+        },
+        {
+          "id": "demo_002",
+          "regular": "https://images.unsplash.com/photo-1544145945-f90425340c7e",
+          "alt_description": "Ros\u00e9 cocktail with dried rose buds and gold rim",
+          "score": 0.87,
+          "baseline_score": 0.69
+        }
+      ]
+    }
+  ]
+}

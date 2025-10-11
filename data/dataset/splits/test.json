@@ -1,0 +1,34 @@
+{
+  "split": "test",
+  "count": 4,
+  "images": [
+    {
+      "image_id": "demo_005",
+      "url": "https://images.unsplash.com/photo-1546171753-97d7676e4602",
+      "local_path": null,
+      "domain": "color_blue",
+      "sub_domain": "unspecified"
+    },
+    {
+      "image_id": "demo_011",
+      "url": "https://images.unsplash.com/photo-1542090087-7d3e0d86b6ba",
+      "local_path": null,
+      "domain": "color_clear",
+      "sub_domain": "floral"
+    },
+    {
+      "image_id": "demo_018",
+      "url": "https://images.unsplash.com/photo-1611865734837-de0bece3de76",
+      "local_path": null,
+      "domain": "color_black",
+      "sub_domain": "modern"
+    },
+    {
+      "image_id": "demo_021",
+      "url": "https://images.unsplash.com/photo-1571115764595-644a1f56a55c",
+      "local_path": null,
+      "domain": "color_red",
+      "sub_domain": "unspecified"
+    }
+  ]
+}
