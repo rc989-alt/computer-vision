@@ -1,0 +1,32 @@
+{
+  "inspirations": [
+    {
+      "query": "pink floral cocktail",
+      "candidates": [
+        {
+          "id": "sample_001",
+          "regular": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a",
+          "alt_description": "A pink cocktail with rose petals garnish in a coupe glass",
+          "score": 0.85
+        },
+        {
+          "id": "sample_002", 
+          "regular": "https://images.unsplash.com/photo-1544145945-f90425340c7e",
+          "alt_description": "Pink strawberry cocktail with fresh fruit garnish",
+          "score": 0.78
+        }
+      ]
+    },
+    {
+      "query": "golden whiskey cocktail",
+      "candidates": [
+        {
+          "id": "sample_003",
+          "regular": "https://images.unsplash.com/photo-1572778492740-03e4c8f5d5eb", 
+          "alt_description": "Golden whiskey cocktail in old fashioned glass with orange peel",
+          "score": 0.92
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "family": "cocktail_garnish",
+  "positive_class": "flower",
+  "negative_class": "cherry_fruit",
+  "detection_threshold": 0.6,
+  "compliance_weight": 1.2,
+  "llm_weight": 0.8,
+  "conflict_penalty": 0.3,
+  "require_glass": true,
+  "hard_require_glass": false,
+  "require_subjects": ["glass", "drink"],
+  "forbid_subjects": ["background", "clutter"],
+  "forbid_penalty": 0.25,
+  "top_k": 6,
+  "graph_smooth": 0.1,
+  "training": {
+    "per_class_samples": 200,
+    "cross_validation_folds": 10,
+    "balance_classes": true
+  }
+}

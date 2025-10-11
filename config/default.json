@@ -1,0 +1,29 @@
+{
+  "family": "cocktail_detection",
+  "positive_class": "glass",
+  "negative_class": "background",
+  "detection_threshold": 0.5,
+  "compliance_weight": 1.0,
+  "llm_weight": 0.6,
+  "conflict_penalty": 0.25,
+  "no_glass_penalty": 0.5,
+  "require_glass": true,
+  "hard_require_glass": false,
+  "top_k": 10,
+  "clip_probe_model": "models/clip_probe.joblib",
+  "yolo_model": "models/yolov8n.pt",
+  "embedding_cache": "models/embedding_cache.joblib",
+  "llm_proxy_url": "http://127.0.0.1:8787/api/generate",
+  "training": {
+    "per_class_samples": 100,
+    "cross_validation_folds": 5,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "epochs": 100
+  },
+  "evaluation": {
+    "metrics": ["accuracy", "precision", "recall", "f1", "auc"],
+    "save_confusion_matrix": true,
+    "save_classification_report": true
+  }
+}

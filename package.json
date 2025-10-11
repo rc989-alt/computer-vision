@@ -1,0 +1,35 @@
+{
+  "name": "computer-vision-cocktail-pipeline",
+  "version": "1.0.0",
+  "description": "Computer vision pipeline for cocktail image analysis with dual scoring, conflict penalty, and subject-object constraints",
+  "main": "pipeline.py",
+  "scripts": {
+    "setup": "./setup.sh",
+    "test": "npm run test:python && npm run test:node",
+    "demo": "python pipeline.py --config config/default.json --input data/input/sample_input.json --output data/output/demo_results.json"
+  },
+  "keywords": [
+    "computer-vision",
+    "machine-learning",
+    "clip",
+    "yolo",
+    "image-analysis",
+    "cocktail",
+    "reranking",
+    "dual-scoring",
+    "object-detection"
+  ],
+  "author": "RC989-ALT",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rc989-alt/computer-vision.git"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "python": ">=3.8.0"
+  }
+}
