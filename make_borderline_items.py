@@ -4,6 +4,9 @@ Make Borderline Items
 
 Extract borderline items from scored data for human review.
 Filters items in the uncertain margin band for manual curation.
+
+Updated with Pre-Off-Topic Gate integration to prevent keyboards and
+other obvious non-cocktails from reaching human reviewers.
 """
 
 import json
@@ -13,6 +16,13 @@ from typing import Dict, List, Any, Optional
 import logging
 from datetime import datetime
 import hashlib
+import sys
+import os
+
+# Add src directory to path for imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+
+from pre_offtopic_gate import PreOffTopicGate
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -186,7 +196,7 @@ class BorderlineExtractor:
                                 low_margin: float = 0.10,
                                 high_margin: float = 0.25,
                                 limit: int = 50) -> List[Dict[str, Any]]:
-        """Extract borderline items for review."""
+        """Extract borderline items for review with pre-off-topic gate filtering."""
         
         if input_path:
             # Load from existing scored data (production mode)
@@ -194,7 +204,7 @@ class BorderlineExtractor:
                 items = json.load(f)
             
             # Filter by margin
-            borderline = [
+            candidate_items = [
                 item for item in items 
                 if low_margin <= item.get('clip_margin', 0) < high_margin
             ]
@@ -202,7 +212,36 @@ class BorderlineExtractor:
             # Simulate from clean dataset (demo mode)
             logger.info("Simulating borderline items from clean dataset")
             clean_items = self.load_clean_dataset()
-            borderline = self.simulate_scoring(clean_items, low_margin, high_margin)
+            candidate_items = self.simulate_scoring(clean_items, low_margin, high_margin)
+        
+        # Apply pre-off-topic gate to filter obvious non-cocktails
+        logger.info(f"Applying pre-off-topic gate to {len(candidate_items)} candidate items")
+        gate = PreOffTopicGate()
+        borderline = []
+        quarantined = []
+        
+        for item in candidate_items:
+            # Extract CLIP similarities and detections
+            sims = {
+                'cocktail': item.get('sim_cocktail', 0.0),
+                'not_cocktail': item.get('sim_not_cocktail', 0.0)
+            }
+            detections = item.get('detected_objects', [])
+            
+            # Evaluate with pre-gate
+            gate_result = gate.evaluate(item, sims, detections)
+            
+            if gate_result.discard:
+                logger.info(f"Quarantined {item['id']}: {gate_result.reason}")
+                quarantined.append({
+                    'item': item,
+                    'reason': gate_result.reason,
+                    'details': gate_result.details
+                })
+            else:
+                borderline.append(item)
+        
+        logger.info(f"Pre-gate results: {len(borderline)} items for review, {len(quarantined)} quarantined")
         
         # Sort by margin (most suspicious first)
         borderline.sort(key=lambda x: x.get('clip_margin', 0))

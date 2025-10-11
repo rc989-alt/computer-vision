@@ -1,0 +1,42 @@
+{
+  "borderline": {
+    "low": 0.05,
+    "high": 0.30,
+    "max_items": 50,
+    "comment": "Widened band temporarily to get 10-20 items per 5-minute session"
+  },
+  "pre_offtopic": {
+    "sim_cocktail_min": 0.60,
+    "neg_beats_pos": true,
+    "object_requirements": ["glass", "cup", "martini", "rocks_glass", "liquid", "garnish"],
+    "min_image_size": 256,
+    "comment": "Gate to catch keyboards and other obvious non-cocktails - raised to 0.60 to catch keyboard (0.5)"
+  },
+  "governance": {
+    "quotas": {
+      "domain_cap_per_run": 10,
+      "photographer_cap_per_domain_per_week": 2,
+      "min_photographers_per_domain": 3
+    },
+    "reputation": {
+      "probation_thresholds": {
+        "off_topic_rate": 0.20,
+        "dup_rate": 0.10,
+        "broken_url_rate": 0.02,
+        "min_submissions": 10
+      },
+      "block_thresholds": {
+        "off_topic_rate": 0.35,
+        "min_submissions": 20
+      },
+      "probation_days": 30,
+      "rolling_window_days": 30
+    },
+    "ci_policies": {
+      "max_broken_url_rate_new": 0.01,
+      "max_duplicate_rate_new": 0.00,
+      "fail_on_blocked_sources": true,
+      "fail_on_quota_exceeded": true
+    }
+  }
+}

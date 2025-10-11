@@ -1,0 +1,24 @@
+[
+  {
+    "id": "demo_005",
+    "domain": "blue_tropical",
+    "query": "blue tropical cocktail with pineapple garnish",
+    "url": "https://images.unsplash.com/photo-1546171753-97d7676e4602",
+    "thumb_url": "https://images.unsplash.com/photo-1546171753-97d7676e4602",
+    "clip_margin": 0.197,
+    "sim_cocktail": 0.611,
+    "sim_not_cocktail": 0.414,
+    "detected_objects": [
+      "glass",
+      "olive",
+      "garnish"
+    ],
+    "flags": {
+      "require_glass": true,
+      "garnish_in_glass": true,
+      "conflict_pairs": []
+    },
+    "run_id": "2025-10-11T15:04:50.188557",
+    "overlay_id": "ovl_2025_10_11_15"
+  }
+]
