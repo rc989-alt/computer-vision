@@ -1,0 +1,313 @@
+{
+  "inspirations": [
+    {
+      "query": "pink floral cocktail with rose petals",
+      "description": "Elegant rose-garnished cocktail in feminine pink hues",
+      "candidates": [
+        {
+          "id": "demo_001",
+          "regular": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a",
+          "alt_description": "Pink cocktail with rose petals garnish in crystal coupe glass",
+          "score": 0.92,
+          "baseline_score": 0.73
+        },
+        {
+          "id": "demo_002", 
+          "regular": "https://images.unsplash.com/photo-1544145945-f90425340c7e",
+          "alt_description": "Rosé cocktail with dried rose buds and gold rim",
+          "score": 0.87,
+          "baseline_score": 0.69
+        }
+      ]
+    },
+    {
+      "query": "golden whiskey old fashioned with orange peel",
+      "description": "Classic whiskey cocktail with citrus garnish and amber tones",
+      "candidates": [
+        {
+          "id": "demo_003",
+          "regular": "https://images.unsplash.com/photo-1572778492740-03e4c8f5d5eb", 
+          "alt_description": "Golden whiskey old fashioned in crystal rocks glass with orange peel",
+          "score": 0.95,
+          "baseline_score": 0.81
+        },
+        {
+          "id": "demo_004",
+          "regular": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0",
+          "alt_description": "Amber whiskey cocktail with large ice cube and citrus twist",
+          "score": 0.89,
+          "baseline_score": 0.76
+        }
+      ]
+    },
+    {
+      "query": "blue tropical cocktail with pineapple garnish",
+      "description": "Vibrant blue cocktail evoking tropical paradise with fruit garnish",
+      "candidates": [
+        {
+          "id": "demo_005",
+          "regular": "https://images.unsplash.com/photo-1546171753-97d7676e4602",
+          "alt_description": "Electric blue cocktail with pineapple wedge and umbrella garnish",
+          "score": 0.88,
+          "baseline_score": 0.71
+        },
+        {
+          "id": "demo_006",
+          "regular": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b",
+          "alt_description": "Turquoise layered drink with fresh pineapple and mint",
+          "score": 0.84,
+          "baseline_score": 0.68
+        }
+      ]
+    },
+    {
+      "query": "green mint mojito with fresh herbs",
+      "description": "Refreshing mint cocktail with vibrant herb garnishes",
+      "candidates": [
+        {
+          "id": "demo_007",
+          "regular": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a",
+          "alt_description": "Fresh mojito with muddled mint leaves and lime wedges",
+          "score": 0.91,
+          "baseline_score": 0.74
+        },
+        {
+          "id": "demo_008",
+          "regular": "https://images.unsplash.com/photo-1574708575293-ed8ac61f5a8d",
+          "alt_description": "Green herb-infused cocktail with basil and mint garnish",
+          "score": 0.86,
+          "baseline_score": 0.70
+        }
+      ]
+    },
+    {
+      "query": "red strawberry margarita with salt rim",
+      "description": "Vibrant red cocktail with fresh berry flavors and salted rim",
+      "candidates": [
+        {
+          "id": "demo_009",
+          "regular": "https://images.unsplash.com/photo-1561149877-84d268ba65b8",
+          "alt_description": "Bright red strawberry margarita with salt rim and fresh strawberry",
+          "score": 0.90,
+          "baseline_score": 0.72
+        },
+        {
+          "id": "demo_010",
+          "regular": "https://images.unsplash.com/photo-1578662996442-48f60103fc96",
+          "alt_description": "Ruby red cocktail with sugared rim and berry garnish",
+          "score": 0.85,
+          "baseline_score": 0.67
+        }
+      ]
+    },
+    {
+      "query": "purple lavender gin cocktail with dried flowers",
+      "description": "Sophisticated floral cocktail with lavender aromatics",
+      "candidates": [
+        {
+          "id": "demo_011",
+          "regular": "https://images.unsplash.com/photo-1542090087-7d3e0d86b6ba",
+          "alt_description": "Purple gin cocktail with dried lavender sprig and crystal glass",
+          "score": 0.87,
+          "baseline_score": 0.69
+        },
+        {
+          "id": "demo_012",
+          "regular": "https://images.unsplash.com/photo-1571982270044-4e8fe68b69a2",
+          "alt_description": "Lavender-hued cocktail with edible flowers and frosted rim",
+          "score": 0.83,
+          "baseline_score": 0.65
+        }
+      ]
+    },
+    {
+      "query": "clear martini with olive garnish",
+      "description": "Classic clear cocktail with traditional olive garnish",
+      "candidates": [
+        {
+          "id": "demo_013",
+          "regular": "https://images.unsplash.com/photo-1578319439584-104c94d37305",
+          "alt_description": "Crystal clear martini with green olive on cocktail pick",
+          "score": 0.94,
+          "baseline_score": 0.82
+        },
+        {
+          "id": "demo_014",
+          "regular": "https://images.unsplash.com/photo-1519734472571-8b6c5ab20c5c",
+          "alt_description": "Pristine gin martini with three olives in martini glass",
+          "score": 0.91,
+          "baseline_score": 0.78
+        }
+      ]
+    },
+    {
+      "query": "orange creamsicle cocktail with vanilla foam",
+      "description": "Creamy orange cocktail with luxurious foam topping",
+      "candidates": [
+        {
+          "id": "demo_015",
+          "regular": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3",
+          "alt_description": "Orange creamy cocktail with white foam and orange zest",
+          "score": 0.89,
+          "baseline_score": 0.71
+        },
+        {
+          "id": "demo_016",
+          "regular": "https://images.unsplash.com/photo-1596185002959-0d9c0b7e8f6a",
+          "alt_description": "Sunset orange drink with cream foam and candied orange peel",
+          "score": 0.86,
+          "baseline_score": 0.68
+        }
+      ]
+    },
+    {
+      "query": "black charcoal cocktail with activated carbon",
+      "description": "Dramatic black cocktail with modern activated charcoal element",
+      "candidates": [
+        {
+          "id": "demo_017",
+          "regular": "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae",
+          "alt_description": "Jet black cocktail with silver garnish and dramatic lighting",
+          "score": 0.85,
+          "baseline_score": 0.66
+        },
+        {
+          "id": "demo_018",
+          "regular": "https://images.unsplash.com/photo-1611865734837-de0bece3de76",
+          "alt_description": "Charcoal-dark cocktail with foam top and modern glass",
+          "score": 0.82,
+          "baseline_score": 0.63
+        }
+      ]
+    },
+    {
+      "query": "yellow lemon drop with sugar rim",
+      "description": "Bright citrus cocktail with crystallized sugar garnish",
+      "candidates": [
+        {
+          "id": "demo_019",
+          "regular": "https://images.unsplash.com/photo-1565299507177-b0ac66763828",
+          "alt_description": "Bright yellow lemon drop with sugared rim and lemon twist",
+          "score": 0.92,
+          "baseline_score": 0.75
+        },
+        {
+          "id": "demo_020",
+          "regular": "https://images.unsplash.com/photo-1536935338788-846bb9981813",
+          "alt_description": "Golden citrus cocktail with candied lemon wheel and crystal sugar",
+          "score": 0.88,
+          "baseline_score": 0.72
+        }
+      ]
+    },
+    {
+      "query": "burgundy wine cocktail with dark berries",
+      "description": "Rich wine-based cocktail with deep berry garnishes",
+      "candidates": [
+        {
+          "id": "demo_021",
+          "regular": "https://images.unsplash.com/photo-1571115764595-644a1f56a55c",
+          "alt_description": "Deep burgundy cocktail with blackberries and wine glass",
+          "score": 0.87,
+          "baseline_score": 0.70
+        },
+        {
+          "id": "demo_022",
+          "regular": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91",
+          "alt_description": "Dark red wine cocktail with fresh berry medley",
+          "score": 0.84,
+          "baseline_score": 0.67
+        }
+      ]
+    },
+    {
+      "query": "white coconut piña colada with pineapple",
+      "description": "Creamy tropical cocktail with coconut and pineapple elements",
+      "candidates": [
+        {
+          "id": "demo_023",
+          "regular": "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f",
+          "alt_description": "Creamy white piña colada with pineapple wedge and toasted coconut",
+          "score": 0.90,
+          "baseline_score": 0.73
+        },
+        {
+          "id": "demo_024",
+          "regular": "https://images.unsplash.com/photo-1546171753-97d7676e4602",
+          "alt_description": "Tropical white cocktail with coconut shavings and fresh fruit",
+          "score": 0.86,
+          "baseline_score": 0.69
+        }
+      ]
+    },
+    {
+      "query": "silver metallic cocktail with edible glitter",
+      "description": "Luxurious cocktail with metallic elements and shimmering garnish",
+      "candidates": [
+        {
+          "id": "demo_025",
+          "regular": "https://images.unsplash.com/photo-1609873814058-56b82c175161",
+          "alt_description": "Silver shimmering cocktail with edible glitter and metallic rim",
+          "score": 0.83,
+          "baseline_score": 0.64
+        },
+        {
+          "id": "demo_026",
+          "regular": "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae",
+          "alt_description": "Reflective cocktail with pearl dust and silver garnish",
+          "score": 0.80,
+          "baseline_score": 0.62
+        }
+      ]
+    },
+    {
+      "query": "smoky mezcal cocktail with chili rim",
+      "description": "Sophisticated smoky cocktail with spicy chili salt garnish",
+      "candidates": [
+        {
+          "id": "demo_027",
+          "regular": "https://images.unsplash.com/photo-1582145701337-fa9c5b9aab2c",
+          "alt_description": "Smoky amber mezcal with chili salt rim and lime wedge",
+          "score": 0.88,
+          "baseline_score": 0.71
+        },
+        {
+          "id": "demo_028",
+          "regular": "https://images.unsplash.com/photo-1629208764118-73b1c7d5bb02",
+          "alt_description": "Artisanal mezcal cocktail with smoked garnish and spiced rim",
+          "score": 0.85,
+          "baseline_score": 0.68
+        }
+      ]
+    },
+    {
+      "query": "rainbow layered cocktail with multiple colors",
+      "description": "Spectacular multi-layered cocktail showcasing color gradients",
+      "candidates": [
+        {
+          "id": "demo_029",
+          "regular": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a",
+          "alt_description": "Perfect rainbow layered cocktail with distinct color bands",
+          "score": 0.91,
+          "baseline_score": 0.74
+        },
+        {
+          "id": "demo_030",
+          "regular": "https://images.unsplash.com/photo-1571982270044-4e8fe68b69a2",
+          "alt_description": "Gradient cocktail with smooth color transitions and fruit garnish",
+          "score": 0.87,
+          "baseline_score": 0.70
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-01-11T00:00:00Z",
+    "total_queries": 15,
+    "total_candidates": 30,
+    "avg_improvement": 0.16,
+    "baseline_system": "CLIP-only scoring",
+    "enhanced_system": "CLIP + YOLO + Region Control + CoTRR-lite",
+    "description": "Demonstration dataset showcasing the computer vision pipeline's ability to improve cocktail image selection through enhanced scoring mechanisms, region-based controls, and advanced reranking."
+  }
+}

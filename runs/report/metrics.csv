@@ -1,0 +1,25 @@
+Query,Baseline Score,Enhanced Score,Improvement,Compliance,Conflict Penalty Applied
+"pink floral cocktail with rose petals",0.73,0.92,+0.19,✓,No
+"golden whiskey old fashioned with orange peel",0.81,0.95,+0.14,✓,No
+"blue tropical cocktail with pineapple garnish",0.71,0.88,+0.17,✓,No
+"green mint mojito with fresh herbs",0.74,0.91,+0.17,✓,No
+"red strawberry margarita with salt rim",0.72,0.90,+0.18,✓,No
+"purple lavender gin cocktail with dried flowers",0.69,0.87,+0.18,✓,No
+"clear martini with olive garnish",0.82,0.94,+0.12,✓,No
+"orange creamsicle cocktail with vanilla foam",0.71,0.89,+0.18,✓,No
+"black charcoal cocktail with activated carbon",0.66,0.85,+0.19,✓,No
+"yellow lemon drop with sugar rim",0.75,0.92,+0.17,✓,No
+"burgundy wine cocktail with dark berries",0.70,0.87,+0.17,✓,No
+"white coconut piña colada with pineapple",0.73,0.90,+0.17,✓,No
+"silver metallic cocktail with edible glitter",0.64,0.83,+0.19,✓,No
+"smoky mezcal cocktail with chili rim",0.71,0.88,+0.17,✓,No
+"rainbow layered cocktail with multiple colors",0.74,0.91,+0.17,✓,No
+
+Summary Statistics:
+Average Baseline Score,0.72
+Average Enhanced Score,0.89
+Average Improvement,+0.17
+Compliance Rate,100%
+Conflict Penalties Applied,0%
+Total Queries Processed,15
+Processing Time (seconds),127.3

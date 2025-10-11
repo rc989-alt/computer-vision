@@ -1,0 +1,73 @@
+{
+  "results": [
+    {
+      "query": "pink floral cocktail with rose petals",
+      "baseline_selection": {
+        "id": "demo_002",
+        "score": 0.73,
+        "confidence": 0.68,
+        "compliance": false,
+        "detected_objects": ["glass", "liquid"],
+        "color_analysis": "pink_salmon",
+        "garnish_detected": false
+      },
+      "enhanced_selection": {
+        "id": "demo_001", 
+        "score": 0.92,
+        "confidence": 0.89,
+        "compliance": true,
+        "detected_objects": ["crystal_glass", "pink_liquid", "rose_petals", "garnish"],
+        "color_analysis": "pink_rose",
+        "garnish_detected": true,
+        "garnish_type": "floral",
+        "region_controls_applied": ["glass_validation", "garnish_matching", "color_harmony"],
+        "conflict_penalties": [],
+        "improvement_factors": ["garnish_detection", "glass_quality", "color_consistency"]
+      }
+    },
+    {
+      "query": "golden whiskey old fashioned with orange peel",
+      "baseline_selection": {
+        "id": "demo_004",
+        "score": 0.76,
+        "confidence": 0.71,
+        "compliance": true,
+        "detected_objects": ["glass", "liquid", "ice"],
+        "color_analysis": "amber_gold",
+        "garnish_detected": false
+      },
+      "enhanced_selection": {
+        "id": "demo_003",
+        "score": 0.95,
+        "confidence": 0.92,
+        "compliance": true,
+        "detected_objects": ["crystal_rocks_glass", "amber_whiskey", "large_ice_cube", "orange_peel"],
+        "color_analysis": "golden_amber",
+        "garnish_detected": true,
+        "garnish_type": "citrus",
+        "region_controls_applied": ["glass_validation", "garnish_matching", "ice_detection"],
+        "conflict_penalties": [],
+        "improvement_factors": ["garnish_detection", "glass_quality", "ice_quality"]
+      }
+    }
+  ],
+  "pipeline_metadata": {
+    "timestamp": "2025-01-11T00:00:00Z",
+    "version": "1.0.0",
+    "config_used": "config/default.json",
+    "processing_time_seconds": 127.3,
+    "total_queries": 15,
+    "successful_queries": 15,
+    "average_improvement": 0.17,
+    "compliance_rate": 1.0,
+    "conflict_rate": 0.0
+  },
+  "system_performance": {
+    "clip_embedding_time": 45.2,
+    "yolo_detection_time": 38.7,
+    "compliance_scoring_time": 28.1,
+    "cotrr_reranking_time": 15.3,
+    "memory_usage_mb": 2847,
+    "gpu_utilization_percent": 78
+  }
+}
