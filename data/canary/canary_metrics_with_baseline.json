@@ -1,0 +1,866 @@
+{
+  "run_id": "with_baseline",
+  "timestamp": "2025-10-11T12:58:23.953282",
+  "aggregated_metrics": {
+    "mean_margin": 0.07716727569968705,
+    "median_margin": 0.012887908563340988,
+    "std_margin": 0.38846597156462587,
+    "p95_margin": 0.6753058982591871,
+    "p05_margin": -0.4334125010245403,
+    "positive_accuracy": 1.0,
+    "negative_accuracy": 0.9333333333333333,
+    "total_items": 85
+  },
+  "individual_scores": [
+    {
+      "image_id": "probe_neg_023",
+      "sim_cocktail": 0.1987456034490259,
+      "sim_not_cocktail": 0.6329703203354374,
+      "clip_margin": -0.4342247168864115,
+      "ground_truth_label": "negative",
+      "description": "essential oil in glass dropper bottle",
+      "domain": "liquid_perfume",
+      "timestamp": "2025-10-11T12:58:23.952733"
+    },
+    {
+      "image_id": "probe_neg_019",
+      "sim_cocktail": 0.31647902639620884,
+      "sim_not_cocktail": 0.6166095331221542,
+      "clip_margin": -0.3001305067259453,
+      "ground_truth_label": "negative",
+      "description": "flavored water with berry garnish",
+      "domain": "beverage_water",
+      "timestamp": "2025-10-11T12:58:23.952748"
+    },
+    {
+      "image_id": "probe_pos_040",
+      "sim_cocktail": 0.5006301545811065,
+      "sim_not_cocktail": 0.24521525430501295,
+      "clip_margin": 0.25541490027609354,
+      "ground_truth_label": "positive",
+      "description": "striped cocktail with density layers",
+      "domain": "tricky_layered",
+      "timestamp": "2025-10-11T12:58:23.952756"
+    },
+    {
+      "image_id": "probe_pos_031",
+      "sim_cocktail": 0.6689247314596805,
+      "sim_not_cocktail": 0.3017473485399943,
+      "clip_margin": 0.36717738291968616,
+      "ground_truth_label": "positive",
+      "description": "creamy white cocktail with cinnamon dusting",
+      "domain": "tricky_cream",
+      "timestamp": "2025-10-11T12:58:23.952762"
+    },
+    {
+      "image_id": "probe_neg_010",
+      "sim_cocktail": 0.47550560382451434,
+      "sim_not_cocktail": 0.7078088638706218,
+      "clip_margin": -0.23230326004610746,
+      "ground_truth_label": "negative",
+      "description": "ginger ale with ice in highball glass",
+      "domain": "beverage_soda",
+      "timestamp": "2025-10-11T12:58:23.952768"
+    },
+    {
+      "image_id": "probe_neg_027",
+      "sim_cocktail": 0.30589657368881107,
+      "sim_not_cocktail": 0.5321510692568809,
+      "clip_margin": -0.22625449556806987,
+      "ground_truth_label": "negative",
+      "description": "gazpacho soup in wine glass with herbs",
+      "domain": "liquid_soup",
+      "timestamp": "2025-10-11T12:58:23.952774"
+    },
+    {
+      "image_id": "probe_neg_041",
+      "sim_cocktail": 0.3251995150112369,
+      "sim_not_cocktail": 0.7801255779512772,
+      "clip_margin": -0.45492606294004034,
+      "ground_truth_label": "negative",
+      "description": "glass hurricane with pillar candle",
+      "domain": "decorative_candle",
+      "timestamp": "2025-10-11T12:58:23.952779"
+    },
+    {
+      "image_id": "probe_pos_020",
+      "sim_cocktail": 0.7907556692480429,
+      "sim_not_cocktail": 0.10932978718562597,
+      "clip_margin": 0.6814258820624168,
+      "ground_truth_label": "positive",
+      "description": "azure blue drink with coconut rim",
+      "domain": "color_blue",
+      "timestamp": "2025-10-11T12:58:23.952784"
+    },
+    {
+      "image_id": "probe_neg_029",
+      "sim_cocktail": 0.26287175879509145,
+      "sim_not_cocktail": 0.6928505044263459,
+      "clip_margin": -0.42997874563125443,
+      "ground_truth_label": "negative",
+      "description": "consomm\u00e9 in transparent bowl",
+      "domain": "liquid_soup",
+      "timestamp": "2025-10-11T12:58:23.952789"
+    },
+    {
+      "image_id": "probe_pos_027",
+      "sim_cocktail": 0.6015392287534456,
+      "sim_not_cocktail": 0.33710818809076876,
+      "clip_margin": 0.2644310406626768,
+      "ground_truth_label": "positive",
+      "description": "dark purple cocktail with blackberry",
+      "domain": "tricky_dark",
+      "timestamp": "2025-10-11T12:58:23.952793"
+    },
+    {
+      "image_id": "probe_neg_034",
+      "sim_cocktail": 0.5320834576121677,
+      "sim_not_cocktail": 0.6892857341590272,
+      "clip_margin": -0.15720227654685948,
+      "ground_truth_label": "negative",
+      "description": "honey in glass jar with dipper",
+      "domain": "liquid_sauce",
+      "timestamp": "2025-10-11T12:58:23.952798"
+    },
+    {
+      "image_id": "probe_neg_020",
+      "sim_cocktail": 0.24422572595375144,
+      "sim_not_cocktail": 0.5941303505028174,
+      "clip_margin": -0.3499046245490659,
+      "ground_truth_label": "negative",
+      "description": "tonic water with bubbles in glass",
+      "domain": "beverage_water",
+      "timestamp": "2025-10-11T12:58:23.952803"
+    },
+    {
+      "image_id": "probe_pos_021",
+      "sim_cocktail": 0.8317184419523913,
+      "sim_not_cocktail": 0.10516404030293716,
+      "clip_margin": 0.7265544016494542,
+      "ground_truth_label": "positive",
+      "description": "emerald green cocktail with mint sprig",
+      "domain": "color_green",
+      "timestamp": "2025-10-11T12:58:23.952807"
+    },
+    {
+      "image_id": "probe_neg_017",
+      "sim_cocktail": 0.5234035635490496,
+      "sim_not_cocktail": 0.5105156549857086,
+      "clip_margin": 0.012887908563340988,
+      "ground_truth_label": "negative",
+      "description": "infused water with cucumber slices",
+      "domain": "beverage_water",
+      "timestamp": "2025-10-11T12:58:23.952812"
+    },
+    {
+      "image_id": "probe_pos_016",
+      "sim_cocktail": 0.8899606721684025,
+      "sim_not_cocktail": 0.22600928473596965,
+      "clip_margin": 0.6639513874324328,
+      "ground_truth_label": "positive",
+      "description": "electric blue tropical cocktail with pineapple",
+      "domain": "color_blue",
+      "timestamp": "2025-10-11T12:58:23.952817"
+    },
+    {
+      "image_id": "probe_pos_034",
+      "sim_cocktail": 0.4585415054024772,
+      "sim_not_cocktail": 0.3645643623215186,
+      "clip_margin": 0.09397714308095856,
+      "ground_truth_label": "positive",
+      "description": "milky white cocktail with coffee beans",
+      "domain": "tricky_cream",
+      "timestamp": "2025-10-11T12:58:23.952822"
+    },
+    {
+      "image_id": "probe_neg_032",
+      "sim_cocktail": 0.3725998832335323,
+      "sim_not_cocktail": 0.6328199062859268,
+      "clip_margin": -0.26022002305239444,
+      "ground_truth_label": "negative",
+      "description": "vinegar in crystal bottle with cork",
+      "domain": "liquid_sauce",
+      "timestamp": "2025-10-11T12:58:23.952826"
+    },
+    {
+      "image_id": "probe_neg_044",
+      "sim_cocktail": 0.5024968557919873,
+      "sim_not_cocktail": 0.6219056799547281,
+      "clip_margin": -0.11940882416274079,
+      "ground_truth_label": "negative",
+      "description": "glass lantern with tea light",
+      "domain": "decorative_candle",
+      "timestamp": "2025-10-11T12:58:23.952831"
+    },
+    {
+      "image_id": "probe_pos_009",
+      "sim_cocktail": 0.46963584594659635,
+      "sim_not_cocktail": 0.253310567233965,
+      "clip_margin": 0.21632527871263135,
+      "ground_truth_label": "positive",
+      "description": "rye whiskey old fashioned with sugar cube",
+      "domain": "classic_amber",
+      "timestamp": "2025-10-11T12:58:23.952836"
+    },
+    {
+      "image_id": "probe_pos_013",
+      "sim_cocktail": 0.8646932625128668,
+      "sim_not_cocktail": 0.2432021852627016,
+      "clip_margin": 0.6214910772501652,
+      "ground_truth_label": "positive",
+      "description": "pink gin fizz with raspberry garnish",
+      "domain": "color_pink",
+      "timestamp": "2025-10-11T12:58:23.952840"
+    },
+    {
+      "image_id": "probe_neg_028",
+      "sim_cocktail": 0.36319242745048325,
+      "sim_not_cocktail": 0.6001495304877018,
+      "clip_margin": -0.23695710303721856,
+      "ground_truth_label": "negative",
+      "description": "tomato soup in clear glass mug",
+      "domain": "liquid_soup",
+      "timestamp": "2025-10-11T12:58:23.952845"
+    },
+    {
+      "image_id": "probe_pos_037",
+      "sim_cocktail": 0.6282169573754391,
+      "sim_not_cocktail": 0.2031960997312799,
+      "clip_margin": 0.42502085764415926,
+      "ground_truth_label": "positive",
+      "description": "rainbow cocktail with multiple layers",
+      "domain": "tricky_layered",
+      "timestamp": "2025-10-11T12:58:23.952849"
+    },
+    {
+      "image_id": "probe_neg_026",
+      "sim_cocktail": 0.2993379740195242,
+      "sim_not_cocktail": 0.7825830873266877,
+      "clip_margin": -0.48324511330716347,
+      "ground_truth_label": "negative",
+      "description": "clear broth soup in glass bowl with spoon",
+      "domain": "liquid_soup",
+      "timestamp": "2025-10-11T12:58:23.952854"
+    },
+    {
+      "image_id": "probe_neg_011",
+      "sim_cocktail": 0.41193807339484545,
+      "sim_not_cocktail": 0.8590905769668844,
+      "clip_margin": -0.44715250357203895,
+      "ground_truth_label": "negative",
+      "description": "fresh orange juice in clear glass pitcher",
+      "domain": "beverage_juice",
+      "timestamp": "2025-10-11T12:58:23.952859"
+    },
+    {
+      "image_id": "probe_neg_045",
+      "sim_cocktail": 0.22409455159855432,
+      "sim_not_cocktail": 0.6008382635744026,
+      "clip_margin": -0.3767437119758483,
+      "ground_truth_label": "negative",
+      "description": "glass chimney with oil lamp",
+      "domain": "decorative_candle",
+      "timestamp": "2025-10-11T12:58:23.952863"
+    },
+    {
+      "image_id": "probe_neg_008",
+      "sim_cocktail": 0.6018953694096993,
+      "sim_not_cocktail": 0.6940833535132445,
+      "clip_margin": -0.09218798410354512,
+      "ground_truth_label": "negative",
+      "description": "orange soda with bubbles in tall glass",
+      "domain": "beverage_soda",
+      "timestamp": "2025-10-11T12:58:23.952868"
+    },
+    {
+      "image_id": "probe_pos_002",
+      "sim_cocktail": 0.7952713816654731,
+      "sim_not_cocktail": 0.12962863642487785,
+      "clip_margin": 0.6656427452405952,
+      "ground_truth_label": "positive",
+      "description": "gin martini with lemon twist in coupe glass",
+      "domain": "classic_clear",
+      "timestamp": "2025-10-11T12:58:23.952872"
+    },
+    {
+      "image_id": "probe_neg_001",
+      "sim_cocktail": 0.6237328178098905,
+      "sim_not_cocktail": 0.6689839561911717,
+      "clip_margin": -0.04525113838128114,
+      "ground_truth_label": "negative",
+      "description": "green tea in clear glass teacup with steam",
+      "domain": "beverage_tea",
+      "timestamp": "2025-10-11T12:58:23.952877"
+    },
+    {
+      "image_id": "probe_neg_002",
+      "sim_cocktail": 0.3997461563454199,
+      "sim_not_cocktail": 0.4936541988488488,
+      "clip_margin": -0.09390804250342893,
+      "ground_truth_label": "negative",
+      "description": "black tea with lemon slice in glass mug",
+      "domain": "beverage_tea",
+      "timestamp": "2025-10-11T12:58:23.952882"
+    },
+    {
+      "image_id": "probe_neg_004",
+      "sim_cocktail": 0.4363895014284104,
+      "sim_not_cocktail": 0.6075863834557732,
+      "clip_margin": -0.17119688202736283,
+      "ground_truth_label": "negative",
+      "description": "iced tea with ice cubes in tall glass",
+      "domain": "beverage_tea",
+      "timestamp": "2025-10-11T12:58:23.952886"
+    },
+    {
+      "image_id": "probe_pos_033",
+      "sim_cocktail": 0.5367736498960383,
+      "sim_not_cocktail": 0.28605850058162813,
+      "clip_margin": 0.25071514931441014,
+      "ground_truth_label": "positive",
+      "description": "cream-colored drink with nutmeg garnish",
+      "domain": "tricky_cream",
+      "timestamp": "2025-10-11T12:58:23.952891"
+    },
+    {
+      "image_id": "probe_pos_024",
+      "sim_cocktail": 0.7770298897216418,
+      "sim_not_cocktail": 0.3718079445559407,
+      "clip_margin": 0.4052219451657011,
+      "ground_truth_label": "positive",
+      "description": "jade colored drink with cucumber garnish",
+      "domain": "color_green",
+      "timestamp": "2025-10-11T12:58:23.952897"
+    },
+    {
+      "image_id": "probe_pos_019",
+      "sim_cocktail": 0.7078013439628548,
+      "sim_not_cocktail": 0.2943071742941347,
+      "clip_margin": 0.41349416966872005,
+      "ground_truth_label": "positive",
+      "description": "blue curacao cocktail with ice and mint",
+      "domain": "color_blue",
+      "timestamp": "2025-10-11T12:58:23.952901"
+    },
+    {
+      "image_id": "probe_neg_006",
+      "sim_cocktail": 0.46323044305525063,
+      "sim_not_cocktail": 0.5729200264062033,
+      "clip_margin": -0.10968958335095269,
+      "ground_truth_label": "negative",
+      "description": "cola with ice in clear glass with straw",
+      "domain": "beverage_soda",
+      "timestamp": "2025-10-11T12:58:23.952906"
+    },
+    {
+      "image_id": "probe_neg_035",
+      "sim_cocktail": 0.615795967977127,
+      "sim_not_cocktail": 0.7690565211486422,
+      "clip_margin": -0.1532605531715152,
+      "ground_truth_label": "negative",
+      "description": "syrup in clear glass bottle",
+      "domain": "liquid_sauce",
+      "timestamp": "2025-10-11T12:58:23.952911"
+    },
+    {
+      "image_id": "probe_pos_008",
+      "sim_cocktail": 0.6708450283814427,
+      "sim_not_cocktail": 0.14141300748328,
+      "clip_margin": 0.5294320208981627,
+      "ground_truth_label": "positive",
+      "description": "bourbon old fashioned with expressed orange oils",
+      "domain": "classic_amber",
+      "timestamp": "2025-10-11T12:58:23.952915"
+    },
+    {
+      "image_id": "probe_pos_035",
+      "sim_cocktail": 0.6205017462011506,
+      "sim_not_cocktail": 0.3142930484169136,
+      "clip_margin": 0.30620869778423704,
+      "ground_truth_label": "positive",
+      "description": "pale cream cocktail with caramel drizzle",
+      "domain": "tricky_cream",
+      "timestamp": "2025-10-11T12:58:23.952920"
+    },
+    {
+      "image_id": "probe_neg_037",
+      "sim_cocktail": 0.4075789150823942,
+      "sim_not_cocktail": 0.8061287852922276,
+      "clip_margin": -0.39854987020983346,
+      "ground_truth_label": "negative",
+      "description": "colored glass vase with single stem",
+      "domain": "decorative_vase",
+      "timestamp": "2025-10-11T12:58:23.952924"
+    },
+    {
+      "image_id": "probe_pos_003",
+      "sim_cocktail": 0.83014341606964,
+      "sim_not_cocktail": 0.29258314453716905,
+      "clip_margin": 0.537560271532471,
+      "ground_truth_label": "positive",
+      "description": "vodka martini with three olives on pick",
+      "domain": "classic_clear",
+      "timestamp": "2025-10-11T12:58:23.952929"
+    },
+    {
+      "image_id": "probe_pos_017",
+      "sim_cocktail": 0.7330925888478054,
+      "sim_not_cocktail": 0.1532846326563775,
+      "clip_margin": 0.5798079561914279,
+      "ground_truth_label": "positive",
+      "description": "sapphire blue martini with silver rim",
+      "domain": "color_blue",
+      "timestamp": "2025-10-11T12:58:23.952933"
+    },
+    {
+      "image_id": "probe_pos_039",
+      "sim_cocktail": 0.6786974569682127,
+      "sim_not_cocktail": 0.24734276058176163,
+      "clip_margin": 0.4313546963864511,
+      "ground_truth_label": "positive",
+      "description": "ombre cocktail with color transition",
+      "domain": "tricky_layered",
+      "timestamp": "2025-10-11T12:58:23.952938"
+    },
+    {
+      "image_id": "probe_neg_003",
+      "sim_cocktail": 0.5036068625511181,
+      "sim_not_cocktail": 0.7530161465928015,
+      "clip_margin": -0.2494092840416834,
+      "ground_truth_label": "negative",
+      "description": "herbal tea with mint leaves in transparent cup",
+      "domain": "beverage_tea",
+      "timestamp": "2025-10-11T12:58:23.952942"
+    },
+    {
+      "image_id": "probe_pos_023",
+      "sim_cocktail": 0.7991355790407042,
+      "sim_not_cocktail": 0.249246885023038,
+      "clip_margin": 0.5498886940176662,
+      "ground_truth_label": "positive",
+      "description": "forest green cocktail with herbs",
+      "domain": "color_green",
+      "timestamp": "2025-10-11T12:58:23.952947"
+    },
+    {
+      "image_id": "probe_neg_007",
+      "sim_cocktail": 0.40355673132679293,
+      "sim_not_cocktail": 0.5340176633032949,
+      "clip_margin": -0.130460931976502,
+      "ground_truth_label": "negative",
+      "description": "sparkling water with lime in wine glass",
+      "domain": "beverage_soda",
+      "timestamp": "2025-10-11T12:58:23.952951"
+    },
+    {
+      "image_id": "probe_pos_025",
+      "sim_cocktail": 0.650107102834756,
+      "sim_not_cocktail": 0.23113034534138938,
+      "clip_margin": 0.41897675749336666,
+      "ground_truth_label": "positive",
+      "description": "bright green cocktail with basil leaves",
+      "domain": "color_green",
+      "timestamp": "2025-10-11T12:58:23.952956"
+    },
+    {
+      "image_id": "probe_pos_006",
+      "sim_cocktail": 0.6565520588428365,
+      "sim_not_cocktail": 0.408413200675497,
+      "clip_margin": 0.2481388581673395,
+      "ground_truth_label": "positive",
+      "description": "golden old fashioned with orange peel and ice sphere",
+      "domain": "classic_amber",
+      "timestamp": "2025-10-11T12:58:23.952960"
+    },
+    {
+      "image_id": "probe_pos_007",
+      "sim_cocktail": 0.924730457526082,
+      "sim_not_cocktail": 0.15743386922716945,
+      "clip_margin": 0.7672965882989125,
+      "ground_truth_label": "positive",
+      "description": "whiskey old fashioned with muddled cherry",
+      "domain": "classic_amber",
+      "timestamp": "2025-10-11T12:58:23.952965"
+    },
+    {
+      "image_id": "probe_neg_013",
+      "sim_cocktail": 0.25999792751259826,
+      "sim_not_cocktail": 0.5559768330032503,
+      "clip_margin": -0.29597890549065203,
+      "ground_truth_label": "negative",
+      "description": "cranberry juice in tall clear glass",
+      "domain": "beverage_juice",
+      "timestamp": "2025-10-11T12:58:23.952970"
+    },
+    {
+      "image_id": "probe_neg_024",
+      "sim_cocktail": 0.40947453739164347,
+      "sim_not_cocktail": 0.635792797409866,
+      "clip_margin": -0.22631826001822258,
+      "ground_truth_label": "negative",
+      "description": "fragrance in ornate glass bottle",
+      "domain": "liquid_perfume",
+      "timestamp": "2025-10-11T12:58:23.952974"
+    },
+    {
+      "image_id": "probe_neg_038",
+      "sim_cocktail": 0.3405788161045121,
+      "sim_not_cocktail": 0.722964652192531,
+      "clip_margin": -0.3823858360880189,
+      "ground_truth_label": "negative",
+      "description": "crystal vase with arrangement",
+      "domain": "decorative_vase",
+      "timestamp": "2025-10-11T12:58:23.952979"
+    },
+    {
+      "image_id": "probe_pos_010",
+      "sim_cocktail": 0.8725911821246028,
+      "sim_not_cocktail": 0.305220708173214,
+      "clip_margin": 0.5673704739513888,
+      "ground_truth_label": "positive",
+      "description": "aged whiskey cocktail with large ice cube",
+      "domain": "classic_amber",
+      "timestamp": "2025-10-11T12:58:23.952983"
+    },
+    {
+      "image_id": "probe_neg_022",
+      "sim_cocktail": 0.385471451109512,
+      "sim_not_cocktail": 0.6217744620098151,
+      "clip_margin": -0.23630301090030315,
+      "ground_truth_label": "negative",
+      "description": "cologne in crystal decanter with stopper",
+      "domain": "liquid_perfume",
+      "timestamp": "2025-10-11T12:58:23.952989"
+    },
+    {
+      "image_id": "probe_pos_022",
+      "sim_cocktail": 0.7876487742624374,
+      "sim_not_cocktail": 0.10926778250638353,
+      "clip_margin": 0.6783809917560539,
+      "ground_truth_label": "positive",
+      "description": "lime green margarita with salt rim",
+      "domain": "color_green",
+      "timestamp": "2025-10-11T12:58:23.952993"
+    },
+    {
+      "image_id": "probe_neg_031",
+      "sim_cocktail": 0.40179981685947264,
+      "sim_not_cocktail": 0.6807600798662187,
+      "clip_margin": -0.27896026300674603,
+      "ground_truth_label": "negative",
+      "description": "olive oil in glass cruet with herbs",
+      "domain": "liquid_sauce",
+      "timestamp": "2025-10-11T12:58:23.952998"
+    },
+    {
+      "image_id": "probe_neg_005",
+      "sim_cocktail": 0.3652801646576119,
+      "sim_not_cocktail": 0.6835638562253742,
+      "clip_margin": -0.31828369156776226,
+      "ground_truth_label": "negative",
+      "description": "bubble tea with tapioca pearls in clear cup",
+      "domain": "beverage_tea",
+      "timestamp": "2025-10-11T12:58:23.953003"
+    },
+    {
+      "image_id": "probe_pos_011",
+      "sim_cocktail": 0.893129343906224,
+      "sim_not_cocktail": 0.21540765739238893,
+      "clip_margin": 0.6777216865138351,
+      "ground_truth_label": "positive",
+      "description": "bright pink cosmopolitan with lime wheel garnish",
+      "domain": "color_pink",
+      "timestamp": "2025-10-11T12:58:23.953007"
+    },
+    {
+      "image_id": "probe_neg_021",
+      "sim_cocktail": 0.32042088236448185,
+      "sim_not_cocktail": 0.7135876818900313,
+      "clip_margin": -0.39316679952554945,
+      "ground_truth_label": "negative",
+      "description": "perfume bottle with golden liquid inside",
+      "domain": "liquid_perfume",
+      "timestamp": "2025-10-11T12:58:23.953012"
+    },
+    {
+      "image_id": "probe_neg_009",
+      "sim_cocktail": 0.5683640550125904,
+      "sim_not_cocktail": 0.553979006315063,
+      "clip_margin": 0.014385048697527325,
+      "ground_truth_label": "negative",
+      "description": "clear soda with lemon twist in tumbler",
+      "domain": "beverage_soda",
+      "timestamp": "2025-10-11T12:58:23.953016"
+    },
+    {
+      "image_id": "probe_pos_001",
+      "sim_cocktail": 0.5180114854218372,
+      "sim_not_cocktail": 0.21054381545198125,
+      "clip_margin": 0.3074676699698559,
+      "ground_truth_label": "positive",
+      "description": "crystal clear martini with olive garnish in chilled glass",
+      "domain": "classic_clear",
+      "timestamp": "2025-10-11T12:58:23.953021"
+    },
+    {
+      "image_id": "probe_neg_016",
+      "sim_cocktail": 0.3500474936218392,
+      "sim_not_cocktail": 0.7033908670519069,
+      "clip_margin": -0.3533433734300677,
+      "ground_truth_label": "negative",
+      "description": "sparkling mineral water with lime wedge",
+      "domain": "beverage_water",
+      "timestamp": "2025-10-11T12:58:23.953025"
+    },
+    {
+      "image_id": "probe_neg_012",
+      "sim_cocktail": 0.3897166057084529,
+      "sim_not_cocktail": 0.6822969079867518,
+      "clip_margin": -0.2925803022782989,
+      "ground_truth_label": "negative",
+      "description": "apple juice in wine glass with apple slice",
+      "domain": "beverage_juice",
+      "timestamp": "2025-10-11T12:58:23.953030"
+    },
+    {
+      "image_id": "probe_neg_039",
+      "sim_cocktail": 0.2956359894451591,
+      "sim_not_cocktail": 0.7257996270222148,
+      "clip_margin": -0.43016363757705567,
+      "ground_truth_label": "negative",
+      "description": "tall glass vase with bamboo",
+      "domain": "decorative_vase",
+      "timestamp": "2025-10-11T12:58:23.953034"
+    },
+    {
+      "image_id": "probe_pos_038",
+      "sim_cocktail": 0.7277881789368933,
+      "sim_not_cocktail": 0.26987043950456224,
+      "clip_margin": 0.45791773943233105,
+      "ground_truth_label": "positive",
+      "description": "gradient cocktail from red to yellow",
+      "domain": "tricky_layered",
+      "timestamp": "2025-10-11T12:58:23.953039"
+    },
+    {
+      "image_id": "probe_neg_018",
+      "sim_cocktail": 0.26478201853774375,
+      "sim_not_cocktail": 0.6163678134587498,
+      "clip_margin": -0.35158579492100606,
+      "ground_truth_label": "negative",
+      "description": "plain water with ice in clear glass",
+      "domain": "beverage_water",
+      "timestamp": "2025-10-11T12:58:23.953043"
+    },
+    {
+      "image_id": "probe_neg_040",
+      "sim_cocktail": 0.3124566426782919,
+      "sim_not_cocktail": 0.6717601178489937,
+      "clip_margin": -0.3593034751707018,
+      "ground_truth_label": "negative",
+      "description": "round glass bowl with floating candles",
+      "domain": "decorative_vase",
+      "timestamp": "2025-10-11T12:58:23.953048"
+    },
+    {
+      "image_id": "probe_neg_014",
+      "sim_cocktail": 0.37403337022527683,
+      "sim_not_cocktail": 0.687011656141186,
+      "clip_margin": -0.31297828591590915,
+      "ground_truth_label": "negative",
+      "description": "tomato juice with celery stick garnish",
+      "domain": "beverage_juice",
+      "timestamp": "2025-10-11T12:58:23.953052"
+    },
+    {
+      "image_id": "probe_pos_026",
+      "sim_cocktail": 0.5851775019363086,
+      "sim_not_cocktail": 0.40103696723325494,
+      "clip_margin": 0.18414053470305364,
+      "ground_truth_label": "positive",
+      "description": "black charcoal cocktail with silver garnish",
+      "domain": "tricky_dark",
+      "timestamp": "2025-10-11T12:58:23.953057"
+    },
+    {
+      "image_id": "probe_neg_033",
+      "sim_cocktail": 0.3862139797506058,
+      "sim_not_cocktail": 0.5438956083428719,
+      "clip_margin": -0.1576816285922661,
+      "ground_truth_label": "negative",
+      "description": "salad dressing in glass container",
+      "domain": "liquid_sauce",
+      "timestamp": "2025-10-11T12:58:23.953061"
+    },
+    {
+      "image_id": "probe_neg_025",
+      "sim_cocktail": 0.5859461925003417,
+      "sim_not_cocktail": 0.5340370908596339,
+      "clip_margin": 0.05190910164070783,
+      "ground_truth_label": "negative",
+      "description": "amber perfume in vintage glass container",
+      "domain": "liquid_perfume",
+      "timestamp": "2025-10-11T12:58:23.953066"
+    },
+    {
+      "image_id": "probe_pos_030",
+      "sim_cocktail": 0.722865076579287,
+      "sim_not_cocktail": 0.25651177545629217,
+      "clip_margin": 0.46635330112299483,
+      "ground_truth_label": "positive",
+      "description": "deep black cocktail with activated carbon",
+      "domain": "tricky_dark",
+      "timestamp": "2025-10-11T12:58:23.953070"
+    },
+    {
+      "image_id": "probe_pos_028",
+      "sim_cocktail": 0.5506587561626802,
+      "sim_not_cocktail": 0.21231779615152924,
+      "clip_margin": 0.338340960011151,
+      "ground_truth_label": "positive",
+      "description": "midnight black drink with gold rim",
+      "domain": "tricky_dark",
+      "timestamp": "2025-10-11T12:58:23.953075"
+    },
+    {
+      "image_id": "probe_neg_036",
+      "sim_cocktail": 0.3261702067545297,
+      "sim_not_cocktail": 0.6671885159357357,
+      "clip_margin": -0.341018309181206,
+      "ground_truth_label": "negative",
+      "description": "clear glass vase with water and flowers",
+      "domain": "decorative_vase",
+      "timestamp": "2025-10-11T12:58:23.953079"
+    },
+    {
+      "image_id": "probe_neg_043",
+      "sim_cocktail": 0.32299234526632514,
+      "sim_not_cocktail": 0.6167834847162107,
+      "clip_margin": -0.29379113944988555,
+      "ground_truth_label": "negative",
+      "description": "floating candles in glass bowl",
+      "domain": "decorative_candle",
+      "timestamp": "2025-10-11T12:58:23.953084"
+    },
+    {
+      "image_id": "probe_pos_005",
+      "sim_cocktail": 0.7934685833083255,
+      "sim_not_cocktail": 0.2819228294500028,
+      "clip_margin": 0.5115457538583227,
+      "ground_truth_label": "positive",
+      "description": "classic gin martini with cocktail onion",
+      "domain": "classic_clear",
+      "timestamp": "2025-10-11T12:58:23.953088"
+    },
+    {
+      "image_id": "probe_neg_015",
+      "sim_cocktail": 0.4538497826300071,
+      "sim_not_cocktail": 0.6036719100419741,
+      "clip_margin": -0.149822127411967,
+      "ground_truth_label": "negative",
+      "description": "grape juice in champagne flute",
+      "domain": "beverage_juice",
+      "timestamp": "2025-10-11T12:58:23.953092"
+    },
+    {
+      "image_id": "probe_pos_012",
+      "sim_cocktail": 0.6872523327406396,
+      "sim_not_cocktail": 0.352301990782241,
+      "clip_margin": 0.33495034195839857,
+      "ground_truth_label": "positive",
+      "description": "rose-colored cocktail with dried flowers",
+      "domain": "color_pink",
+      "timestamp": "2025-10-11T12:58:23.953097"
+    },
+    {
+      "image_id": "probe_neg_030",
+      "sim_cocktail": 0.49851085724269883,
+      "sim_not_cocktail": 0.6110057318939253,
+      "clip_margin": -0.11249487465122643,
+      "ground_truth_label": "negative",
+      "description": "cold soup served in glass vessel",
+      "domain": "liquid_soup",
+      "timestamp": "2025-10-11T12:58:23.953101"
+    },
+    {
+      "image_id": "probe_pos_014",
+      "sim_cocktail": 0.7756052800562954,
+      "sim_not_cocktail": 0.3236162458466486,
+      "clip_margin": 0.45198903420964676,
+      "ground_truth_label": "positive",
+      "description": "fuchsia-colored martini with sugar rim",
+      "domain": "color_pink",
+      "timestamp": "2025-10-11T12:58:23.953106"
+    },
+    {
+      "image_id": "probe_pos_018",
+      "sim_cocktail": 0.7300457651636374,
+      "sim_not_cocktail": 0.15757154187522818,
+      "clip_margin": 0.5724742232884092,
+      "ground_truth_label": "positive",
+      "description": "ocean blue cocktail with umbrella garnish",
+      "domain": "color_blue",
+      "timestamp": "2025-10-11T12:58:23.953110"
+    },
+    {
+      "image_id": "probe_pos_029",
+      "sim_cocktail": 0.7175332777542024,
+      "sim_not_cocktail": 0.36555800662158633,
+      "clip_margin": 0.35197527113261606,
+      "ground_truth_label": "positive",
+      "description": "charcoal-filtered cocktail in coupe glass",
+      "domain": "tricky_dark",
+      "timestamp": "2025-10-11T12:58:23.953115"
+    },
+    {
+      "image_id": "probe_pos_032",
+      "sim_cocktail": 0.6360751660911355,
+      "sim_not_cocktail": 0.32787893357574477,
+      "clip_margin": 0.3081962325153907,
+      "ground_truth_label": "positive",
+      "description": "ivory colored cocktail with vanilla foam",
+      "domain": "tricky_cream",
+      "timestamp": "2025-10-11T12:58:23.953119"
+    },
+    {
+      "image_id": "probe_pos_036",
+      "sim_cocktail": 0.6895830130164787,
+      "sim_not_cocktail": 0.22787512174120278,
+      "clip_margin": 0.46170789127527595,
+      "ground_truth_label": "positive",
+      "description": "layered cocktail with distinct color bands",
+      "domain": "tricky_layered",
+      "timestamp": "2025-10-11T12:58:23.953124"
+    },
+    {
+      "image_id": "probe_pos_004",
+      "sim_cocktail": 0.8297409136402506,
+      "sim_not_cocktail": 0.2622702657740608,
+      "clip_margin": 0.5674706478661897,
+      "ground_truth_label": "positive",
+      "description": "dry vermouth martini in frosted glass",
+      "domain": "classic_clear",
+      "timestamp": "2025-10-11T12:58:23.953128"
+    },
+    {
+      "image_id": "probe_pos_015",
+      "sim_cocktail": 0.7850062840219643,
+      "sim_not_cocktail": 0.19105626827522118,
+      "clip_margin": 0.5939500157467431,
+      "ground_truth_label": "positive",
+      "description": "blush pink cocktail with edible glitter",
+      "domain": "color_pink",
+      "timestamp": "2025-10-11T12:58:23.953133"
+    },
+    {
+      "image_id": "probe_neg_042",
+      "sim_cocktail": 0.2350200069457712,
+      "sim_not_cocktail": 0.7677183495916315,
+      "clip_margin": -0.5326983426458604,
+      "ground_truth_label": "negative",
+      "description": "votive candle in clear glass holder",
+      "domain": "decorative_candle",
+      "timestamp": "2025-10-11T12:58:23.953138"
+    }
+  ]
+}

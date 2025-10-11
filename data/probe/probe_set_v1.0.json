@@ -1,0 +1,813 @@
+{
+  "metadata": {
+    "version": "v1.0",
+    "created_at": "2025-10-11T12:54:47.433142",
+    "total_items": 85,
+    "positive_count": 40,
+    "negative_count": 45,
+    "random_seed": 42,
+    "description": "Balanced probe set for canary monitoring of cocktail classification"
+  },
+  "balance_report": {
+    "label_distribution": {
+      "negative": 45,
+      "positive": 40
+    },
+    "domain_distribution": {
+      "liquid_perfume": 5,
+      "beverage_water": 5,
+      "tricky_layered": 5,
+      "tricky_cream": 5,
+      "beverage_soda": 5,
+      "liquid_soup": 5,
+      "decorative_candle": 5,
+      "color_blue": 5,
+      "tricky_dark": 5,
+      "liquid_sauce": 5,
+      "color_green": 5,
+      "classic_amber": 5,
+      "color_pink": 5,
+      "beverage_juice": 5,
+      "classic_clear": 5,
+      "beverage_tea": 5,
+      "decorative_vase": 5
+    },
+    "category_distribution": {
+      "liquid": 15,
+      "beverage": 20,
+      "cocktail": 40,
+      "decorative": 10
+    },
+    "difficulty_distribution": {
+      "hard": 60,
+      "easy": 25
+    }
+  },
+  "examples": [
+    {
+      "id": "probe_neg_023",
+      "url": "https://images.unsplash.com/photo-05cbe1cf-placeholder?cocktail=false",
+      "description": "essential oil in glass dropper bottle",
+      "domain": "liquid_perfume",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_019",
+      "url": "https://images.unsplash.com/photo-804845ac-placeholder?cocktail=false",
+      "description": "flavored water with berry garnish",
+      "domain": "beverage_water",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_040",
+      "url": "https://images.unsplash.com/photo-df0264c4-placeholder?cocktail=true",
+      "description": "striped cocktail with density layers",
+      "domain": "tricky_layered",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_031",
+      "url": "https://images.unsplash.com/photo-b15ce096-placeholder?cocktail=true",
+      "description": "creamy white cocktail with cinnamon dusting",
+      "domain": "tricky_cream",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_010",
+      "url": "https://images.unsplash.com/photo-6852213a-placeholder?cocktail=false",
+      "description": "ginger ale with ice in highball glass",
+      "domain": "beverage_soda",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_027",
+      "url": "https://images.unsplash.com/photo-cad9f1b1-placeholder?cocktail=false",
+      "description": "gazpacho soup in wine glass with herbs",
+      "domain": "liquid_soup",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_041",
+      "url": "https://images.unsplash.com/photo-50c6405f-placeholder?cocktail=false",
+      "description": "glass hurricane with pillar candle",
+      "domain": "decorative_candle",
+      "label": "negative",
+      "category": "decorative",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_020",
+      "url": "https://images.unsplash.com/photo-195b1f67-placeholder?cocktail=true",
+      "description": "azure blue drink with coconut rim",
+      "domain": "color_blue",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_029",
+      "url": "https://images.unsplash.com/photo-6cea19d8-placeholder?cocktail=false",
+      "description": "consomm\u00e9 in transparent bowl",
+      "domain": "liquid_soup",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_027",
+      "url": "https://images.unsplash.com/photo-b7db0261-placeholder?cocktail=true",
+      "description": "dark purple cocktail with blackberry",
+      "domain": "tricky_dark",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_034",
+      "url": "https://images.unsplash.com/photo-05b4555c-placeholder?cocktail=false",
+      "description": "honey in glass jar with dipper",
+      "domain": "liquid_sauce",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_020",
+      "url": "https://images.unsplash.com/photo-8fcae858-placeholder?cocktail=false",
+      "description": "tonic water with bubbles in glass",
+      "domain": "beverage_water",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_021",
+      "url": "https://images.unsplash.com/photo-bea20d14-placeholder?cocktail=true",
+      "description": "emerald green cocktail with mint sprig",
+      "domain": "color_green",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_017",
+      "url": "https://images.unsplash.com/photo-fa37e654-placeholder?cocktail=false",
+      "description": "infused water with cucumber slices",
+      "domain": "beverage_water",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_016",
+      "url": "https://images.unsplash.com/photo-ac64909f-placeholder?cocktail=true",
+      "description": "electric blue tropical cocktail with pineapple",
+      "domain": "color_blue",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_pos_034",
+      "url": "https://images.unsplash.com/photo-58a5d1c6-placeholder?cocktail=true",
+      "description": "milky white cocktail with coffee beans",
+      "domain": "tricky_cream",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_032",
+      "url": "https://images.unsplash.com/photo-fd695a34-placeholder?cocktail=false",
+      "description": "vinegar in crystal bottle with cork",
+      "domain": "liquid_sauce",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_044",
+      "url": "https://images.unsplash.com/photo-0bd05213-placeholder?cocktail=false",
+      "description": "glass lantern with tea light",
+      "domain": "decorative_candle",
+      "label": "negative",
+      "category": "decorative",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_009",
+      "url": "https://images.unsplash.com/photo-7c569bc6-placeholder?cocktail=true",
+      "description": "rye whiskey old fashioned with sugar cube",
+      "domain": "classic_amber",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_pos_013",
+      "url": "https://images.unsplash.com/photo-b6a68aa4-placeholder?cocktail=true",
+      "description": "pink gin fizz with raspberry garnish",
+      "domain": "color_pink",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_028",
+      "url": "https://images.unsplash.com/photo-0b63b8c1-placeholder?cocktail=false",
+      "description": "tomato soup in clear glass mug",
+      "domain": "liquid_soup",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_037",
+      "url": "https://images.unsplash.com/photo-45eb64a6-placeholder?cocktail=true",
+      "description": "rainbow cocktail with multiple layers",
+      "domain": "tricky_layered",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_026",
+      "url": "https://images.unsplash.com/photo-a53ab9ac-placeholder?cocktail=false",
+      "description": "clear broth soup in glass bowl with spoon",
+      "domain": "liquid_soup",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_011",
+      "url": "https://images.unsplash.com/photo-a12a101f-placeholder?cocktail=false",
+      "description": "fresh orange juice in clear glass pitcher",
+      "domain": "beverage_juice",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_045",
+      "url": "https://images.unsplash.com/photo-6a617dca-placeholder?cocktail=false",
+      "description": "glass chimney with oil lamp",
+      "domain": "decorative_candle",
+      "label": "negative",
+      "category": "decorative",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_008",
+      "url": "https://images.unsplash.com/photo-5a36a0fd-placeholder?cocktail=false",
+      "description": "orange soda with bubbles in tall glass",
+      "domain": "beverage_soda",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_002",
+      "url": "https://images.unsplash.com/photo-c7838b01-placeholder?cocktail=true",
+      "description": "gin martini with lemon twist in coupe glass",
+      "domain": "classic_clear",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_001",
+      "url": "https://images.unsplash.com/photo-f04be97f-placeholder?cocktail=false",
+      "description": "green tea in clear glass teacup with steam",
+      "domain": "beverage_tea",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_002",
+      "url": "https://images.unsplash.com/photo-33e46c56-placeholder?cocktail=false",
+      "description": "black tea with lemon slice in glass mug",
+      "domain": "beverage_tea",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_004",
+      "url": "https://images.unsplash.com/photo-9f13516b-placeholder?cocktail=false",
+      "description": "iced tea with ice cubes in tall glass",
+      "domain": "beverage_tea",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_033",
+      "url": "https://images.unsplash.com/photo-e605218d-placeholder?cocktail=true",
+      "description": "cream-colored drink with nutmeg garnish",
+      "domain": "tricky_cream",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_024",
+      "url": "https://images.unsplash.com/photo-443aa4ce-placeholder?cocktail=true",
+      "description": "jade colored drink with cucumber garnish",
+      "domain": "color_green",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_pos_019",
+      "url": "https://images.unsplash.com/photo-778aa7d6-placeholder?cocktail=true",
+      "description": "blue curacao cocktail with ice and mint",
+      "domain": "color_blue",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_006",
+      "url": "https://images.unsplash.com/photo-4c67ef6a-placeholder?cocktail=false",
+      "description": "cola with ice in clear glass with straw",
+      "domain": "beverage_soda",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_035",
+      "url": "https://images.unsplash.com/photo-f138278a-placeholder?cocktail=false",
+      "description": "syrup in clear glass bottle",
+      "domain": "liquid_sauce",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_008",
+      "url": "https://images.unsplash.com/photo-7d703dbc-placeholder?cocktail=true",
+      "description": "bourbon old fashioned with expressed orange oils",
+      "domain": "classic_amber",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_pos_035",
+      "url": "https://images.unsplash.com/photo-937ce79b-placeholder?cocktail=true",
+      "description": "pale cream cocktail with caramel drizzle",
+      "domain": "tricky_cream",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_037",
+      "url": "https://images.unsplash.com/photo-4c0dc26d-placeholder?cocktail=false",
+      "description": "colored glass vase with single stem",
+      "domain": "decorative_vase",
+      "label": "negative",
+      "category": "decorative",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_003",
+      "url": "https://images.unsplash.com/photo-805ad798-placeholder?cocktail=true",
+      "description": "vodka martini with three olives on pick",
+      "domain": "classic_clear",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_pos_017",
+      "url": "https://images.unsplash.com/photo-9b85a679-placeholder?cocktail=true",
+      "description": "sapphire blue martini with silver rim",
+      "domain": "color_blue",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_pos_039",
+      "url": "https://images.unsplash.com/photo-a0825b50-placeholder?cocktail=true",
+      "description": "ombre cocktail with color transition",
+      "domain": "tricky_layered",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_003",
+      "url": "https://images.unsplash.com/photo-da51fe13-placeholder?cocktail=false",
+      "description": "herbal tea with mint leaves in transparent cup",
+      "domain": "beverage_tea",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_023",
+      "url": "https://images.unsplash.com/photo-54d1952b-placeholder?cocktail=true",
+      "description": "forest green cocktail with herbs",
+      "domain": "color_green",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_007",
+      "url": "https://images.unsplash.com/photo-cb007298-placeholder?cocktail=false",
+      "description": "sparkling water with lime in wine glass",
+      "domain": "beverage_soda",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_025",
+      "url": "https://images.unsplash.com/photo-e7ec6baf-placeholder?cocktail=true",
+      "description": "bright green cocktail with basil leaves",
+      "domain": "color_green",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_pos_006",
+      "url": "https://images.unsplash.com/photo-b1013262-placeholder?cocktail=true",
+      "description": "golden old fashioned with orange peel and ice sphere",
+      "domain": "classic_amber",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_pos_007",
+      "url": "https://images.unsplash.com/photo-b2bf8909-placeholder?cocktail=true",
+      "description": "whiskey old fashioned with muddled cherry",
+      "domain": "classic_amber",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_013",
+      "url": "https://images.unsplash.com/photo-8495f82d-placeholder?cocktail=false",
+      "description": "cranberry juice in tall clear glass",
+      "domain": "beverage_juice",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_024",
+      "url": "https://images.unsplash.com/photo-c9d9fa5a-placeholder?cocktail=false",
+      "description": "fragrance in ornate glass bottle",
+      "domain": "liquid_perfume",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_038",
+      "url": "https://images.unsplash.com/photo-3b2cebdb-placeholder?cocktail=false",
+      "description": "crystal vase with arrangement",
+      "domain": "decorative_vase",
+      "label": "negative",
+      "category": "decorative",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_010",
+      "url": "https://images.unsplash.com/photo-c33def9e-placeholder?cocktail=true",
+      "description": "aged whiskey cocktail with large ice cube",
+      "domain": "classic_amber",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_022",
+      "url": "https://images.unsplash.com/photo-2b8d09c3-placeholder?cocktail=false",
+      "description": "cologne in crystal decanter with stopper",
+      "domain": "liquid_perfume",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_022",
+      "url": "https://images.unsplash.com/photo-0d444b28-placeholder?cocktail=true",
+      "description": "lime green margarita with salt rim",
+      "domain": "color_green",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_031",
+      "url": "https://images.unsplash.com/photo-5d743d25-placeholder?cocktail=false",
+      "description": "olive oil in glass cruet with herbs",
+      "domain": "liquid_sauce",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_005",
+      "url": "https://images.unsplash.com/photo-d5834389-placeholder?cocktail=false",
+      "description": "bubble tea with tapioca pearls in clear cup",
+      "domain": "beverage_tea",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_011",
+      "url": "https://images.unsplash.com/photo-c946c15f-placeholder?cocktail=true",
+      "description": "bright pink cosmopolitan with lime wheel garnish",
+      "domain": "color_pink",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_021",
+      "url": "https://images.unsplash.com/photo-d28855e8-placeholder?cocktail=false",
+      "description": "perfume bottle with golden liquid inside",
+      "domain": "liquid_perfume",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_009",
+      "url": "https://images.unsplash.com/photo-e3f0a3dd-placeholder?cocktail=false",
+      "description": "clear soda with lemon twist in tumbler",
+      "domain": "beverage_soda",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_001",
+      "url": "https://images.unsplash.com/photo-8b363a77-placeholder?cocktail=true",
+      "description": "crystal clear martini with olive garnish in chilled glass",
+      "domain": "classic_clear",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_016",
+      "url": "https://images.unsplash.com/photo-18d0de23-placeholder?cocktail=false",
+      "description": "sparkling mineral water with lime wedge",
+      "domain": "beverage_water",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_012",
+      "url": "https://images.unsplash.com/photo-f2c364e9-placeholder?cocktail=false",
+      "description": "apple juice in wine glass with apple slice",
+      "domain": "beverage_juice",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_039",
+      "url": "https://images.unsplash.com/photo-46a2bfe3-placeholder?cocktail=false",
+      "description": "tall glass vase with bamboo",
+      "domain": "decorative_vase",
+      "label": "negative",
+      "category": "decorative",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_038",
+      "url": "https://images.unsplash.com/photo-13f274f1-placeholder?cocktail=true",
+      "description": "gradient cocktail from red to yellow",
+      "domain": "tricky_layered",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_018",
+      "url": "https://images.unsplash.com/photo-3da61552-placeholder?cocktail=false",
+      "description": "plain water with ice in clear glass",
+      "domain": "beverage_water",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_040",
+      "url": "https://images.unsplash.com/photo-9fbe04c1-placeholder?cocktail=false",
+      "description": "round glass bowl with floating candles",
+      "domain": "decorative_vase",
+      "label": "negative",
+      "category": "decorative",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_014",
+      "url": "https://images.unsplash.com/photo-66afaa2c-placeholder?cocktail=false",
+      "description": "tomato juice with celery stick garnish",
+      "domain": "beverage_juice",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_026",
+      "url": "https://images.unsplash.com/photo-4a6dcef8-placeholder?cocktail=true",
+      "description": "black charcoal cocktail with silver garnish",
+      "domain": "tricky_dark",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_033",
+      "url": "https://images.unsplash.com/photo-aa9542dc-placeholder?cocktail=false",
+      "description": "salad dressing in glass container",
+      "domain": "liquid_sauce",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_025",
+      "url": "https://images.unsplash.com/photo-773ddf43-placeholder?cocktail=false",
+      "description": "amber perfume in vintage glass container",
+      "domain": "liquid_perfume",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_030",
+      "url": "https://images.unsplash.com/photo-f9b4179a-placeholder?cocktail=true",
+      "description": "deep black cocktail with activated carbon",
+      "domain": "tricky_dark",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_028",
+      "url": "https://images.unsplash.com/photo-498c243f-placeholder?cocktail=true",
+      "description": "midnight black drink with gold rim",
+      "domain": "tricky_dark",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_036",
+      "url": "https://images.unsplash.com/photo-ad225a9d-placeholder?cocktail=false",
+      "description": "clear glass vase with water and flowers",
+      "domain": "decorative_vase",
+      "label": "negative",
+      "category": "decorative",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_neg_043",
+      "url": "https://images.unsplash.com/photo-257c30b3-placeholder?cocktail=false",
+      "description": "floating candles in glass bowl",
+      "domain": "decorative_candle",
+      "label": "negative",
+      "category": "decorative",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_005",
+      "url": "https://images.unsplash.com/photo-dc5c3e34-placeholder?cocktail=true",
+      "description": "classic gin martini with cocktail onion",
+      "domain": "classic_clear",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_015",
+      "url": "https://images.unsplash.com/photo-789f10dd-placeholder?cocktail=false",
+      "description": "grape juice in champagne flute",
+      "domain": "beverage_juice",
+      "label": "negative",
+      "category": "beverage",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_012",
+      "url": "https://images.unsplash.com/photo-e3185fff-placeholder?cocktail=true",
+      "description": "rose-colored cocktail with dried flowers",
+      "domain": "color_pink",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_030",
+      "url": "https://images.unsplash.com/photo-2a3bf72e-placeholder?cocktail=false",
+      "description": "cold soup served in glass vessel",
+      "domain": "liquid_soup",
+      "label": "negative",
+      "category": "liquid",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_014",
+      "url": "https://images.unsplash.com/photo-301959a1-placeholder?cocktail=true",
+      "description": "fuchsia-colored martini with sugar rim",
+      "domain": "color_pink",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_pos_018",
+      "url": "https://images.unsplash.com/photo-15f6c25a-placeholder?cocktail=true",
+      "description": "ocean blue cocktail with umbrella garnish",
+      "domain": "color_blue",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_pos_029",
+      "url": "https://images.unsplash.com/photo-563c43bb-placeholder?cocktail=true",
+      "description": "charcoal-filtered cocktail in coupe glass",
+      "domain": "tricky_dark",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_032",
+      "url": "https://images.unsplash.com/photo-466ca4d0-placeholder?cocktail=true",
+      "description": "ivory colored cocktail with vanilla foam",
+      "domain": "tricky_cream",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_036",
+      "url": "https://images.unsplash.com/photo-13464dcf-placeholder?cocktail=true",
+      "description": "layered cocktail with distinct color bands",
+      "domain": "tricky_layered",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "hard"
+    },
+    {
+      "id": "probe_pos_004",
+      "url": "https://images.unsplash.com/photo-c850d5bf-placeholder?cocktail=true",
+      "description": "dry vermouth martini in frosted glass",
+      "domain": "classic_clear",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_pos_015",
+      "url": "https://images.unsplash.com/photo-0853f0df-placeholder?cocktail=true",
+      "description": "blush pink cocktail with edible glitter",
+      "domain": "color_pink",
+      "label": "positive",
+      "category": "cocktail",
+      "difficulty": "easy"
+    },
+    {
+      "id": "probe_neg_042",
+      "url": "https://images.unsplash.com/photo-f199ac6b-placeholder?cocktail=false",
+      "description": "votive candle in clear glass holder",
+      "domain": "decorative_candle",
+      "label": "negative",
+      "category": "decorative",
+      "difficulty": "hard"
+    }
+  ]
+}

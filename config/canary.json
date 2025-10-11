@@ -1,0 +1,28 @@
+{
+  "triggers": {
+    "overlay_update": true,
+    "source_sync": true,
+    "model_change": true,
+    "scheduled": false
+  },
+  "thresholds": {
+    "mean_drop_critical": 0.05,
+    "mean_drop_warning": 0.03,
+    "ci_confidence": 0.95,
+    "tail_drop_threshold": 0.05
+  },
+  "baseline": {
+    "rolling_window": 7,
+    "min_history_days": 3,
+    "max_history_days": 30
+  },
+  "alerts": {
+    "block_on_critical": true,
+    "create_incidents": true,
+    "notification_channels": []
+  },
+  "probe": {
+    "version": "v1.0",
+    "auto_update": false
+  }
+}
