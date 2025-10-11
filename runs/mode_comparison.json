@@ -1,0 +1,2415 @@
+{
+  "comparison_results": [
+    {
+      "query": "pink floral cocktail with rose petals",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_001",
+          "score": 0.92,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_001",
+            "score": 0.92,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_002",
+            "score": 0.87,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_001",
+          "original_score": 0.92,
+          "compliance_score": 0.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 0.4,
+          "final_score": 0.556,
+          "score": 0.556,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 4,
+          "compliance_details": {
+            "compliance_score": 0.0,
+            "extracted_triples": [
+              [
+                "crystal_glass",
+                "contains",
+                "liquid"
+              ],
+              [
+                "rose_garnish",
+                "placed_on",
+                "glass"
+              ],
+              [
+                "petal_garnish",
+                "placed_on",
+                "glass"
+              ]
+            ],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [
+                "crystal_glass-contains-liquid",
+                "rose_garnish-placed_on-glass",
+                "petal_garnish-placed_on-glass"
+              ],
+              "warnings": [],
+              "total_relationships": 3
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "conflict_count": 0,
+            "raw_penalty": 0.0,
+            "scaled_penalty": 0.0,
+            "final_penalty": 0.0,
+            "alpha": 0.25,
+            "graph_stats": {
+              "nodes": 4,
+              "edges": 0,
+              "rules_applied": 4
+            },
+            "module": "conflict_penalty",
+            "version": "1.0.0"
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_001",
+            "original_score": 0.92,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.556,
+            "score": 0.556,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 4,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "crystal_glass",
+                  "contains",
+                  "liquid"
+                ],
+                [
+                  "rose_garnish",
+                  "placed_on",
+                  "glass"
+                ],
+                [
+                  "petal_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "crystal_glass-contains-liquid",
+                  "rose_garnish-placed_on-glass",
+                  "petal_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 3
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 4,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "demo_002",
+            "original_score": 0.87,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.5409999999999999,
+            "score": 0.5409999999999999,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 1,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "rose_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "rose_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 1,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "improvement": -0.364
+    },
+    {
+      "query": "golden whiskey old fashioned with orange peel",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_003",
+          "score": 0.95,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_003",
+            "score": 0.95,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_004",
+            "score": 0.89,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_004",
+          "original_score": 0.89,
+          "compliance_score": 1.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 1.0,
+          "final_score": 0.967,
+          "score": 0.967,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 1,
+          "compliance_details": {
+            "compliance_score": 1.0,
+            "extracted_triples": [],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [],
+              "warnings": [],
+              "total_relationships": 0
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "conflict_count": 0,
+            "raw_penalty": 0.0,
+            "scaled_penalty": 0.0,
+            "final_penalty": 0.0,
+            "alpha": 0.25,
+            "graph_stats": {
+              "nodes": 1,
+              "edges": 0,
+              "rules_applied": 4
+            },
+            "module": "conflict_penalty",
+            "version": "1.0.0"
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_004",
+            "original_score": 0.89,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.967,
+            "score": 0.967,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 1,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 0
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 1,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "demo_003",
+            "original_score": 0.95,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.565,
+            "score": 0.565,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 3,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "crystal_glass",
+                  "contains",
+                  "liquid"
+                ],
+                [
+                  "orange_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "crystal_glass-contains-liquid",
+                  "orange_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 2
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 3,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "improvement": 0.017000000000000015
+    },
+    {
+      "query": "blue tropical cocktail with pineapple garnish",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_005",
+          "score": 0.88,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_005",
+            "score": 0.88,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_006",
+            "score": 0.84,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_005",
+          "original_score": 0.88,
+          "compliance_score": 1.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 1.0,
+          "final_score": 0.964,
+          "score": 0.964,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 1,
+          "compliance_details": {
+            "compliance_score": 1.0,
+            "extracted_triples": [],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [],
+              "warnings": [],
+              "total_relationships": 0
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "conflict_count": 0,
+            "raw_penalty": 0.0,
+            "scaled_penalty": 0.0,
+            "final_penalty": 0.0,
+            "alpha": 0.25,
+            "graph_stats": {
+              "nodes": 1,
+              "edges": 0,
+              "rules_applied": 4
+            },
+            "module": "conflict_penalty",
+            "version": "1.0.0"
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_005",
+            "original_score": 0.88,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.964,
+            "score": 0.964,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 1,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 0
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 1,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "demo_006",
+            "original_score": 0.84,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.532,
+            "score": 0.532,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 2,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "mint_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "mint_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 2,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "improvement": 0.08399999999999996
+    },
+    {
+      "query": "green mint mojito with fresh herbs",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_007",
+          "score": 0.91,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_007",
+            "score": 0.91,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_008",
+            "score": 0.86,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_007",
+          "original_score": 0.91,
+          "compliance_score": 0.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 0.4,
+          "final_score": 0.5529999999999999,
+          "score": 0.5529999999999999,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 2,
+          "compliance_details": {
+            "compliance_score": 0.0,
+            "extracted_triples": [
+              [
+                "lime_garnish",
+                "placed_on",
+                "glass"
+              ],
+              [
+                "mint_garnish",
+                "placed_on",
+                "glass"
+              ]
+            ],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [
+                "lime_garnish-placed_on-glass",
+                "mint_garnish-placed_on-glass"
+              ],
+              "warnings": [],
+              "total_relationships": 2
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "conflict_count": 0,
+            "raw_penalty": 0.0,
+            "scaled_penalty": 0.0,
+            "final_penalty": 0.0,
+            "alpha": 0.25,
+            "graph_stats": {
+              "nodes": 2,
+              "edges": 0,
+              "rules_applied": 4
+            },
+            "module": "conflict_penalty",
+            "version": "1.0.0"
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_007",
+            "original_score": 0.91,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.5529999999999999,
+            "score": 0.5529999999999999,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 2,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "lime_garnish",
+                  "placed_on",
+                  "glass"
+                ],
+                [
+                  "mint_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "lime_garnish-placed_on-glass",
+                  "mint_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 2
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 2,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "demo_008",
+            "original_score": 0.86,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.538,
+            "score": 0.538,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 3,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "mint_garnish",
+                  "placed_on",
+                  "glass"
+                ],
+                [
+                  "basil_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "mint_garnish-placed_on-glass",
+                  "basil_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 2
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 3,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "improvement": -0.3570000000000001
+    },
+    {
+      "query": "red strawberry margarita with salt rim",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_009",
+          "score": 0.9,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_009",
+            "score": 0.9,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_010",
+            "score": 0.85,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_009",
+          "original_score": 0.9,
+          "compliance_score": 0.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 0.4,
+          "final_score": 0.55,
+          "score": 0.55,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 3,
+          "compliance_details": {
+            "compliance_score": 0.0,
+            "extracted_triples": [
+              [
+                "berry_garnish",
+                "placed_on",
+                "glass"
+              ],
+              [
+                "strawberry_garnish",
+                "placed_on",
+                "glass"
+              ]
+            ],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [
+                "berry_garnish-placed_on-glass",
+                "strawberry_garnish-placed_on-glass"
+              ],
+              "warnings": [],
+              "total_relationships": 2
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "conflict_count": 0,
+            "raw_penalty": 0.0,
+            "scaled_penalty": 0.0,
+            "final_penalty": 0.0,
+            "alpha": 0.25,
+            "graph_stats": {
+              "nodes": 3,
+              "edges": 0,
+              "rules_applied": 4
+            },
+            "module": "conflict_penalty",
+            "version": "1.0.0"
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_009",
+            "original_score": 0.9,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.55,
+            "score": 0.55,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 3,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "berry_garnish",
+                  "placed_on",
+                  "glass"
+                ],
+                [
+                  "strawberry_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "berry_garnish-placed_on-glass",
+                  "strawberry_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 2
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 3,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "demo_010",
+            "original_score": 0.85,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.5349999999999999,
+            "score": 0.5349999999999999,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 2,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "berry_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "berry_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 2,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "improvement": -0.35
+    },
+    {
+      "query": "purple lavender gin cocktail with dried flowers",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_011",
+          "score": 0.87,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_011",
+            "score": 0.87,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_012",
+            "score": 0.83,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_011",
+          "original_score": 0.87,
+          "compliance_score": 0.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 0.4,
+          "final_score": 0.5409999999999999,
+          "score": 0.5409999999999999,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 3,
+          "compliance_details": {
+            "compliance_score": 0.0,
+            "extracted_triples": [
+              [
+                "crystal_glass",
+                "contains",
+                "liquid"
+              ],
+              [
+                "lavender_garnish",
+                "placed_on",
+                "glass"
+              ]
+            ],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [
+                "crystal_glass-contains-liquid",
+                "lavender_garnish-placed_on-glass"
+              ],
+              "warnings": [],
+              "total_relationships": 2
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "conflict_count": 0,
+            "raw_penalty": 0.0,
+            "scaled_penalty": 0.0,
+            "final_penalty": 0.0,
+            "alpha": 0.25,
+            "graph_stats": {
+              "nodes": 3,
+              "edges": 0,
+              "rules_applied": 4
+            },
+            "module": "conflict_penalty",
+            "version": "1.0.0"
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_011",
+            "original_score": 0.87,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.5409999999999999,
+            "score": 0.5409999999999999,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 3,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "crystal_glass",
+                  "contains",
+                  "liquid"
+                ],
+                [
+                  "lavender_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "crystal_glass-contains-liquid",
+                  "lavender_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 2
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 3,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "demo_012",
+            "original_score": 0.83,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.5289999999999999,
+            "score": 0.5289999999999999,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 1,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "lavender_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "lavender_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 1,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "improvement": -0.32900000000000007
+    },
+    {
+      "query": "clear martini with olive garnish",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_013",
+          "score": 0.94,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_013",
+            "score": 0.94,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_014",
+            "score": 0.91,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_014",
+          "original_score": 0.91,
+          "compliance_score": 1.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 1.0,
+          "final_score": 0.973,
+          "score": 0.973,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 1,
+          "compliance_details": {
+            "compliance_score": 1.0,
+            "extracted_triples": [
+              [
+                "glass",
+                "contains",
+                "liquid"
+              ]
+            ],
+            "validation": {
+              "valid_relationships": [
+                "glass-contains-liquid"
+              ],
+              "invalid_relationships": [],
+              "warnings": [],
+              "total_relationships": 1
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "conflict_count": 0,
+            "raw_penalty": 0.0,
+            "scaled_penalty": 0.0,
+            "final_penalty": 0.0,
+            "alpha": 0.25,
+            "graph_stats": {
+              "nodes": 1,
+              "edges": 0,
+              "rules_applied": 4
+            },
+            "module": "conflict_penalty",
+            "version": "1.0.0"
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_014",
+            "original_score": 0.91,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.973,
+            "score": 0.973,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 1,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [
+                [
+                  "glass",
+                  "contains",
+                  "liquid"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [
+                  "glass-contains-liquid"
+                ],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 1,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "demo_013",
+            "original_score": 0.94,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.5619999999999999,
+            "score": 0.5619999999999999,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 3,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "crystal_glass",
+                  "contains",
+                  "liquid"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "crystal_glass-contains-liquid"
+                ],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 3,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "improvement": 0.03300000000000003
+    },
+    {
+      "query": "orange creamsicle cocktail with vanilla foam",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_015",
+          "score": 0.89,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_015",
+            "score": 0.89,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_016",
+            "score": 0.86,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_015",
+          "original_score": 0.89,
+          "compliance_score": 0.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 0.4,
+          "final_score": 0.5469999999999999,
+          "score": 0.5469999999999999,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 1,
+          "compliance_details": {
+            "compliance_score": 0.0,
+            "extracted_triples": [
+              [
+                "orange_garnish",
+                "placed_on",
+                "glass"
+              ]
+            ],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [
+                "orange_garnish-placed_on-glass"
+              ],
+              "warnings": [],
+              "total_relationships": 1
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "conflict_count": 0,
+            "raw_penalty": 0.0,
+            "scaled_penalty": 0.0,
+            "final_penalty": 0.0,
+            "alpha": 0.25,
+            "graph_stats": {
+              "nodes": 1,
+              "edges": 0,
+              "rules_applied": 4
+            },
+            "module": "conflict_penalty",
+            "version": "1.0.0"
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_015",
+            "original_score": 0.89,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.5469999999999999,
+            "score": 0.5469999999999999,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 1,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "orange_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "orange_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 1,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "demo_016",
+            "original_score": 0.86,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.538,
+            "score": 0.538,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 1,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "orange_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "orange_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 1,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "improvement": -0.3430000000000001
+    },
+    {
+      "query": "black charcoal cocktail with activated carbon",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_017",
+          "score": 0.85,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_017",
+            "score": 0.85,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_018",
+            "score": 0.82,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_017",
+          "original_score": 0.85,
+          "compliance_score": 1.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 1.0,
+          "final_score": 0.955,
+          "score": 0.955,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 0,
+          "compliance_details": {
+            "compliance_score": 1.0,
+            "extracted_triples": [],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [],
+              "warnings": [],
+              "total_relationships": 0
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "total_penalty": 0.0,
+            "alpha": 0.25
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_017",
+            "original_score": 0.85,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.955,
+            "score": 0.955,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 0,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 0
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "total_penalty": 0.0,
+              "alpha": 0.25
+            }
+          },
+          {
+            "id": "demo_018",
+            "original_score": 0.82,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.946,
+            "score": 0.946,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 1,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [
+                [
+                  "glass",
+                  "contains",
+                  "liquid"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [
+                  "glass-contains-liquid"
+                ],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 1,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "improvement": 0.10499999999999998
+    },
+    {
+      "query": "yellow lemon drop with sugar rim",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_019",
+          "score": 0.92,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_019",
+            "score": 0.92,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_020",
+            "score": 0.88,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_019",
+          "original_score": 0.92,
+          "compliance_score": 0.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 0.4,
+          "final_score": 0.556,
+          "score": 0.556,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 2,
+          "compliance_details": {
+            "compliance_score": 0.0,
+            "extracted_triples": [
+              [
+                "lemon_garnish",
+                "placed_on",
+                "glass"
+              ]
+            ],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [
+                "lemon_garnish-placed_on-glass"
+              ],
+              "warnings": [],
+              "total_relationships": 1
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "conflict_count": 0,
+            "raw_penalty": 0.0,
+            "scaled_penalty": 0.0,
+            "final_penalty": 0.0,
+            "alpha": 0.25,
+            "graph_stats": {
+              "nodes": 2,
+              "edges": 0,
+              "rules_applied": 4
+            },
+            "module": "conflict_penalty",
+            "version": "1.0.0"
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_019",
+            "original_score": 0.92,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.556,
+            "score": 0.556,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 2,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "lemon_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "lemon_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 2,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "demo_020",
+            "original_score": 0.88,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.544,
+            "score": 0.544,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 2,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "lemon_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "lemon_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 2,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "improvement": -0.364
+    },
+    {
+      "query": "burgundy wine cocktail with dark berries",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_021",
+          "score": 0.87,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_021",
+            "score": 0.87,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_022",
+            "score": 0.84,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_021",
+          "original_score": 0.87,
+          "compliance_score": 1.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 1.0,
+          "final_score": 0.961,
+          "score": 0.961,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 1,
+          "compliance_details": {
+            "compliance_score": 1.0,
+            "extracted_triples": [
+              [
+                "glass",
+                "contains",
+                "liquid"
+              ]
+            ],
+            "validation": {
+              "valid_relationships": [
+                "glass-contains-liquid"
+              ],
+              "invalid_relationships": [],
+              "warnings": [],
+              "total_relationships": 1
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "conflict_count": 0,
+            "raw_penalty": 0.0,
+            "scaled_penalty": 0.0,
+            "final_penalty": 0.0,
+            "alpha": 0.25,
+            "graph_stats": {
+              "nodes": 1,
+              "edges": 0,
+              "rules_applied": 4
+            },
+            "module": "conflict_penalty",
+            "version": "1.0.0"
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_021",
+            "original_score": 0.87,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.961,
+            "score": 0.961,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 1,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [
+                [
+                  "glass",
+                  "contains",
+                  "liquid"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [
+                  "glass-contains-liquid"
+                ],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 1,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "demo_022",
+            "original_score": 0.84,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.532,
+            "score": 0.532,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 2,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "berry_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "berry_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 2,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "improvement": 0.09099999999999997
+    },
+    {
+      "query": "white coconut pi\u00f1a colada with pineapple",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_023",
+          "score": 0.9,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_023",
+            "score": 0.9,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_024",
+            "score": 0.86,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_023",
+          "original_score": 0.9,
+          "compliance_score": 1.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 1.0,
+          "final_score": 0.97,
+          "score": 0.97,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 0,
+          "compliance_details": {
+            "compliance_score": 1.0,
+            "extracted_triples": [],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [],
+              "warnings": [],
+              "total_relationships": 0
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "total_penalty": 0.0,
+            "alpha": 0.25
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_023",
+            "original_score": 0.9,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.97,
+            "score": 0.97,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 0,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 0
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "total_penalty": 0.0,
+              "alpha": 0.25
+            }
+          },
+          {
+            "id": "demo_024",
+            "original_score": 0.86,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.958,
+            "score": 0.958,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 0,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 0
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "total_penalty": 0.0,
+              "alpha": 0.25
+            }
+          }
+        ]
+      },
+      "improvement": 0.06999999999999995
+    },
+    {
+      "query": "silver metallic cocktail with edible glitter",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_025",
+          "score": 0.83,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_025",
+            "score": 0.83,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_026",
+            "score": 0.8,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_025",
+          "original_score": 0.83,
+          "compliance_score": 1.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 1.0,
+          "final_score": 0.949,
+          "score": 0.949,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 0,
+          "compliance_details": {
+            "compliance_score": 1.0,
+            "extracted_triples": [],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [],
+              "warnings": [],
+              "total_relationships": 0
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "total_penalty": 0.0,
+            "alpha": 0.25
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_025",
+            "original_score": 0.83,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.949,
+            "score": 0.949,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 0,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 0
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "total_penalty": 0.0,
+              "alpha": 0.25
+            }
+          },
+          {
+            "id": "demo_026",
+            "original_score": 0.8,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.94,
+            "score": 0.94,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 0,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 0
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "total_penalty": 0.0,
+              "alpha": 0.25
+            }
+          }
+        ]
+      },
+      "improvement": 0.119
+    },
+    {
+      "query": "smoky mezcal cocktail with chili rim",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_027",
+          "score": 0.88,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_027",
+            "score": 0.88,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_028",
+            "score": 0.85,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_028",
+          "original_score": 0.85,
+          "compliance_score": 1.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 1.0,
+          "final_score": 0.955,
+          "score": 0.955,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 0,
+          "compliance_details": {
+            "compliance_score": 1.0,
+            "extracted_triples": [],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [],
+              "warnings": [],
+              "total_relationships": 0
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "total_penalty": 0.0,
+            "alpha": 0.25
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_028",
+            "original_score": 0.85,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.955,
+            "score": 0.955,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 0,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 0
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "total_penalty": 0.0,
+              "alpha": 0.25
+            }
+          },
+          {
+            "id": "demo_027",
+            "original_score": 0.88,
+            "compliance_score": 0.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 0.4,
+            "final_score": 0.544,
+            "score": 0.544,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 2,
+            "compliance_details": {
+              "compliance_score": 0.0,
+              "extracted_triples": [
+                [
+                  "lime_garnish",
+                  "placed_on",
+                  "glass"
+                ]
+              ],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [
+                  "lime_garnish-placed_on-glass"
+                ],
+                "warnings": [],
+                "total_relationships": 1
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 2,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          }
+        ]
+      },
+      "improvement": 0.07499999999999996
+    },
+    {
+      "query": "rainbow layered cocktail with multiple colors",
+      "baseline": {
+        "top_candidate": {
+          "id": "demo_029",
+          "score": 0.91,
+          "mode": "baseline",
+          "processing": "clip_only"
+        },
+        "all_candidates": [
+          {
+            "id": "demo_029",
+            "score": 0.91,
+            "mode": "baseline",
+            "processing": "clip_only"
+          },
+          {
+            "id": "demo_030",
+            "score": 0.87,
+            "mode": "baseline",
+            "processing": "clip_only"
+          }
+        ]
+      },
+      "region_control": {
+        "top_candidate": {
+          "id": "demo_029",
+          "original_score": 0.91,
+          "compliance_score": 1.0,
+          "conflict_penalty": 0.0,
+          "enhanced_score": 1.0,
+          "final_score": 0.973,
+          "score": 0.973,
+          "mode": "region_control",
+          "processing": "clip_yolo_region_control",
+          "regions_detected": 1,
+          "compliance_details": {
+            "compliance_score": 1.0,
+            "extracted_triples": [],
+            "validation": {
+              "valid_relationships": [],
+              "invalid_relationships": [],
+              "warnings": [],
+              "total_relationships": 0
+            },
+            "module": "subject_object_constraints",
+            "version": "1.0.0"
+          },
+          "penalty_details": {
+            "conflicts": [],
+            "conflict_count": 0,
+            "raw_penalty": 0.0,
+            "scaled_penalty": 0.0,
+            "final_penalty": 0.0,
+            "alpha": 0.25,
+            "graph_stats": {
+              "nodes": 1,
+              "edges": 0,
+              "rules_applied": 4
+            },
+            "module": "conflict_penalty",
+            "version": "1.0.0"
+          }
+        },
+        "all_candidates": [
+          {
+            "id": "demo_029",
+            "original_score": 0.91,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.973,
+            "score": 0.973,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 1,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 0
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "conflict_count": 0,
+              "raw_penalty": 0.0,
+              "scaled_penalty": 0.0,
+              "final_penalty": 0.0,
+              "alpha": 0.25,
+              "graph_stats": {
+                "nodes": 1,
+                "edges": 0,
+                "rules_applied": 4
+              },
+              "module": "conflict_penalty",
+              "version": "1.0.0"
+            }
+          },
+          {
+            "id": "demo_030",
+            "original_score": 0.87,
+            "compliance_score": 1.0,
+            "conflict_penalty": 0.0,
+            "enhanced_score": 1.0,
+            "final_score": 0.961,
+            "score": 0.961,
+            "mode": "region_control",
+            "processing": "clip_yolo_region_control",
+            "regions_detected": 0,
+            "compliance_details": {
+              "compliance_score": 1.0,
+              "extracted_triples": [],
+              "validation": {
+                "valid_relationships": [],
+                "invalid_relationships": [],
+                "warnings": [],
+                "total_relationships": 0
+              },
+              "module": "subject_object_constraints",
+              "version": "1.0.0"
+            },
+            "penalty_details": {
+              "conflicts": [],
+              "total_penalty": 0.0,
+              "alpha": 0.25
+            }
+          }
+        ]
+      },
+      "improvement": 0.06299999999999994
+    }
+  ],
+  "summary": {
+    "queries_processed": 15,
+    "average_baseline_score": 0.8946666666666666,
+    "average_region_control_score": 0.7979999999999999,
+    "average_improvement": -0.09666666666666669,
+    "improvement_percentage": -10.804769001490316,
+    "positive_improvements": 9,
+    "negative_improvements": 6,
+    "neutral_improvements": 0
+  },
+  "metadata": {
+    "generated_by": "mode_comparison_demo",
+    "timestamp": "2025-01-11T00:00:00Z",
+    "input_file": "demo/samples.json",
+    "core_modules_used": [
+      "subject_object",
+      "conflict_penalty",
+      "dual_score"
+    ]
+  }
+}

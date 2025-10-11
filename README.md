@@ -59,15 +59,29 @@ python3 pipeline.py --config config/default.json --input data/input/sample_input
 python3 pipeline.py --config config/advanced.json --input your_input.json
 ```
 
-### 3. Individual Components
+### 3. Core Modules (NEW)
 ```bash
-# CLIP embeddings only
+# Compare baseline vs region control modes
+python3 pipeline.py --config config/default.json --input demo/samples.json --output results.json --mode baseline
+python3 pipeline.py --config config/default.json --input demo/samples.json --output results.json --mode region_control
+
+# Run mode comparison demo
+python3 demo_mode_comparison.py
+
+# Test core modules directly
+python3 test_core_modules.py
+```
+
+### 4. Individual Components
+```bash
+# Core module APIs (importable)
+from src.subject_object import check_subject_object
+from src.conflict_penalty import conflict_penalty
+from src.dual_score import fuse_dual_score
+
+# Legacy individual scripts
 python3 scripts/clip_probe/clip_probe_training.py
-
-# YOLO detection only
 python3 scripts/yolo_detection.py --input path/to/image.jpg
-
-# Reranking only
 python3 scripts/reranking_listwise.py --input cocktails.json
 ```
 
@@ -157,6 +171,31 @@ computer-vision/
 ├── data/                  # Input/output data
 └── docs/                  # Documentation
 ```
+
+## Core Modules
+
+The pipeline's key capabilities are implemented as explicit, importable modules:
+
+### 1. Subject-Object Constraints (`src/subject_object.py`)
+```python
+compliance, details = check_subject_object(triples, regions)
+# Returns: (compliance: float, details: dict)
+```
+Validates semantic consistency between detected objects and their relationships.
+
+### 2. Conflict Penalty (`src/conflict_penalty.py`)  
+```python
+penalty, details = conflict_penalty(regions, graph, alpha=0.3)
+# Returns: (penalty: float, details: dict)
+```
+Detects and penalizes semantic conflicts (e.g., pink cocktails with orange garnish).
+
+### 3. Dual Score Fusion (`src/dual_score.py`)
+```python
+final_score = fuse_dual_score(compliance, conflict, w_c=0.5, w_n=0.5, normalize=True)
+# Returns: float
+```
+Combines compliance and conflict scores with configurable weighting.
 
 ## Advanced Features
 
