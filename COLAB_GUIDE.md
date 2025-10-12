@@ -17,20 +17,29 @@ from google.colab import drive
 drive.mount('/content/drive')
 ```
 
-2. **上传数据和脚本**
+2. **下载数据和脚本**
 ```python
-# 上传以下文件到Colab:
-# - colab_night_runner.py
-# - production_dataset.json
+# 直接从GitHub下载所需文件
+!wget -q https://raw.githubusercontent.com/rc989-alt/computer-vision/main/colab_night_runner.py
+!wget -q https://raw.githubusercontent.com/rc989-alt/computer-vision/main/production_dataset.json
+print("✅ 文件下载完成!")
 ```
 
 3. **启动实验**
 ```python
-!python /content/colab_night_runner.py \
-  --data /content/production_dataset.json \
+# 完整8小时实验 (推荐今晚使用)
+!python colab_night_runner.py \
+  --data production_dataset.json \
   --out_dir "/content/drive/MyDrive/v1_night_opt" \
-  --hours_per_shard 2 \
+  --hours_per_shard 2.0 \
   --total_shards 4
+
+# 快速测试版 (30分钟验证用)
+!python colab_night_runner.py \
+  --data production_dataset.json \
+  --out_dir "/content/drive/MyDrive/v1_night_test" \
+  --hours_per_shard 0.25 \
+  --total_shards 2
 ```
 
 ## 📊 实验配置
