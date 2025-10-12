@@ -1,0 +1,27 @@
+{
+  "session_id": "20251012_014326",
+  "start_time": "2025-10-12T01:43:26.899219",
+  "completed": [
+    "shard_0_mmr_a0.7_s0",
+    "shard_1_mmr_a0.7_s0",
+    "shard_0_mmr_a0.7_s1",
+    "shard_1_mmr_a0.7_s1",
+    "shard_0_mmr_a0.7_s2",
+    "shard_1_mmr_a0.7_s2",
+    "shard_0_mmr_a0.75_s0",
+    "shard_1_mmr_a0.75_s0",
+    "shard_0_mmr_a0.75_s1",
+    "shard_1_mmr_a0.75_s1",
+    "shard_0_mmr_a0.75_s2",
+    "shard_1_mmr_a0.75_s2",
+    "shard_0_mmr_a0.8_s0",
+    "shard_1_mmr_a0.8_s0",
+    "shard_0_mmr_a0.8_s1",
+    "shard_1_mmr_a0.8_s1",
+    "shard_0_mmr_a0.8_s2",
+    "shard_1_mmr_a0.8_s2"
+  ],
+  "failed": [],
+  "total_experiments": 9,
+  "last_update": "2025-10-12T01:44:01.152348"
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "query_id": "cocktail_presentation_002",
+    "candidate": {
+      "id": "candidate_004",
+      "score": 0.92,
+      "compliance": 1,
+      "content": {
+        "style": "tropical",
+        "garnish": "pineapple wedge",
+        "glass": "hurricane",
+        "color": "blue"
+      }
+    },
+    "score_v1": 0.92,
+    "label": 1
+  },
+  {
+    "query_id": "cocktail_presentation_002",
+    "candidate": {
+      "id": "candidate_005",
+      "score": 0.84,
+      "compliance": 1,
+      "content": {
+        "style": "vibrant",
+        "garnish": "umbrella",
+        "glass": "tiki",
+        "color": "orange"
+      }
+    },
+    "score_v1": 0.84,
+    "label": 1
+  },
+  {
+    "query_id": "cocktail_presentation_002",
+    "candidate": {
+      "id": "candidate_006",
+      "score": 0.71,
+      "compliance": 1,
+      "content": {
+        "style": "beach",
+        "garnish": "coconut rim",
+        "glass": "mason jar",
+        "color": "yellow"
+      }
+    },
+    "score_v1": 0.71,
+    "label": 1
+  },
+  {
+    "query_id": "cocktail_presentation_004",
+    "candidate": {
+      "id": "candidate_010",
+      "score": 0.91,
+      "compliance": 1,
+      "content": {
+        "style": "vintage",
+        "garnish": "maraschino cherry",
+        "glass": "nick and nora",
+        "color": "deep red"
+      }
+    },
+    "score_v1": 0.91,
+    "label": 1
+  },
+  {
+    "query_id": "cocktail_presentation_004",
+    "candidate": {
+      "id": "candidate_011",
+      "score": 0.82,
+      "compliance": 1,
+      "content": {
+        "style": "classic",
+        "garnish": "orange peel",
+        "glass": "old fashioned",
+        "color": "amber"
+      }
+    },
+    "score_v1": 0.82,
+    "label": 1
+  },
+  {
+    "query_id": "cocktail_presentation_004",
+    "candidate": {
+      "id": "candidate_012",
+      "score": 0.68,
+      "compliance": 1,
+      "content": {
+        "style": "retro",
+        "garnish": "cocktail onion",
+        "glass": "martini",
+        "color": "clear"
+      }
+    },
+    "score_v1": 0.68,
+    "label": 1
+  },
+  {
+    "query_id": "cocktail_presentation_005",
+    "candidate": {
+      "id": "candidate_013",
+      "score": 0.94,
+      "compliance": 1,
+      "content": {
+        "style": "molecular",
+        "garnish": "foam topping",
+        "glass": "sphere glass",
+        "color": "purple"
+      }
+    },
+    "score_v1": 0.94,
+    "label": 1
+  },
+  {
+    "query_id": "cocktail_presentation_005",
+    "candidate": {
+      "id": "candidate_014",
+      "score": 0.87,
+      "compliance": 1,
+      "content": {
+        "style": "avant-garde",
+        "garnish": "edible flowers",
+        "glass": "test tube",
+        "color": "green"
+      }
+    },
+    "score_v1": 0.87,
+    "label": 1
+  },
+  {
+    "query_id": "cocktail_presentation_005",
+    "candidate": {
+      "id": "candidate_015",
+      "score": 0.73,
+      "compliance": 0,
+      "content": {
+        "style": "experimental",
+        "garnish": "dry ice",
+        "glass": "beaker",
+        "color": "smoking"
+      }
+    },
+    "score_v1": 0.73,
+    "label": 0
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-10-12T00:49:53.434408",
+  "overall_status": "healthy",
+  "checks": {
+    "basic_functionality": {
+      "status": "healthy",
+      "message": "基础功能正常",
+      "test_count": 1
+    },
+    "performance": {
+      "status": "healthy",
+      "avg_latency_ms": 0.005,
+      "p95_latency_ms": 0.009,
+      "success_rate": 1.0,
+      "test_count": 10
+    },
+    "stability": {
+      "status": "healthy",
+      "error_rate": 0.0,
+      "avg_latency_ms": 0.0049200924960049715,
+      "uptime_seconds": 0.0008499622344970703,
+      "total_queries": 11,
+      "alerts": []
+    },
+    "accuracy": {
+      "status": "healthy",
+      "ranking_accuracy": 0.5,
+      "correct_predictions": 1,
+      "total_tests": 2
+    },
+    "resources": {
+      "status": "healthy",
+      "memory_mb": 27.8,
+      "cpu_percent": 0.0,
+      "alerts": []
+    }
+  }
+}

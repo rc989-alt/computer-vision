@@ -1,0 +1,281 @@
+{
+  "tasks": {
+    "T001": {
+      "id": "T001",
+      "name": "Cross-Attention\u6a21\u578b\u67b6\u6784",
+      "description": "\u5b9e\u73b0Token\u5316\u591a\u6a21\u6001\u7f16\u7801\u5668\u548c\u8f7b\u91cf\u7ea7Cross-Attention",
+      "assigned_day": 1,
+      "estimated_hours": 8.0,
+      "dependencies": [],
+      "status": "pending",
+      "actual_hours": 0.0,
+      "completion_percentage": 0,
+      "notes": [],
+      "deliverables": [
+        "TokenizedMultiModalEncoder\u7c7b",
+        "LightweightCrossAttention\u7c7b",
+        "\u5355\u5143\u6d4b\u8bd5\u901a\u8fc7",
+        "\u6027\u80fd\u57fa\u51c6\u6d4b\u8bd5"
+      ]
+    },
+    "T002": {
+      "id": "T002",
+      "name": "ListMLE + Focal Loss\u5b9e\u73b0",
+      "description": "\u5b9e\u73b0ListMLE\u548cFocal Loss\u7ec4\u5408\u635f\u5931\u51fd\u6570",
+      "assigned_day": 2,
+      "estimated_hours": 6.0,
+      "dependencies": [
+        "T001"
+      ],
+      "status": "completed",
+      "actual_hours": 0.0,
+      "completion_percentage": 100.0,
+      "notes": [],
+      "deliverables": [
+        "ListMLEWithFocalLoss\u7c7b",
+        "\u635f\u5931\u51fd\u6570\u5355\u5143\u6d4b\u8bd5",
+        "\u68af\u5ea6\u68c0\u67e5\u901a\u8fc7"
+      ]
+    },
+    "T003": {
+      "id": "T003",
+      "name": "\u7a33\u5065\u8bad\u7ec3Pipeline",
+      "description": "\u5b9e\u73b0\u4e24\u9636\u6bb5\u8bad\u7ec3\uff1aPairwise Warmup \u2192 ListMLE Fine-tune",
+      "assigned_day": 3,
+      "estimated_hours": 10.0,
+      "dependencies": [
+        "T001",
+        "T002"
+      ],
+      "status": "completed",
+      "actual_hours": 0.0,
+      "completion_percentage": 100.0,
+      "notes": [],
+      "deliverables": [
+        "StableTrainingPipeline\u7c7b\u5b8c\u5584",
+        "\u8bad\u7ec3\u5faa\u73af\u5b9e\u73b0",
+        "checkpoint\u4fdd\u5b58/\u52a0\u8f7d"
+      ]
+    },
+    "T004": {
+      "id": "T004",
+      "name": "\u7b49\u6e17\u6821\u51c6\u5668",
+      "description": "\u5b9e\u73b0\u7b49\u6e17\u56de\u5f52\u6821\u51c6\u548c\u6e29\u5ea6\u6807\u5b9a",
+      "assigned_day": 4,
+      "estimated_hours": 4.0,
+      "dependencies": [
+        "T003"
+      ],
+      "status": "pending",
+      "actual_hours": 0.0,
+      "completion_percentage": 0,
+      "notes": [],
+      "deliverables": [
+        "IsotonicCalibrator\u7c7b",
+        "\u6821\u51c6\u8bc4\u6d4b\u6307\u6807",
+        "ECE\u8ba1\u7b97\u9a8c\u8bc1"
+      ]
+    },
+    "T005": {
+      "id": "T005",
+      "name": "Step5\u6570\u636e\u96c6\u6210",
+      "description": "\u5b8c\u5584scored.jsonl\u8bfb\u53d6\u548c\u7279\u5f81\u63d0\u53d6",
+      "assigned_day": 5,
+      "estimated_hours": 6.0,
+      "dependencies": [
+        "T003"
+      ],
+      "status": "pending",
+      "actual_hours": 0.0,
+      "completion_percentage": 0,
+      "notes": [],
+      "deliverables": [
+        "Step5DataLoader\u5b8c\u5584",
+        "\u7279\u5f81\u63d0\u53d6\u9a8c\u8bc1",
+        "\u6570\u636e\u8d28\u91cf\u5206\u6790\u62a5\u544a"
+      ]
+    },
+    "T006": {
+      "id": "T006",
+      "name": "\u521d\u6b65\u8bad\u7ec3\u6d4b\u8bd5",
+      "description": "\u4f7f\u7528mock\u6570\u636e\u8fdb\u884c\u5b8c\u6574\u8bad\u7ec3\u6d41\u7a0b\u6d4b\u8bd5",
+      "assigned_day": 5,
+      "estimated_hours": 4.0,
+      "dependencies": [
+        "T003",
+        "T004",
+        "T005"
+      ],
+      "status": "pending",
+      "actual_hours": 0.0,
+      "completion_percentage": 0,
+      "notes": [],
+      "deliverables": [
+        "\u8bad\u7ec3\u6d41\u7a0b\u6210\u529f\u8fd0\u884c",
+        "\u521d\u6b65\u6027\u80fd\u6307\u6807",
+        "\u95ee\u9898\u8bc6\u522b\u548c\u4fee\u590d"
+      ]
+    },
+    "T007": {
+      "id": "T007",
+      "name": "\u8d85\u53c2\u6570\u8c03\u4f18",
+      "description": "\u7f51\u683c\u641c\u7d22\u6700\u4f18\u8d85\u53c2\u6570\u7ec4\u5408",
+      "assigned_day": 8,
+      "estimated_hours": 8.0,
+      "dependencies": [
+        "T006"
+      ],
+      "status": "pending",
+      "actual_hours": 0.0,
+      "completion_percentage": 0,
+      "notes": [],
+      "deliverables": [
+        "\u8d85\u53c2\u6570\u641c\u7d22\u811a\u672c",
+        "\u6700\u4f18\u53c2\u6570\u914d\u7f6e",
+        "\u6027\u80fd\u5bf9\u6bd4\u62a5\u544a"
+      ]
+    },
+    "T008": {
+      "id": "T008",
+      "name": "Hard Negative Mining",
+      "description": "\u5b9e\u73b0\u56f0\u96be\u6837\u672c\u6316\u6398\u7b56\u7565",
+      "assigned_day": 9,
+      "estimated_hours": 6.0,
+      "dependencies": [
+        "T007"
+      ],
+      "status": "pending",
+      "actual_hours": 0.0,
+      "completion_percentage": 0,
+      "notes": [],
+      "deliverables": [
+        "HardNegativeMiner\u7c7b",
+        "\u91c7\u6837\u7b56\u7565\u9a8c\u8bc1",
+        "\u8bad\u7ec3\u6548\u679c\u5206\u6790"
+      ]
+    },
+    "T009": {
+      "id": "T009",
+      "name": "\u8bc4\u6d4b\u6846\u67b6\u5b8c\u5584",
+      "description": "Bootstrap CI\u8ba1\u7b97\u548c\u5931\u8d25\u5206\u6790\u7cfb\u7edf",
+      "assigned_day": 10,
+      "estimated_hours": 8.0,
+      "dependencies": [
+        "T007"
+      ],
+      "status": "pending",
+      "actual_hours": 0.0,
+      "completion_percentage": 0,
+      "notes": [],
+      "deliverables": [
+        "BootstrapEvaluator\u5b8c\u5584",
+        "\u5931\u8d25\u5206\u6790\u53ef\u89c6\u5316",
+        "\u7edf\u8ba1\u663e\u8457\u6027\u68c0\u9a8c"
+      ]
+    },
+    "T010": {
+      "id": "T010",
+      "name": "A/B\u6d4b\u8bd5\u63a5\u53e3",
+      "description": "\u5b9e\u73b0\u751f\u4ea7\u73af\u5883\u90e8\u7f72\u63a5\u53e3",
+      "assigned_day": 12,
+      "estimated_hours": 10.0,
+      "dependencies": [
+        "T008",
+        "T009"
+      ],
+      "status": "pending",
+      "actual_hours": 0.0,
+      "completion_percentage": 0,
+      "notes": [],
+      "deliverables": [
+        "rerank_step4_candidates\u63a5\u53e3",
+        "Shadow mode\u652f\u6301",
+        "\u76d1\u63a7\u6307\u6807\u96c6\u6210"
+      ]
+    },
+    "T011": {
+      "id": "T011",
+      "name": "\u6027\u80fd\u9a8c\u6536\u6d4b\u8bd5",
+      "description": "\u6700\u7ec8\u6027\u80fd\u6307\u6807\u9a8c\u8bc1\u548c\u95e8\u69db\u68c0\u67e5",
+      "assigned_day": 13,
+      "estimated_hours": 6.0,
+      "dependencies": [
+        "T010"
+      ],
+      "status": "pending",
+      "actual_hours": 0.0,
+      "completion_percentage": 0,
+      "notes": [],
+      "deliverables": [
+        "\u5b8c\u6574\u6027\u80fd\u62a5\u544a",
+        "\u7f6e\u4fe1\u533a\u95f4\u8ba1\u7b97",
+        "\u95e8\u69db\u8fbe\u6210\u786e\u8ba4"
+      ]
+    },
+    "T012": {
+      "id": "T012",
+      "name": "\u6587\u6863\u548c\u4ea4\u4ed8",
+      "description": "\u6280\u672f\u6587\u6863\u7f16\u5199\u548c\u4ee3\u7801\u6574\u7406",
+      "assigned_day": 14,
+      "estimated_hours": 6.0,
+      "dependencies": [
+        "T011"
+      ],
+      "status": "pending",
+      "actual_hours": 0.0,
+      "completion_percentage": 0,
+      "notes": [],
+      "deliverables": [
+        "\u6280\u672f\u6587\u6863",
+        "\u4f7f\u7528\u624b\u518c",
+        "\u90e8\u7f72\u6307\u5357"
+      ]
+    }
+  },
+  "milestones": {
+    "M1": {
+      "id": "M1",
+      "name": "Week 1 \u6838\u5fc3\u67b6\u6784\u5b8c\u6210",
+      "target_date": "2025-10-18",
+      "success_criteria": [
+        "\u6240\u6709\u6838\u5fc3\u7ec4\u4ef6\u5b9e\u73b0\u5b8c\u6210",
+        "\u5355\u5143\u6d4b\u8bd5\u5168\u90e8\u901a\u8fc7",
+        "Mock\u6570\u636e\u8bad\u7ec3\u6210\u529f",
+        "\u521d\u6b65\u6027\u80fd\u6307\u6807\u53ef\u6d4b\u91cf"
+      ],
+      "status": "pending",
+      "actual_date": null,
+      "notes": ""
+    },
+    "M2": {
+      "id": "M2",
+      "name": "\u6027\u80fd\u76ee\u6807\u8fbe\u6210",
+      "target_date": "2025-10-23",
+      "success_criteria": [
+        "Compliance@1 \u2265 +4pts (95% CI)",
+        "nDCG@10 \u2265 +8pts (95% CI)",
+        "ECE \u2264 0.03",
+        "\u7edf\u8ba1\u663e\u8457\u6027 p < 0.05"
+      ],
+      "status": "pending",
+      "actual_date": null,
+      "notes": ""
+    },
+    "M3": {
+      "id": "M3",
+      "name": "A/B\u6d4b\u8bd5\u5c31\u7eea",
+      "target_date": "2025-10-25",
+      "success_criteria": [
+        "\u751f\u4ea7\u63a5\u53e3\u5b8c\u6210",
+        "Shadow mode\u6d4b\u8bd5\u901a\u8fc7",
+        "\u76d1\u63a7\u544a\u8b66\u914d\u7f6e\u5b8c\u6210",
+        "\u56de\u6eda\u673a\u5236\u9a8c\u8bc1"
+      ],
+      "status": "pending",
+      "actual_date": null,
+      "notes": ""
+    }
+  },
+  "metrics": [],
+  "last_updated": "2025-10-11T19:17:38.972170"
+}

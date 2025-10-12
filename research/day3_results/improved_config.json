@@ -1,0 +1,7 @@
+{
+  "base_boost": 0.005,
+  "keyword_match_boost": 0.04,
+  "quality_match_boost": 0.005,
+  "max_total_boost": 0.1,
+  "score": 11.000000000000009
+}

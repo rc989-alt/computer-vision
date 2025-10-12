@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "deployment_mode": "production",
+  "performance_targets": {
+    "compliance_improvement": 0.13,
+    "max_latency_p95_ms": 0.1,
+    "error_rate_threshold": 0.001,
+    "blossom_fruit_accuracy": 0.98
+  },
+  "enhancer_config": {
+    "relevance_weight": 1.0,
+    "diversity_weight": 0.3,
+    "position_decay": 0.85,
+    "top_k_boost": 0.15,
+    "quality_threshold": 0.5,
+    "max_latency_ms": 1.0,
+    "enable_health_check": true
+  },
+  "monitoring": {
+    "metrics_interval_seconds": 60,
+    "health_check_interval_seconds": 30,
+    "alert_thresholds": {
+      "latency_p95_ms": 0.2,
+      "error_rate": 0.01,
+      "compliance_drop": 0.02
+    }
+  },
+  "rollback": {
+    "auto_rollback_enabled": true,
+    "rollback_conditions": {
+      "error_rate_threshold": 0.05,
+      "latency_threshold_ms": 2.0,
+      "compliance_drop_threshold": 0.05
+    }
+  },
+  "traffic_ramp": {
+    "initial_percentage": 5,
+    "ramp_steps": [5, 20, 50, 100],
+    "ramp_interval_hours": 24,
+    "validation_queries_per_step": 1000
+  },
+  "feature_flags": {
+    "enable_position_optimization": true,
+    "enable_diversity_penalty": true,
+    "enable_top_k_boost": true,
+    "enable_quality_filtering": true
+  },
+  "logging": {
+    "level": "INFO",
+    "enable_performance_logging": true,
+    "enable_error_tracking": true,
+    "log_sample_rate": 0.01
+  }
+}

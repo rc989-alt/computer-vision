@@ -1,0 +1,35 @@
+services:
+  pipeline:
+    build: .
+    depends_on:
+    - redis
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8Gi
+        reservations:
+          devices:
+          - capabilities:
+            - gpu
+            count: 1
+            driver: nvidia
+    environment:
+      BATCH_SIZE: '4'
+      ENVIRONMENT: laptop
+      GPU_MEMORY_GB: '8.0'
+      REDIS_URL: redis://redis:6379
+    volumes:
+    - ./data:/app/data
+    - ./config:/app/config
+    - ./logs:/app/logs
+  redis:
+    command: redis-server --maxmemory 1gb --maxmemory-policy allkeys-lru
+    image: redis:7-alpine
+    ports:
+    - 6379:6379
+    volumes:
+    - redis_data:/data
+version: '3.8'
+volumes:
+  redis_data: {}

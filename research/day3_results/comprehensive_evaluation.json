@@ -1,0 +1,408 @@
+{
+  "overall_metrics": {
+    "total_queries": 45,
+    "avg_improvement": 0.059622222222222215,
+    "std_improvement": 0.005986239364442007,
+    "median_improvement": 0.06199999999999983,
+    "positive_improvement_rate": 1.0,
+    "avg_processing_time_ms": 0.010167227851019965,
+    "p95_processing_time_ms": 0.01635551452636718
+  },
+  "domain_metrics": {
+    "cocktails": {
+      "queries": 15,
+      "avg_improvement": 0.06446666666666667,
+      "std_improvement": 0.006540812046085913
+    },
+    "flowers": {
+      "queries": 15,
+      "avg_improvement": 0.06039999999999998,
+      "std_improvement": 0.0026532998322842945
+    },
+    "food": {
+      "queries": 15,
+      "avg_improvement": 0.05400000000000002,
+      "std_improvement": 0.00141421356237307
+    }
+  },
+  "quality_tier_metrics": {
+    "high": {
+      "samples": 45,
+      "avg_improvement": 0.059622222222222215,
+      "std_improvement": 0.005986239364442007
+    },
+    "medium": {
+      "samples": 90,
+      "avg_improvement": 0.059622222222222215,
+      "std_improvement": 0.005986239364442007
+    },
+    "low": {
+      "samples": 90,
+      "avg_improvement": 0.059622222222222215,
+      "std_improvement": 0.005986239364442007
+    }
+  },
+  "performance_metrics": {},
+  "detailed_results": [
+    {
+      "query": "pink floral cocktail",
+      "domain": "cocktails",
+      "improvement": 0.06999999999999995,
+      "processing_time": 3.1948089599609375e-05,
+      "original_avg": 0.6816000000000001,
+      "enhanced_avg": 0.7516
+    },
+    {
+      "query": "pink martini",
+      "domain": "cocktails",
+      "improvement": 0.07000000000000017,
+      "processing_time": 1.4066696166992188e-05,
+      "original_avg": 0.704,
+      "enhanced_avg": 0.7740000000000001
+    },
+    {
+      "query": "pink whiskey",
+      "domain": "cocktails",
+      "improvement": 0.062000000000000166,
+      "processing_time": 1.1920928955078125e-05,
+      "original_avg": 0.5965999999999999,
+      "enhanced_avg": 0.6586000000000001
+    },
+    {
+      "query": "golden whiskey cocktail",
+      "domain": "cocktails",
+      "improvement": 0.06400000000000006,
+      "processing_time": 1.0013580322265625e-05,
+      "original_avg": 0.635,
+      "enhanced_avg": 0.6990000000000001
+    },
+    {
+      "query": "pink martini",
+      "domain": "cocktails",
+      "improvement": 0.06199999999999983,
+      "processing_time": 9.775161743164062e-06,
+      "original_avg": 0.6142000000000001,
+      "enhanced_avg": 0.6761999999999999
+    },
+    {
+      "query": "blue martini",
+      "domain": "cocktails",
+      "improvement": 0.05300000000000005,
+      "processing_time": 9.298324584960938e-06,
+      "original_avg": 0.6896,
+      "enhanced_avg": 0.7426
+    },
+    {
+      "query": "pink cocktail",
+      "domain": "cocktails",
+      "improvement": 0.07800000000000007,
+      "processing_time": 8.821487426757812e-06,
+      "original_avg": 0.5578,
+      "enhanced_avg": 0.6358
+    },
+    {
+      "query": "pink whiskey",
+      "domain": "cocktails",
+      "improvement": 0.06999999999999995,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.655,
+      "enhanced_avg": 0.725
+    },
+    {
+      "query": "clear gin fizz",
+      "domain": "cocktails",
+      "improvement": 0.05599999999999994,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.6364,
+      "enhanced_avg": 0.6923999999999999
+    },
+    {
+      "query": "pink cocktail",
+      "domain": "cocktails",
+      "improvement": 0.06999999999999995,
+      "processing_time": 8.821487426757812e-06,
+      "original_avg": 0.65,
+      "enhanced_avg": 0.72
+    },
+    {
+      "query": "pink martini",
+      "domain": "cocktails",
+      "improvement": 0.061999999999999944,
+      "processing_time": 7.867813110351562e-06,
+      "original_avg": 0.6172000000000001,
+      "enhanced_avg": 0.6792
+    },
+    {
+      "query": "pink whiskey",
+      "domain": "cocktails",
+      "improvement": 0.07000000000000006,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.6123999999999999,
+      "enhanced_avg": 0.6824
+    },
+    {
+      "query": "amber old fashioned",
+      "domain": "cocktails",
+      "improvement": 0.05599999999999983,
+      "processing_time": 9.298324584960938e-06,
+      "original_avg": 0.6454000000000001,
+      "enhanced_avg": 0.7013999999999999
+    },
+    {
+      "query": "pink cocktail",
+      "domain": "cocktails",
+      "improvement": 0.062000000000000055,
+      "processing_time": 7.867813110351562e-06,
+      "original_avg": 0.6056,
+      "enhanced_avg": 0.6676000000000001
+    },
+    {
+      "query": "pink martini",
+      "domain": "cocktails",
+      "improvement": 0.062000000000000055,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.6234,
+      "enhanced_avg": 0.6854
+    },
+    {
+      "query": "pink rose bouquet",
+      "domain": "flowers",
+      "improvement": 0.062000000000000055,
+      "processing_time": 1.8358230590820312e-05,
+      "original_avg": 0.6379999999999999,
+      "enhanced_avg": 0.7
+    },
+    {
+      "query": "pink lily",
+      "domain": "flowers",
+      "improvement": 0.062000000000000055,
+      "processing_time": 1.6927719116210938e-05,
+      "original_avg": 0.6496,
+      "enhanced_avg": 0.7116
+    },
+    {
+      "query": "pink tulip",
+      "domain": "flowers",
+      "improvement": 0.061999999999999944,
+      "processing_time": 1.1205673217773438e-05,
+      "original_avg": 0.6298,
+      "enhanced_avg": 0.6918
+    },
+    {
+      "query": "white lily arrangement",
+      "domain": "flowers",
+      "improvement": 0.05600000000000005,
+      "processing_time": 1.1205673217773438e-05,
+      "original_avg": 0.6357999999999999,
+      "enhanced_avg": 0.6918
+    },
+    {
+      "query": "pink rose",
+      "domain": "flowers",
+      "improvement": 0.06199999999999983,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.671,
+      "enhanced_avg": 0.7329999999999999
+    },
+    {
+      "query": "pink tulip",
+      "domain": "flowers",
+      "improvement": 0.062000000000000055,
+      "processing_time": 9.298324584960938e-06,
+      "original_avg": 0.6299999999999999,
+      "enhanced_avg": 0.692
+    },
+    {
+      "query": "red tulip garden",
+      "domain": "flowers",
+      "improvement": 0.05599999999999994,
+      "processing_time": 1.0013580322265625e-05,
+      "original_avg": 0.5923999999999999,
+      "enhanced_avg": 0.6483999999999999
+    },
+    {
+      "query": "pink rose",
+      "domain": "flowers",
+      "improvement": 0.062000000000000055,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.6092,
+      "enhanced_avg": 0.6712
+    },
+    {
+      "query": "pink lily",
+      "domain": "flowers",
+      "improvement": 0.061999999999999944,
+      "processing_time": 9.775161743164062e-06,
+      "original_avg": 0.6194000000000001,
+      "enhanced_avg": 0.6814
+    },
+    {
+      "query": "purple lavender field",
+      "domain": "flowers",
+      "improvement": 0.05600000000000016,
+      "processing_time": 1.0251998901367188e-05,
+      "original_avg": 0.6197999999999999,
+      "enhanced_avg": 0.6758000000000001
+    },
+    {
+      "query": "pink rose",
+      "domain": "flowers",
+      "improvement": 0.06199999999999983,
+      "processing_time": 8.821487426757812e-06,
+      "original_avg": 0.5942000000000001,
+      "enhanced_avg": 0.6561999999999999
+    },
+    {
+      "query": "pink lily",
+      "domain": "flowers",
+      "improvement": 0.06199999999999983,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.6544000000000001,
+      "enhanced_avg": 0.7163999999999999
+    },
+    {
+      "query": "pink tulip",
+      "domain": "flowers",
+      "improvement": 0.062000000000000055,
+      "processing_time": 8.106231689453125e-06,
+      "original_avg": 0.6739999999999999,
+      "enhanced_avg": 0.736
+    },
+    {
+      "query": "yellow sunflower bloom",
+      "domain": "flowers",
+      "improvement": 0.05599999999999994,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.629,
+      "enhanced_avg": 0.6849999999999999
+    },
+    {
+      "query": "pink rose",
+      "domain": "flowers",
+      "improvement": 0.061999999999999944,
+      "processing_time": 7.867813110351562e-06,
+      "original_avg": 0.623,
+      "enhanced_avg": 0.6849999999999999
+    },
+    {
+      "query": "golden crispy pastry",
+      "domain": "food",
+      "improvement": 0.05599999999999994,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.6446000000000001,
+      "enhanced_avg": 0.7006
+    },
+    {
+      "query": "golden salad",
+      "domain": "food",
+      "improvement": 0.05300000000000016,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.6197999999999999,
+      "enhanced_avg": 0.6728000000000001
+    },
+    {
+      "query": "golden dessert",
+      "domain": "food",
+      "improvement": 0.05300000000000005,
+      "processing_time": 9.298324584960938e-06,
+      "original_avg": 0.603,
+      "enhanced_avg": 0.656
+    },
+    {
+      "query": "fresh green salad",
+      "domain": "food",
+      "improvement": 0.05599999999999994,
+      "processing_time": 1.0013580322265625e-05,
+      "original_avg": 0.6574,
+      "enhanced_avg": 0.7133999999999999
+    },
+    {
+      "query": "golden pastry",
+      "domain": "food",
+      "improvement": 0.05300000000000016,
+      "processing_time": 7.867813110351562e-06,
+      "original_avg": 0.6247999999999999,
+      "enhanced_avg": 0.6778000000000001
+    },
+    {
+      "query": "golden dessert",
+      "domain": "food",
+      "improvement": 0.052999999999999936,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.591,
+      "enhanced_avg": 0.6439999999999999
+    },
+    {
+      "query": "rich chocolate dessert",
+      "domain": "food",
+      "improvement": 0.05600000000000005,
+      "processing_time": 8.821487426757812e-06,
+      "original_avg": 0.6235999999999999,
+      "enhanced_avg": 0.6796
+    },
+    {
+      "query": "golden pastry",
+      "domain": "food",
+      "improvement": 0.05300000000000016,
+      "processing_time": 8.344650268554688e-06,
+      "original_avg": 0.6494,
+      "enhanced_avg": 0.7024000000000001
+    },
+    {
+      "query": "golden salad",
+      "domain": "food",
+      "improvement": 0.05300000000000005,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.6274,
+      "enhanced_avg": 0.6804
+    },
+    {
+      "query": "creamy white sauce",
+      "domain": "food",
+      "improvement": 0.05599999999999994,
+      "processing_time": 9.775161743164062e-06,
+      "original_avg": 0.6338,
+      "enhanced_avg": 0.6898
+    },
+    {
+      "query": "golden pastry",
+      "domain": "food",
+      "improvement": 0.052999999999999936,
+      "processing_time": 9.059906005859375e-06,
+      "original_avg": 0.5786,
+      "enhanced_avg": 0.6315999999999999
+    },
+    {
+      "query": "golden salad",
+      "domain": "food",
+      "improvement": 0.052999999999999936,
+      "processing_time": 9.298324584960938e-06,
+      "original_avg": 0.6108,
+      "enhanced_avg": 0.6638
+    },
+    {
+      "query": "golden dessert",
+      "domain": "food",
+      "improvement": 0.05300000000000005,
+      "processing_time": 7.867813110351562e-06,
+      "original_avg": 0.6406,
+      "enhanced_avg": 0.6936
+    },
+    {
+      "query": "spicy red curry",
+      "domain": "food",
+      "improvement": 0.05600000000000005,
+      "processing_time": 8.821487426757812e-06,
+      "original_avg": 0.6714,
+      "enhanced_avg": 0.7274
+    },
+    {
+      "query": "golden pastry",
+      "domain": "food",
+      "improvement": 0.052999999999999936,
+      "processing_time": 8.106231689453125e-06,
+      "original_avg": 0.6508,
+      "enhanced_avg": 0.7038
+    }
+  ]
+}

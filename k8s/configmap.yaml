@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  batch_size: '512'
+  environment: production
+  gpu_memory_gb: '32.0'
+  max_workers: '8'
+kind: ConfigMap
+metadata:
+  name: pipeline-config
+  namespace: production

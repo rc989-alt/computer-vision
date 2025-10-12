@@ -1,0 +1,15 @@
+{
+  "ranking_accuracy": 0.5768518518518518,
+  "attention_weights": {
+    "visual": 0.3323240578174591,
+    "text": 0.33437445759773254,
+    "attribute": 0.3333014249801636
+  },
+  "estimated_ndcg_improvement": 0.028842592592592593,
+  "v1_comparison": {
+    "v1_ndcg": 0.0114,
+    "v2_ndcg": 0.028842592592592593,
+    "improvement_ratio": 2.5300519818063676
+  },
+  "evaluation_time": "2025-10-11T23:46:23.656099"
+}

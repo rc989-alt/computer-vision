@@ -1,0 +1,71 @@
+{
+  "execution_plan": {
+    "sprint_timeline": {
+      "start_date": "2025-10-12T00:05:27.540083",
+      "deadline": "2025-10-19T00:05:27.540083",
+      "total_days": 7
+    },
+    "daily_schedule": {
+      "day_1": {
+        "tasks": [
+          "上传生产数据到Colab",
+          "配置A100 GPU环境",
+          "实现真实特征提取pipeline"
+        ],
+        "deliverable": "真实特征提取器完成"
+      },
+      "day_2": {
+        "tasks": [
+          "在真实特征上训练V2.0模型",
+          "实现严格验证框架",
+          "执行初步验证"
+        ],
+        "deliverable": "V2.0真实模型训练完成"
+      },
+      "day_3-5": {
+        "tasks": [
+          "执行严格的5折交叉验证",
+          "Bootstrap置信区间分析",
+          "门槛检验"
+        ],
+        "deliverable": "严格验证结果"
+      },
+      "day_6-7": {
+        "tasks": [
+          "结果分析和决策",
+          "如通过：准备shadow部署",
+          "如失败：输出关闭报告"
+        ],
+        "deliverable": "Go/No-Go决策"
+      }
+    },
+    "success_criteria": {
+      "primary_gate": "ΔnDCG@10 ≥ +0.02 (CI95不含0)",
+      "secondary_gate": "ΔCompliance@1 不下降 (CI95不含0的负值)",
+      "sample_requirement": "至少100个有效查询验证",
+      "confidence_level": "95%置信区间"
+    },
+    "failure_handling": {
+      "if_ndcg_fails": "立即停止，输出详细分析报告",
+      "if_compliance_fails": "立即停止，避免业务风险",
+      "sunk_cost_acceptance": "承认架构探索价值，但停止继续投入"
+    }
+  },
+  "data_preparation": {
+    "required_files": [
+      "research/day3_results/production_dataset.json"
+    ],
+    "upload_instructions": [
+      "1. 打开Google Colab",
+      "2. 选择A100 GPU runtime",
+      "3. 上传production_dataset.json",
+      "4. 运行notebook cells依次执行"
+    ]
+  },
+  "expected_runtime": {
+    "feature_extraction": "10-15分钟",
+    "model_training": "5-10分钟",
+    "validation": "15-20分钟",
+    "total_estimated": "30-45分钟"
+  }
+}

@@ -1,0 +1,48 @@
+batch_size: 512
+cache_backend: redis
+cache_config:
+  cluster_endpoint: redis-cluster.cache.amazonaws.com:6379
+  eviction_policy: allkeys-lru
+  max_connections: 100
+  max_memory: 16gb
+  ssl: true
+cpu_limit: '16'
+description: Cloud production environment with high throughput
+disk_limit: 1Ti
+gpu_memory_gb: 32.0
+max_workers: 8
+memory_limit: 64Gi
+monitoring_config:
+  alert_webhook: https://hooks.slack.com/services/...
+  dashboard_enabled: true
+  distributed_tracing: true
+  log_level: INFO
+  metrics_export:
+    cloudwatch: true
+    prometheus: true
+  metrics_retention: 30d
+monitoring_enabled: true
+name: production
+queue_backend: kafka
+queue_config:
+  bootstrap_servers:
+  - kafka-1:9092
+  - kafka-2:9092
+  - kafka-3:9092
+  partitions: 16
+  replication_factor: 3
+  sasl_mechanism: PLAIN
+  sasl_password: ${KAFKA_PASSWORD}
+  sasl_username: ${KAFKA_USERNAME}
+  security_protocol: SASL_SSL
+storage_backend: s3
+storage_config:
+  bucket: pipeline-data-prod
+  encryption: AES256
+  lifecycle_rules:
+    logs:
+      expiration: 90
+    temp:
+      expiration: 7
+  region: us-west-2
+  versioning: true

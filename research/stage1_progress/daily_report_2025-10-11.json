@@ -1,0 +1,82 @@
+{
+  "date": "2025-10-11",
+  "project_day": 1,
+  "today_tasks": [
+    {
+      "id": "T001",
+      "name": "Cross-Attention\u6a21\u578b\u67b6\u6784",
+      "description": "\u5b9e\u73b0Token\u5316\u591a\u6a21\u6001\u7f16\u7801\u5668\u548c\u8f7b\u91cf\u7ea7Cross-Attention",
+      "assigned_day": 1,
+      "estimated_hours": 8.0,
+      "dependencies": [],
+      "status": "pending",
+      "actual_hours": 0.0,
+      "completion_percentage": 0,
+      "notes": [],
+      "deliverables": [
+        "TokenizedMultiModalEncoder\u7c7b",
+        "LightweightCrossAttention\u7c7b",
+        "\u5355\u5143\u6d4b\u8bd5\u901a\u8fc7",
+        "\u6027\u80fd\u57fa\u51c6\u6d4b\u8bd5"
+      ]
+    }
+  ],
+  "progress_summary": {
+    "completed_tasks": 0,
+    "in_progress_tasks": 0,
+    "blocked_tasks": 0,
+    "total_tasks": 12,
+    "completion_rate": 0.0
+  },
+  "time_tracking": {
+    "estimated_hours": 82.0,
+    "actual_hours": 0.0,
+    "efficiency": 0.0
+  },
+  "upcoming_milestones": [
+    {
+      "id": "M1",
+      "name": "Week 1 \u6838\u5fc3\u67b6\u6784\u5b8c\u6210",
+      "target_date": "2025-10-18",
+      "success_criteria": [
+        "\u6240\u6709\u6838\u5fc3\u7ec4\u4ef6\u5b9e\u73b0\u5b8c\u6210",
+        "\u5355\u5143\u6d4b\u8bd5\u5168\u90e8\u901a\u8fc7",
+        "Mock\u6570\u636e\u8bad\u7ec3\u6210\u529f",
+        "\u521d\u6b65\u6027\u80fd\u6307\u6807\u53ef\u6d4b\u91cf"
+      ],
+      "status": "pending",
+      "actual_date": null,
+      "notes": ""
+    },
+    {
+      "id": "M2",
+      "name": "\u6027\u80fd\u76ee\u6807\u8fbe\u6210",
+      "target_date": "2025-10-23",
+      "success_criteria": [
+        "Compliance@1 \u2265 +4pts (95% CI)",
+        "nDCG@10 \u2265 +8pts (95% CI)",
+        "ECE \u2264 0.03",
+        "\u7edf\u8ba1\u663e\u8457\u6027 p < 0.05"
+      ],
+      "status": "pending",
+      "actual_date": null,
+      "notes": ""
+    },
+    {
+      "id": "M3",
+      "name": "A/B\u6d4b\u8bd5\u5c31\u7eea",
+      "target_date": "2025-10-25",
+      "success_criteria": [
+        "\u751f\u4ea7\u63a5\u53e3\u5b8c\u6210",
+        "Shadow mode\u6d4b\u8bd5\u901a\u8fc7",
+        "\u76d1\u63a7\u544a\u8b66\u914d\u7f6e\u5b8c\u6210",
+        "\u56de\u6eda\u673a\u5236\u9a8c\u8bc1"
+      ],
+      "status": "pending",
+      "actual_date": null,
+      "notes": ""
+    }
+  ],
+  "recent_metrics": [],
+  "risks_and_blockers": []
+}

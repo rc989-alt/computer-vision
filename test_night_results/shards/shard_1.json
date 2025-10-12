@@ -1,0 +1,98 @@
+[
+  {
+    "query_id": "cocktail_presentation_001",
+    "candidate": {
+      "id": "candidate_001",
+      "score": 0.89,
+      "compliance": 1,
+      "content": {
+        "style": "elegant",
+        "garnish": "lemon twist",
+        "glass": "coupe",
+        "color": "amber"
+      }
+    },
+    "score_v1": 0.89,
+    "label": 1
+  },
+  {
+    "query_id": "cocktail_presentation_001",
+    "candidate": {
+      "id": "candidate_002",
+      "score": 0.76,
+      "compliance": 1,
+      "content": {
+        "style": "modern",
+        "garnish": "cherry",
+        "glass": "martini",
+        "color": "red"
+      }
+    },
+    "score_v1": 0.76,
+    "label": 1
+  },
+  {
+    "query_id": "cocktail_presentation_001",
+    "candidate": {
+      "id": "candidate_003",
+      "score": 0.65,
+      "compliance": 0,
+      "content": {
+        "style": "casual",
+        "garnish": "none",
+        "glass": "rocks",
+        "color": "clear"
+      }
+    },
+    "score_v1": 0.65,
+    "label": 0
+  },
+  {
+    "query_id": "cocktail_presentation_003",
+    "candidate": {
+      "id": "candidate_007",
+      "score": 0.88,
+      "compliance": 1,
+      "content": {
+        "style": "minimalist",
+        "garnish": "single herb sprig",
+        "glass": "crystal coupe",
+        "color": "clear"
+      }
+    },
+    "score_v1": 0.88,
+    "label": 1
+  },
+  {
+    "query_id": "cocktail_presentation_003",
+    "candidate": {
+      "id": "candidate_008",
+      "score": 0.79,
+      "compliance": 1,
+      "content": {
+        "style": "geometric",
+        "garnish": "ice sphere",
+        "glass": "angular rocks",
+        "color": "pale gold"
+      }
+    },
+    "score_v1": 0.79,
+    "label": 1
+  },
+  {
+    "query_id": "cocktail_presentation_003",
+    "candidate": {
+      "id": "candidate_009",
+      "score": 0.63,
+      "compliance": 0,
+      "content": {
+        "style": "cluttered",
+        "garnish": "multiple fruits",
+        "glass": "basic tumbler",
+        "color": "muddy brown"
+      }
+    },
+    "score_v1": 0.63,
+    "label": 0
+  }
+]

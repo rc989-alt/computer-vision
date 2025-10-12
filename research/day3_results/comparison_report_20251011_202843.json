@@ -1,0 +1,40 @@
+{
+  "test_metadata": {
+    "timestamp": "20251011_202843",
+    "test_data": "data/input/sample_input.json",
+    "cotrr_available": false
+  },
+  "baseline_results": {
+    "success": false,
+    "error": "2025-10-11 20:28:43,348 - INFO - \ud83d\ude80 Starting Computer Vision Pipeline\n2025-10-11 20:28:43,348 - INFO - \ud83d\udcc1 Input: data/input/sample_input.json\n2025-10-11 20:28:43,348 - INFO - \ud83d\udcc1 Output: research/day3_results/baseline_results_20251011_202843.json\n2025-10-11 20:28:43,348 - INFO - \u2699\ufe0f Config: config/default.json\n2025-10-11 20:28:43,348 - INFO - \ud83c\udf9b\ufe0f Mode: baseline\n2025-10-11 20:28:43,348 - INFO - \ud83d\udd0d Step 1: Feature Extraction\n2025-10-11 20:28:43,348 - INFO - Running: YOLO object detection\nTraceback (most recent call last):\n  File \"/Users/guyan/computer_vision/computer-vision/pipeline.py\", line 302, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/guyan/computer_vision/computer-vision/pipeline.py\", line 230, in main\n    run_command([\n    ~~~~~~~~~~~^^\n        'python', 'scripts/image_model.py',\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n        '--threshold', str(config.get('detection_threshold', 0.5))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ], \"YOLO object detection\")\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/guyan/computer_vision/computer-vision/pipeline.py\", line 46, in run_command\n    result = subprocess.run(cmd, check=True, capture_output=True, text=True)\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py\", line 554, in run\n    with Popen(*popenargs, **kwargs) as process:\n         ~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py\", line 1039, in __init__\n    self._execute_child(args, executable, preexec_fn, close_fds,\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                        pass_fds, cwd, env,\n                        ^^^^^^^^^^^^^^^^^^^\n    ...<5 lines>...\n                        gid, gids, uid, umask,\n                        ^^^^^^^^^^^^^^^^^^^^^^\n                        start_new_session, process_group)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py\", line 1972, in _execute_child\n    raise child_exception_type(errno_num, err_msg, err_filename)\nFileNotFoundError: [Errno 2] No such file or directory: 'python'\n"
+  },
+  "cotrr_results": {
+    "success": false,
+    "error": "CoTRR-Stable\u4e0d\u53ef\u7528"
+  },
+  "comparison": {
+    "execution_time_comparison": {
+      "baseline_time": 0,
+      "cotrr_time": 0,
+      "overhead_ratio": 0,
+      "overhead_absolute": 0
+    },
+    "quality_metrics": {},
+    "reranking_analysis": {},
+    "error_analysis": {},
+    "success_rates": {
+      "baseline_success": false,
+      "cotrr_success": false
+    }
+  },
+  "summary": {
+    "overall_status": "BOTH_FAILED",
+    "key_findings": [
+      "Both pipelines failed to execute"
+    ],
+    "performance_verdict": "UNKNOWN",
+    "recommendations": [
+      "Debug pipeline setup and dependencies"
+    ]
+  }
+}

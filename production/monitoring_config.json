@@ -1,0 +1,29 @@
+{
+  "metrics": {
+    "compliance_improvement": {
+      "target": 0.1382,
+      "alert_threshold": 0.05,
+      "measurement_window": "5min"
+    },
+    "p95_latency": {
+      "target": 0.062,
+      "alert_threshold": 2.0,
+      "measurement_window": "1min"
+    },
+    "error_rate": {
+      "target": 0.0,
+      "alert_threshold": 5.0,
+      "measurement_window": "1min"
+    },
+    "throughput": {
+      "baseline": "TBD",
+      "measurement_window": "1min"
+    }
+  },
+  "alerts": {
+    "compliance_drop": "Compliance improvement below 5%",
+    "latency_spike": "P95 latency above 2.0ms",
+    "high_error_rate": "Error rate above 5%",
+    "system_unavailable": "Health check failures"
+  }
+}

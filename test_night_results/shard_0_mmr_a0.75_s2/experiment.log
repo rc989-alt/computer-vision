@@ -1,0 +1,19 @@
+Experiment: shard_0_mmr_a0.75_s2
+Start: 2025-10-12T01:43:47.073896
+Parameters: alpha=0.75, slots=2
+Shard: test_night_results/shards/shard_0.json
+Results: {
+  "parameters": {
+    "alpha": 0.75,
+    "slots": 2
+  },
+  "sample_size": 3,
+  "baseline_ndcg": 1.0,
+  "enhanced_ndcg": 1.0,
+  "mean_improvement": 0.0,
+  "ci_95_lower": 0.0,
+  "ci_95_upper": 0.0,
+  "p_value": 1.0,
+  "is_significant": false,
+  "top1_improvement": -0.004697063399994987
+}

@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pipeline-workers
+  namespace: production
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pipeline-workers
+  template:
+    metadata:
+      labels:
+        app: pipeline-workers
+    spec:
+      containers:
+      - env:
+        - name: ENVIRONMENT
+          valueFrom:
+            configMapKeyRef:
+              key: environment
+              name: pipeline-config
+        image: your-registry/pipeline:latest
+        name: pipeline-worker
+        ports:
+        - containerPort: 8080
+          name: metrics
+        resources:
+          limits:
+            cpu: '16'
+            memory: 64Gi
+            nvidia.com/gpu: '1'
+          requests:
+            cpu: '2'
+            memory: 8Gi
+            nvidia.com/gpu: '1'
+      nodeSelector:
+        node-type: gpu-worker
+      tolerations:
+      - effect: NoSchedule
+        key: nvidia.com/gpu
+        operator: Exists

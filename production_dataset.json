@@ -1,0 +1,204 @@
+{
+  "inspirations": [
+    {
+      "query_id": "cocktail_presentation_001",
+      "query": "elegant cocktail presentation with garnish",
+      "description": "Professional cocktail styling for upscale venue",
+      "candidates": [
+        {
+          "id": "candidate_001",
+          "score": 0.89,
+          "compliance": 1,
+          "content": {
+            "style": "elegant",
+            "garnish": "lemon twist",
+            "glass": "coupe",
+            "color": "amber"
+          }
+        },
+        {
+          "id": "candidate_002", 
+          "score": 0.76,
+          "compliance": 1,
+          "content": {
+            "style": "modern",
+            "garnish": "cherry",
+            "glass": "martini",
+            "color": "red"
+          }
+        },
+        {
+          "id": "candidate_003",
+          "score": 0.65,
+          "compliance": 0,
+          "content": {
+            "style": "casual",
+            "garnish": "none",
+            "glass": "rocks",
+            "color": "clear"
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "cocktail_presentation_002",
+      "query": "colorful tropical drink styling",
+      "description": "Vibrant presentation for summer cocktails",
+      "candidates": [
+        {
+          "id": "candidate_004",
+          "score": 0.92,
+          "compliance": 1,
+          "content": {
+            "style": "tropical",
+            "garnish": "pineapple wedge",
+            "glass": "hurricane",
+            "color": "blue"
+          }
+        },
+        {
+          "id": "candidate_005",
+          "score": 0.84,
+          "compliance": 1,
+          "content": {
+            "style": "vibrant",
+            "garnish": "umbrella",
+            "glass": "tiki",
+            "color": "orange"
+          }
+        },
+        {
+          "id": "candidate_006",
+          "score": 0.71,
+          "compliance": 1,
+          "content": {
+            "style": "beach",
+            "garnish": "coconut rim",
+            "glass": "mason jar",
+            "color": "yellow"
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "cocktail_presentation_003",
+      "query": "minimalist glass design cocktail",
+      "description": "Clean, simple presentation focusing on glass aesthetics",
+      "candidates": [
+        {
+          "id": "candidate_007",
+          "score": 0.88,
+          "compliance": 1,
+          "content": {
+            "style": "minimalist",
+            "garnish": "single herb sprig",
+            "glass": "crystal coupe",
+            "color": "clear"
+          }
+        },
+        {
+          "id": "candidate_008",
+          "score": 0.79,
+          "compliance": 1,
+          "content": {
+            "style": "geometric",
+            "garnish": "ice sphere",
+            "glass": "angular rocks",
+            "color": "pale gold"
+          }
+        },
+        {
+          "id": "candidate_009",
+          "score": 0.63,
+          "compliance": 0,
+          "content": {
+            "style": "cluttered",
+            "garnish": "multiple fruits",
+            "glass": "basic tumbler",
+            "color": "muddy brown"
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "cocktail_presentation_004",
+      "query": "vintage style cocktail with classic garnish",
+      "description": "Retro cocktail presentation with traditional elements",
+      "candidates": [
+        {
+          "id": "candidate_010",
+          "score": 0.91,
+          "compliance": 1,
+          "content": {
+            "style": "vintage",
+            "garnish": "maraschino cherry",
+            "glass": "nick and nora",
+            "color": "deep red"
+          }
+        },
+        {
+          "id": "candidate_011",
+          "score": 0.82,
+          "compliance": 1,
+          "content": {
+            "style": "classic",
+            "garnish": "orange peel",
+            "glass": "old fashioned",
+            "color": "amber"
+          }
+        },
+        {
+          "id": "candidate_012",
+          "score": 0.68,
+          "compliance": 1,
+          "content": {
+            "style": "retro",
+            "garnish": "cocktail onion",
+            "glass": "martini",
+            "color": "clear"
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "cocktail_presentation_005",
+      "query": "modern molecular mixology presentation",
+      "description": "Innovative cocktail styling with molecular techniques",
+      "candidates": [
+        {
+          "id": "candidate_013",
+          "score": 0.94,
+          "compliance": 1,
+          "content": {
+            "style": "molecular",
+            "garnish": "foam topping",
+            "glass": "sphere glass",
+            "color": "purple"
+          }
+        },
+        {
+          "id": "candidate_014",
+          "score": 0.87,
+          "compliance": 1,
+          "content": {
+            "style": "avant-garde",
+            "garnish": "edible flowers",
+            "glass": "test tube",
+            "color": "green"
+          }
+        },
+        {
+          "id": "candidate_015",
+          "score": 0.73,
+          "compliance": 0,
+          "content": {
+            "style": "experimental",
+            "garnish": "dry ice",
+            "glass": "beaker",
+            "color": "smoking"
+          }
+        }
+      ]
+    }
+  ]
+}

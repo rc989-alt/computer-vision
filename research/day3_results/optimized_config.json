@@ -1,0 +1,64 @@
+{
+  "config": {
+    "compliance_weight": 0.3,
+    "conflict_penalty_alpha": 0.1,
+    "description_boost_weight": 0.1
+  },
+  "score": -0.22499999999999964,
+  "details": {
+    "avg_improvement": -0.022499999999999964,
+    "avg_processing_time": 8.392333984375e-05,
+    "rerank_rate": 0.0,
+    "valid_queries": 1
+  },
+  "full_test_results": {
+    "results": [
+      {
+        "query": "pink floral cocktail",
+        "original_scores": [
+          0.85,
+          0.78
+        ],
+        "enhanced_scores": [
+          0.835,
+          0.75
+        ],
+        "original_order": [
+          "sample_001",
+          "sample_002"
+        ],
+        "enhanced_order": [
+          "sample_001",
+          "sample_002"
+        ],
+        "improvement": -0.022499999999999964,
+        "processing_time": 0.00011014938354492188,
+        "ranking_changed": false
+      }
+    ],
+    "summary": {
+      "total_queries": 1,
+      "avg_improvement": -0.022499999999999964,
+      "avg_processing_time": 0.00011014938354492188,
+      "rerank_rate": 0.0,
+      "positive_improvements": 0,
+      "config": {
+        "compliance_weight": 0.3,
+        "conflict_penalty_alpha": 0.1,
+        "description_boost_weight": 0.1
+      }
+    },
+    "enhancer_stats": {
+      "processed_queries": 1,
+      "cache_hits": 0,
+      "enhancement_applied": 0,
+      "avg_processing_time": 0.00010919570922851562,
+      "cache_hit_rate": 0.0,
+      "config": {
+        "compliance_weight": 0.3,
+        "conflict_penalty_alpha": 0.1,
+        "description_boost_weight": 0.1
+      }
+    }
+  }
+}

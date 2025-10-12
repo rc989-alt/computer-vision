@@ -1,0 +1,32 @@
+{
+  "metrics": {
+    "compliance_improvement": 0.138185,
+    "compliance_ci95": [
+      0.13290866666666667,
+      0.1429799166666667
+    ],
+    "ndcg_improvement": 0.011369690611034409,
+    "ndcg_ci95": [
+      0.010436675538364677,
+      0.012286933497559757
+    ],
+    "p95_latency_ms": 0.06200790405273437,
+    "blossom_fruit_error_rate": 0.0,
+    "low_margin_rate": 0.98
+  },
+  "thresholds_met": {
+    "compliance_improvement": false,
+    "ndcg_improvement": false,
+    "latency": true,
+    "blossom_fruit_error": true,
+    "low_margin": false
+  },
+  "config": {
+    "min_compliance_improvement": 0.15,
+    "target_ndcg_improvement": 0.08,
+    "max_p95_latency_ms": 1.0,
+    "max_blossom_fruit_error_rate": 0.02,
+    "max_low_margin_rate": 0.1
+  },
+  "evaluation_time": 1760235109.460557
+}

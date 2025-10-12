@@ -1,0 +1,33 @@
+batch_size: 4
+cache_backend: redis
+cache_config:
+  db: 1
+  eviction_policy: allkeys-lru
+  host: localhost
+  max_memory: 1gb
+  port: 6379
+cpu_limit: '4'
+description: Laptop development environment with GPU optimization
+disk_limit: 100Gi
+gpu_memory_gb: 8.0
+max_workers: 3
+memory_limit: 8Gi
+monitoring_config:
+  alert_webhook: null
+  dashboard_enabled: true
+  log_level: INFO
+  metrics_retention: 24h
+monitoring_enabled: true
+name: laptop
+queue_backend: redis
+queue_config:
+  db: 0
+  host: localhost
+  max_connections: 10
+  port: 6379
+  socket_timeout: 30
+storage_backend: local
+storage_config:
+  backup_enabled: false
+  base_path: ./data
+  temp_path: /tmp/pipeline

@@ -1,0 +1,44 @@
+batch_size: 32
+cache_backend: redis
+cache_config:
+  cluster_enabled: true
+  max_memory: 4gb
+  nodes:
+  - host: redis-1
+    port: 6380
+  - host: redis-2
+    port: 6380
+  - host: redis-3
+    port: 6380
+cpu_limit: '8'
+description: Staging environment for testing production configurations
+disk_limit: 500Gi
+gpu_memory_gb: 16.0
+max_workers: 4
+memory_limit: 32Gi
+monitoring_config:
+  alert_webhook: https://hooks.slack.com/services/.../staging
+  dashboard_enabled: true
+  distributed_tracing: true
+  log_level: DEBUG
+  metrics_retention: 7d
+monitoring_enabled: true
+name: staging
+queue_backend: redis
+queue_config:
+  cluster_enabled: true
+  max_connections: 20
+  nodes:
+  - host: redis-1
+    port: 6379
+  - host: redis-2
+    port: 6379
+  - host: redis-3
+    port: 6379
+storage_backend: s3
+storage_config:
+  access_key: ${MINIO_ACCESS_KEY}
+  bucket: pipeline-data-staging
+  endpoint: http://minio:9000
+  secret_key: ${MINIO_SECRET_KEY}
+  secure: false

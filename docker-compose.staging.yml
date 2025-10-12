@@ -1,0 +1,69 @@
+services:
+  minio:
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ACCESS_KEY: pipeline_access
+      MINIO_SECRET_KEY: pipeline_secret_key_123
+    image: minio/minio:latest
+    ports:
+    - 9000:9000
+    - 9001:9001
+    volumes:
+    - minio_data:/data
+  pipeline:
+    build: .
+    depends_on:
+    - redis-1
+    - redis-2
+    - redis-3
+    - minio
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: '8'
+          memory: 32Gi
+    environment:
+      BATCH_SIZE: '32'
+      ENVIRONMENT: staging
+      GPU_MEMORY_GB: '16.0'
+      MINIO_ACCESS_KEY: pipeline_access
+      MINIO_ENDPOINT: http://minio:9000
+      MINIO_SECRET_KEY: pipeline_secret_key_123
+      REDIS_CLUSTER: redis-1:6379,redis-2:6381,redis-3:6383
+    volumes:
+    - ./config:/app/config
+    - ./logs:/app/logs
+  redis-1:
+    command: redis-server --port 6379 --cluster-enabled yes --cluster-config-file
+      nodes.conf
+    image: redis:7-alpine
+    ports:
+    - 6379:6379
+    - 6380:6380
+    volumes:
+    - redis1_data:/data
+  redis-2:
+    command: redis-server --port 6379 --cluster-enabled yes --cluster-config-file
+      nodes.conf
+    image: redis:7-alpine
+    ports:
+    - 6381:6379
+    - 6382:6380
+    volumes:
+    - redis2_data:/data
+  redis-3:
+    command: redis-server --port 6379 --cluster-enabled yes --cluster-config-file
+      nodes.conf
+    image: redis:7-alpine
+    ports:
+    - 6383:6379
+    - 6384:6380
+    volumes:
+    - redis3_data:/data
+version: '3.8'
+volumes:
+  minio_data: {}
+  redis1_data: {}
+  redis2_data: {}
+  redis3_data: {}

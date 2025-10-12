@@ -1,0 +1,2869 @@
+{
+  "metadata": {
+    "created_at": "2025-10-12T01:12:06.084328",
+    "total_queries": 100,
+    "domains": [
+      "cocktails",
+      "food",
+      "alcohol",
+      "dining"
+    ],
+    "purpose": "V1 algorithm optimization research"
+  },
+  "inspirations": [
+    {
+      "query": "signature old fashioned",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_14_0",
+          "title": "Signature old fashioned - craft recipe",
+          "score": 0.907,
+          "compliance_score": 0.981,
+          "alt_description": "Professional signature old fashioned cocktail"
+        },
+        {
+          "id": "cocktail_14_1",
+          "title": "Signature old fashioned - bar style",
+          "score": 0.913,
+          "compliance_score": 0.918,
+          "alt_description": "Professional signature old fashioned cocktail"
+        },
+        {
+          "id": "cocktail_14_2",
+          "title": "Signature old fashioned - signature",
+          "score": 0.918,
+          "compliance_score": 0.902,
+          "alt_description": "Professional signature old fashioned cocktail"
+        },
+        {
+          "id": "cocktail_14_3",
+          "title": "Signature old fashioned - premium",
+          "score": 0.904,
+          "compliance_score": 0.934,
+          "alt_description": "Professional signature old fashioned cocktail"
+        },
+        {
+          "id": "cocktail_14_4",
+          "title": "Signature old fashioned - classic",
+          "score": 0.737,
+          "compliance_score": 0.802,
+          "alt_description": "Professional signature old fashioned cocktail"
+        }
+      ]
+    },
+    {
+      "query": "premium seafood",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_27_0",
+          "title": "Premium seafood - artisan",
+          "score": 0.784,
+          "compliance_score": 0.692,
+          "alt_description": "High quality premium seafood image"
+        },
+        {
+          "id": "food_27_1",
+          "title": "Premium seafood - gourmet",
+          "score": 0.616,
+          "compliance_score": 0.662,
+          "alt_description": "High quality premium seafood image"
+        }
+      ]
+    },
+    {
+      "query": "trendy happy hour",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_8_0",
+          "title": "Trendy happy hour - memorable dining",
+          "score": 0.764,
+          "compliance_score": 0.811,
+          "alt_description": "Beautiful trendy happy hour setting"
+        },
+        {
+          "id": "dining_8_1",
+          "title": "Trendy happy hour - premium experience",
+          "score": 0.834,
+          "compliance_score": 0.858,
+          "alt_description": "Beautiful trendy happy hour setting"
+        },
+        {
+          "id": "dining_8_2",
+          "title": "Trendy happy hour - stylish ambiance",
+          "score": 0.796,
+          "compliance_score": 0.805,
+          "alt_description": "Beautiful trendy happy hour setting"
+        },
+        {
+          "id": "dining_8_3",
+          "title": "Trendy happy hour - memorable dining",
+          "score": 0.701,
+          "compliance_score": 0.644,
+          "alt_description": "Beautiful trendy happy hour setting"
+        }
+      ]
+    },
+    {
+      "query": "rustic breakfast",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_3_0",
+          "title": "Rustic breakfast - perfect setting",
+          "score": 0.892,
+          "compliance_score": 0.868,
+          "alt_description": "Beautiful rustic breakfast setting"
+        },
+        {
+          "id": "dining_3_1",
+          "title": "Rustic breakfast - perfect setting",
+          "score": 0.866,
+          "compliance_score": 0.873,
+          "alt_description": "Beautiful rustic breakfast setting"
+        },
+        {
+          "id": "dining_3_2",
+          "title": "Rustic breakfast - memorable dining",
+          "score": 0.938,
+          "compliance_score": 0.87,
+          "alt_description": "Beautiful rustic breakfast setting"
+        },
+        {
+          "id": "dining_3_3",
+          "title": "Rustic breakfast - memorable dining",
+          "score": 0.807,
+          "compliance_score": 0.776,
+          "alt_description": "Beautiful rustic breakfast setting"
+        }
+      ]
+    },
+    {
+      "query": "organic sandwich photography",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_7_0",
+          "title": "Organic sandwich - artisan",
+          "score": 0.775,
+          "compliance_score": 0.771,
+          "alt_description": "High quality organic sandwich image"
+        },
+        {
+          "id": "food_7_1",
+          "title": "Organic sandwich - professional",
+          "score": 0.685,
+          "compliance_score": 0.621,
+          "alt_description": "High quality organic sandwich image"
+        }
+      ]
+    },
+    {
+      "query": "premium negroni",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_22_0",
+          "title": "Premium negroni - signature",
+          "score": 0.785,
+          "compliance_score": 0.838,
+          "alt_description": "Professional premium negroni cocktail"
+        },
+        {
+          "id": "cocktail_22_1",
+          "title": "Premium negroni - signature",
+          "score": 0.917,
+          "compliance_score": 1.0,
+          "alt_description": "Professional premium negroni cocktail"
+        },
+        {
+          "id": "cocktail_22_2",
+          "title": "Premium negroni - craft recipe",
+          "score": 0.911,
+          "compliance_score": 0.945,
+          "alt_description": "Professional premium negroni cocktail"
+        },
+        {
+          "id": "cocktail_22_3",
+          "title": "Premium negroni - bar style",
+          "score": 0.767,
+          "compliance_score": 0.771,
+          "alt_description": "Professional premium negroni cocktail"
+        },
+        {
+          "id": "cocktail_22_4",
+          "title": "Premium negroni - craft recipe",
+          "score": 0.685,
+          "compliance_score": 0.644,
+          "alt_description": "Professional premium negroni cocktail"
+        }
+      ]
+    },
+    {
+      "query": "luxury artisan scotch",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_12_0",
+          "title": "Artisan scotch - limited edition",
+          "score": 0.73,
+          "compliance_score": 0.807,
+          "alt_description": "High-end artisan scotch bottle"
+        },
+        {
+          "id": "alcohol_12_1",
+          "title": "Artisan scotch - limited edition",
+          "score": 0.963,
+          "compliance_score": 0.928,
+          "alt_description": "High-end artisan scotch bottle"
+        },
+        {
+          "id": "alcohol_12_2",
+          "title": "Artisan scotch - limited edition",
+          "score": 0.762,
+          "compliance_score": 0.825,
+          "alt_description": "High-end artisan scotch bottle"
+        },
+        {
+          "id": "alcohol_12_3",
+          "title": "Artisan scotch - collector grade",
+          "score": 0.872,
+          "compliance_score": 0.826,
+          "alt_description": "High-end artisan scotch bottle"
+        }
+      ]
+    },
+    {
+      "query": "best elegant daiquiri recipe",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_21_0",
+          "title": "Elegant daiquiri - bar style",
+          "score": 0.781,
+          "compliance_score": 0.9,
+          "alt_description": "Professional elegant daiquiri cocktail"
+        },
+        {
+          "id": "cocktail_21_1",
+          "title": "Elegant daiquiri - signature",
+          "score": 0.674,
+          "compliance_score": 0.755,
+          "alt_description": "Professional elegant daiquiri cocktail"
+        },
+        {
+          "id": "cocktail_21_2",
+          "title": "Elegant daiquiri - signature",
+          "score": 0.912,
+          "compliance_score": 0.927,
+          "alt_description": "Professional elegant daiquiri cocktail"
+        }
+      ]
+    },
+    {
+      "query": "best refreshing gin fizz recipe",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_18_0",
+          "title": "Refreshing gin fizz - premium",
+          "score": 0.895,
+          "compliance_score": 0.877,
+          "alt_description": "Professional refreshing gin fizz cocktail"
+        },
+        {
+          "id": "cocktail_18_1",
+          "title": "Refreshing gin fizz - bar style",
+          "score": 0.687,
+          "compliance_score": 0.642,
+          "alt_description": "Professional refreshing gin fizz cocktail"
+        }
+      ]
+    },
+    {
+      "query": "margarita with premium garnish",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_7_0",
+          "title": "Premium margarita - premium",
+          "score": 0.911,
+          "compliance_score": 0.907,
+          "alt_description": "Professional premium margarita cocktail"
+        },
+        {
+          "id": "cocktail_7_1",
+          "title": "Premium margarita - craft recipe",
+          "score": 0.836,
+          "compliance_score": 0.92,
+          "alt_description": "Professional premium margarita cocktail"
+        },
+        {
+          "id": "cocktail_7_2",
+          "title": "Premium margarita - signature",
+          "score": 0.81,
+          "compliance_score": 0.746,
+          "alt_description": "Professional premium margarita cocktail"
+        },
+        {
+          "id": "cocktail_7_3",
+          "title": "Premium margarita - bar style",
+          "score": 0.857,
+          "compliance_score": 0.81,
+          "alt_description": "Professional premium margarita cocktail"
+        }
+      ]
+    },
+    {
+      "query": "pizza with homemade ingredients",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_25_0",
+          "title": "Homemade pizza - gourmet",
+          "score": 0.937,
+          "compliance_score": 0.907,
+          "alt_description": "High quality homemade pizza image"
+        },
+        {
+          "id": "food_25_1",
+          "title": "Homemade pizza - professional",
+          "score": 0.82,
+          "compliance_score": 0.834,
+          "alt_description": "High quality homemade pizza image"
+        },
+        {
+          "id": "food_25_2",
+          "title": "Homemade pizza - gourmet",
+          "score": 0.776,
+          "compliance_score": 0.83,
+          "alt_description": "High quality homemade pizza image"
+        }
+      ]
+    },
+    {
+      "query": "sophisticated negroni",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_10_0",
+          "title": "Sophisticated negroni - classic",
+          "score": 0.89,
+          "compliance_score": 0.976,
+          "alt_description": "Professional sophisticated negroni cocktail"
+        },
+        {
+          "id": "cocktail_10_1",
+          "title": "Sophisticated negroni - signature",
+          "score": 0.759,
+          "compliance_score": 0.815,
+          "alt_description": "Professional sophisticated negroni cocktail"
+        },
+        {
+          "id": "cocktail_10_2",
+          "title": "Sophisticated negroni - premium",
+          "score": 0.676,
+          "compliance_score": 0.715,
+          "alt_description": "Professional sophisticated negroni cocktail"
+        }
+      ]
+    },
+    {
+      "query": "delicious dessert photography",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_11_0",
+          "title": "Delicious dessert - gourmet",
+          "score": 0.931,
+          "compliance_score": 0.989,
+          "alt_description": "High quality delicious dessert image"
+        },
+        {
+          "id": "food_11_1",
+          "title": "Delicious dessert - professional",
+          "score": 0.892,
+          "compliance_score": 0.943,
+          "alt_description": "High quality delicious dessert image"
+        }
+      ]
+    },
+    {
+      "query": "elegant bistro interior",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_7_0",
+          "title": "Elegant bistro - premium experience",
+          "score": 0.887,
+          "compliance_score": 0.86,
+          "alt_description": "Beautiful elegant bistro setting"
+        },
+        {
+          "id": "dining_7_1",
+          "title": "Elegant bistro - premium experience",
+          "score": 0.793,
+          "compliance_score": 0.801,
+          "alt_description": "Beautiful elegant bistro setting"
+        },
+        {
+          "id": "dining_7_2",
+          "title": "Elegant bistro - memorable dining",
+          "score": 0.848,
+          "compliance_score": 0.884,
+          "alt_description": "Beautiful elegant bistro setting"
+        },
+        {
+          "id": "dining_7_3",
+          "title": "Elegant bistro - stylish ambiance",
+          "score": 0.777,
+          "compliance_score": 0.713,
+          "alt_description": "Beautiful elegant bistro setting"
+        }
+      ]
+    },
+    {
+      "query": "classic brunch interior",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_12_0",
+          "title": "Classic brunch - stylish ambiance",
+          "score": 0.914,
+          "compliance_score": 0.871,
+          "alt_description": "Beautiful classic brunch setting"
+        },
+        {
+          "id": "dining_12_1",
+          "title": "Classic brunch - memorable dining",
+          "score": 0.701,
+          "compliance_score": 0.724,
+          "alt_description": "Beautiful classic brunch setting"
+        }
+      ]
+    },
+    {
+      "query": "seafood with artisan ingredients",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_15_0",
+          "title": "Artisan seafood - artisan",
+          "score": 0.856,
+          "compliance_score": 0.86,
+          "alt_description": "High quality artisan seafood image"
+        },
+        {
+          "id": "food_15_1",
+          "title": "Artisan seafood - homemade",
+          "score": 0.728,
+          "compliance_score": 0.794,
+          "alt_description": "High quality artisan seafood image"
+        },
+        {
+          "id": "food_15_2",
+          "title": "Artisan seafood - restaurant style",
+          "score": 0.921,
+          "compliance_score": 0.897,
+          "alt_description": "High quality artisan seafood image"
+        },
+        {
+          "id": "food_15_3",
+          "title": "Artisan seafood - artisan",
+          "score": 0.937,
+          "compliance_score": 0.858,
+          "alt_description": "High quality artisan seafood image"
+        }
+      ]
+    },
+    {
+      "query": "trendy lunch",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_2_0",
+          "title": "Trendy lunch - premium experience",
+          "score": 0.772,
+          "compliance_score": 0.831,
+          "alt_description": "Beautiful trendy lunch setting"
+        },
+        {
+          "id": "dining_2_1",
+          "title": "Trendy lunch - premium experience",
+          "score": 0.819,
+          "compliance_score": 0.915,
+          "alt_description": "Beautiful trendy lunch setting"
+        }
+      ]
+    },
+    {
+      "query": "restaurant quality artisan steak",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_17_0",
+          "title": "Artisan steak - restaurant style",
+          "score": 0.961,
+          "compliance_score": 0.952,
+          "alt_description": "High quality artisan steak image"
+        },
+        {
+          "id": "food_17_1",
+          "title": "Artisan steak - homemade",
+          "score": 0.735,
+          "compliance_score": 0.791,
+          "alt_description": "High quality artisan steak image"
+        },
+        {
+          "id": "food_17_2",
+          "title": "Artisan steak - gourmet",
+          "score": 0.896,
+          "compliance_score": 0.994,
+          "alt_description": "High quality artisan steak image"
+        }
+      ]
+    },
+    {
+      "query": "martini with creative garnish",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_19_0",
+          "title": "Creative martini - craft recipe",
+          "score": 0.698,
+          "compliance_score": 0.685,
+          "alt_description": "Professional creative martini cocktail"
+        },
+        {
+          "id": "cocktail_19_1",
+          "title": "Creative martini - premium",
+          "score": 0.874,
+          "compliance_score": 0.845,
+          "alt_description": "Professional creative martini cocktail"
+        },
+        {
+          "id": "cocktail_19_2",
+          "title": "Creative martini - classic",
+          "score": 0.676,
+          "compliance_score": 0.67,
+          "alt_description": "Professional creative martini cocktail"
+        },
+        {
+          "id": "cocktail_19_3",
+          "title": "Creative martini - classic",
+          "score": 0.834,
+          "compliance_score": 0.891,
+          "alt_description": "Professional creative martini cocktail"
+        },
+        {
+          "id": "cocktail_19_4",
+          "title": "Creative martini - bar style",
+          "score": 0.877,
+          "compliance_score": 0.942,
+          "alt_description": "Professional creative martini cocktail"
+        }
+      ]
+    },
+    {
+      "query": "homemade burger",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_3_0",
+          "title": "Homemade burger - restaurant style",
+          "score": 0.717,
+          "compliance_score": 0.645,
+          "alt_description": "High quality homemade burger image"
+        },
+        {
+          "id": "food_3_1",
+          "title": "Homemade burger - gourmet",
+          "score": 0.872,
+          "compliance_score": 0.892,
+          "alt_description": "High quality homemade burger image"
+        },
+        {
+          "id": "food_3_2",
+          "title": "Homemade burger - gourmet",
+          "score": 0.606,
+          "compliance_score": 0.618,
+          "alt_description": "High quality homemade burger image"
+        }
+      ]
+    },
+    {
+      "query": "happy hour upscale atmosphere",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_10_0",
+          "title": "Upscale happy hour - stylish ambiance",
+          "score": 0.92,
+          "compliance_score": 0.891,
+          "alt_description": "Beautiful upscale happy hour setting"
+        },
+        {
+          "id": "dining_10_1",
+          "title": "Upscale happy hour - memorable dining",
+          "score": 0.73,
+          "compliance_score": 0.804,
+          "alt_description": "Beautiful upscale happy hour setting"
+        },
+        {
+          "id": "dining_10_2",
+          "title": "Upscale happy hour - perfect setting",
+          "score": 0.751,
+          "compliance_score": 0.848,
+          "alt_description": "Beautiful upscale happy hour setting"
+        }
+      ]
+    },
+    {
+      "query": "vintage vodka",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_4_0",
+          "title": "Vintage vodka - distillery special",
+          "score": 0.915,
+          "compliance_score": 0.984,
+          "alt_description": "High-end vintage vodka bottle"
+        },
+        {
+          "id": "alcohol_4_1",
+          "title": "Vintage vodka - collector grade",
+          "score": 0.726,
+          "compliance_score": 0.74,
+          "alt_description": "High-end vintage vodka bottle"
+        },
+        {
+          "id": "alcohol_4_2",
+          "title": "Vintage vodka - limited edition",
+          "score": 0.936,
+          "compliance_score": 0.892,
+          "alt_description": "High-end vintage vodka bottle"
+        }
+      ]
+    },
+    {
+      "query": "artisan pizza",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_28_0",
+          "title": "Artisan pizza - restaurant style",
+          "score": 0.828,
+          "compliance_score": 0.825,
+          "alt_description": "High quality artisan pizza image"
+        },
+        {
+          "id": "food_28_1",
+          "title": "Artisan pizza - restaurant style",
+          "score": 0.788,
+          "compliance_score": 0.844,
+          "alt_description": "High quality artisan pizza image"
+        },
+        {
+          "id": "food_28_2",
+          "title": "Artisan pizza - gourmet",
+          "score": 0.923,
+          "compliance_score": 0.975,
+          "alt_description": "High quality artisan pizza image"
+        },
+        {
+          "id": "food_28_3",
+          "title": "Artisan pizza - restaurant style",
+          "score": 0.822,
+          "compliance_score": 0.748,
+          "alt_description": "High quality artisan pizza image"
+        },
+        {
+          "id": "food_28_4",
+          "title": "Artisan pizza - homemade",
+          "score": 0.945,
+          "compliance_score": 0.875,
+          "alt_description": "High quality artisan pizza image"
+        }
+      ]
+    },
+    {
+      "query": "best fresh steak recipe",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_5_0",
+          "title": "Fresh steak - gourmet",
+          "score": 0.75,
+          "compliance_score": 0.72,
+          "alt_description": "High quality fresh steak image"
+        },
+        {
+          "id": "food_5_1",
+          "title": "Fresh steak - artisan",
+          "score": 0.643,
+          "compliance_score": 0.699,
+          "alt_description": "High quality fresh steak image"
+        }
+      ]
+    },
+    {
+      "query": "dessert with seasonal ingredients",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_24_0",
+          "title": "Seasonal dessert - homemade",
+          "score": 0.955,
+          "compliance_score": 1.0,
+          "alt_description": "High quality seasonal dessert image"
+        },
+        {
+          "id": "food_24_1",
+          "title": "Seasonal dessert - restaurant style",
+          "score": 0.771,
+          "compliance_score": 0.715,
+          "alt_description": "High quality seasonal dessert image"
+        },
+        {
+          "id": "food_24_2",
+          "title": "Seasonal dessert - professional",
+          "score": 0.966,
+          "compliance_score": 0.881,
+          "alt_description": "High quality seasonal dessert image"
+        }
+      ]
+    },
+    {
+      "query": "refreshing piña colada",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_1_0",
+          "title": "Refreshing piña colada - craft recipe",
+          "score": 0.892,
+          "compliance_score": 1.0,
+          "alt_description": "Professional refreshing piña colada cocktail"
+        },
+        {
+          "id": "cocktail_1_1",
+          "title": "Refreshing piña colada - bar style",
+          "score": 0.739,
+          "compliance_score": 0.686,
+          "alt_description": "Professional refreshing piña colada cocktail"
+        },
+        {
+          "id": "cocktail_1_2",
+          "title": "Refreshing piña colada - classic",
+          "score": 0.929,
+          "compliance_score": 0.918,
+          "alt_description": "Professional refreshing piña colada cocktail"
+        },
+        {
+          "id": "cocktail_1_3",
+          "title": "Refreshing piña colada - craft recipe",
+          "score": 0.866,
+          "compliance_score": 0.86,
+          "alt_description": "Professional refreshing piña colada cocktail"
+        },
+        {
+          "id": "cocktail_1_4",
+          "title": "Refreshing piña colada - bar style",
+          "score": 0.874,
+          "compliance_score": 0.834,
+          "alt_description": "Professional refreshing piña colada cocktail"
+        }
+      ]
+    },
+    {
+      "query": "best craft piña colada recipe",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_4_0",
+          "title": "Craft piña colada - signature",
+          "score": 0.818,
+          "compliance_score": 0.871,
+          "alt_description": "Professional craft piña colada cocktail"
+        },
+        {
+          "id": "cocktail_4_1",
+          "title": "Craft piña colada - classic",
+          "score": 0.939,
+          "compliance_score": 0.886,
+          "alt_description": "Professional craft piña colada cocktail"
+        },
+        {
+          "id": "cocktail_4_2",
+          "title": "Craft piña colada - bar style",
+          "score": 0.717,
+          "compliance_score": 0.759,
+          "alt_description": "Professional craft piña colada cocktail"
+        },
+        {
+          "id": "cocktail_4_3",
+          "title": "Craft piña colada - craft recipe",
+          "score": 0.793,
+          "compliance_score": 0.805,
+          "alt_description": "Professional craft piña colada cocktail"
+        },
+        {
+          "id": "cocktail_4_4",
+          "title": "Craft piña colada - signature",
+          "score": 0.925,
+          "compliance_score": 0.891,
+          "alt_description": "Professional craft piña colada cocktail"
+        }
+      ]
+    },
+    {
+      "query": "casual fine dining photography",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_13_0",
+          "title": "Casual fine dining - memorable dining",
+          "score": 0.878,
+          "compliance_score": 0.912,
+          "alt_description": "Beautiful casual fine dining setting"
+        },
+        {
+          "id": "dining_13_1",
+          "title": "Casual fine dining - premium experience",
+          "score": 0.837,
+          "compliance_score": 0.895,
+          "alt_description": "Beautiful casual fine dining setting"
+        }
+      ]
+    },
+    {
+      "query": "bar quality artisanal cosmopolitan",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_15_0",
+          "title": "Artisanal cosmopolitan - premium",
+          "score": 0.763,
+          "compliance_score": 0.738,
+          "alt_description": "Professional artisanal cosmopolitan cocktail"
+        },
+        {
+          "id": "cocktail_15_1",
+          "title": "Artisanal cosmopolitan - craft recipe",
+          "score": 0.79,
+          "compliance_score": 0.905,
+          "alt_description": "Professional artisanal cosmopolitan cocktail"
+        }
+      ]
+    },
+    {
+      "query": "whiskey sour with craft garnish",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_16_0",
+          "title": "Craft whiskey sour - bar style",
+          "score": 0.842,
+          "compliance_score": 0.897,
+          "alt_description": "Professional craft whiskey sour cocktail"
+        },
+        {
+          "id": "cocktail_16_1",
+          "title": "Craft whiskey sour - classic",
+          "score": 0.884,
+          "compliance_score": 0.949,
+          "alt_description": "Professional craft whiskey sour cocktail"
+        },
+        {
+          "id": "cocktail_16_2",
+          "title": "Craft whiskey sour - craft recipe",
+          "score": 0.714,
+          "compliance_score": 0.809,
+          "alt_description": "Professional craft whiskey sour cocktail"
+        },
+        {
+          "id": "cocktail_16_3",
+          "title": "Craft whiskey sour - craft recipe",
+          "score": 0.817,
+          "compliance_score": 0.742,
+          "alt_description": "Professional craft whiskey sour cocktail"
+        }
+      ]
+    },
+    {
+      "query": "dessert with homemade ingredients",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_0_0",
+          "title": "Homemade dessert - professional",
+          "score": 0.849,
+          "compliance_score": 0.861,
+          "alt_description": "High quality homemade dessert image"
+        },
+        {
+          "id": "food_0_1",
+          "title": "Homemade dessert - artisan",
+          "score": 0.977,
+          "compliance_score": 0.931,
+          "alt_description": "High quality homemade dessert image"
+        },
+        {
+          "id": "food_0_2",
+          "title": "Homemade dessert - homemade",
+          "score": 0.659,
+          "compliance_score": 0.591,
+          "alt_description": "High quality homemade dessert image"
+        },
+        {
+          "id": "food_0_3",
+          "title": "Homemade dessert - artisan",
+          "score": 0.819,
+          "compliance_score": 0.726,
+          "alt_description": "High quality homemade dessert image"
+        }
+      ]
+    },
+    {
+      "query": "casual dining modern atmosphere",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_19_0",
+          "title": "Modern casual dining - stylish ambiance",
+          "score": 0.84,
+          "compliance_score": 0.882,
+          "alt_description": "Beautiful modern casual dining setting"
+        },
+        {
+          "id": "dining_19_1",
+          "title": "Modern casual dining - perfect setting",
+          "score": 0.926,
+          "compliance_score": 0.963,
+          "alt_description": "Beautiful modern casual dining setting"
+        }
+      ]
+    },
+    {
+      "query": "collection whiskey",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_5_0",
+          "title": "Collection whiskey - limited edition",
+          "score": 0.858,
+          "compliance_score": 0.888,
+          "alt_description": "High-end collection whiskey bottle"
+        },
+        {
+          "id": "alcohol_5_1",
+          "title": "Collection whiskey - premium quality",
+          "score": 0.782,
+          "compliance_score": 0.748,
+          "alt_description": "High-end collection whiskey bottle"
+        },
+        {
+          "id": "alcohol_5_2",
+          "title": "Collection whiskey - collector grade",
+          "score": 0.921,
+          "compliance_score": 0.875,
+          "alt_description": "High-end collection whiskey bottle"
+        }
+      ]
+    },
+    {
+      "query": "signature margarita",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_2_0",
+          "title": "Signature margarita - classic",
+          "score": 0.848,
+          "compliance_score": 0.806,
+          "alt_description": "Professional signature margarita cocktail"
+        },
+        {
+          "id": "cocktail_2_1",
+          "title": "Signature margarita - craft recipe",
+          "score": 0.735,
+          "compliance_score": 0.67,
+          "alt_description": "Professional signature margarita cocktail"
+        },
+        {
+          "id": "cocktail_2_2",
+          "title": "Signature margarita - premium",
+          "score": 0.724,
+          "compliance_score": 0.739,
+          "alt_description": "Professional signature margarita cocktail"
+        },
+        {
+          "id": "cocktail_2_3",
+          "title": "Signature margarita - signature",
+          "score": 0.842,
+          "compliance_score": 0.782,
+          "alt_description": "Professional signature margarita cocktail"
+        }
+      ]
+    },
+    {
+      "query": "boutique whiskey photography",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_16_0",
+          "title": "Boutique whiskey - distillery special",
+          "score": 0.817,
+          "compliance_score": 0.843,
+          "alt_description": "High-end boutique whiskey bottle"
+        },
+        {
+          "id": "alcohol_16_1",
+          "title": "Boutique whiskey - premium quality",
+          "score": 0.849,
+          "compliance_score": 0.928,
+          "alt_description": "High-end boutique whiskey bottle"
+        }
+      ]
+    },
+    {
+      "query": "casual bistro photography",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_16_0",
+          "title": "Casual bistro - premium experience",
+          "score": 0.893,
+          "compliance_score": 0.889,
+          "alt_description": "Beautiful casual bistro setting"
+        },
+        {
+          "id": "dining_16_1",
+          "title": "Casual bistro - premium experience",
+          "score": 0.807,
+          "compliance_score": 0.739,
+          "alt_description": "Beautiful casual bistro setting"
+        },
+        {
+          "id": "dining_16_2",
+          "title": "Casual bistro - perfect setting",
+          "score": 0.683,
+          "compliance_score": 0.773,
+          "alt_description": "Beautiful casual bistro setting"
+        },
+        {
+          "id": "dining_16_3",
+          "title": "Casual bistro - stylish ambiance",
+          "score": 0.752,
+          "compliance_score": 0.839,
+          "alt_description": "Beautiful casual bistro setting"
+        }
+      ]
+    },
+    {
+      "query": "restaurant quality local pasta",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_13_0",
+          "title": "Local pasta - artisan",
+          "score": 0.72,
+          "compliance_score": 0.644,
+          "alt_description": "High quality local pasta image"
+        },
+        {
+          "id": "food_13_1",
+          "title": "Local pasta - gourmet",
+          "score": 0.782,
+          "compliance_score": 0.683,
+          "alt_description": "High quality local pasta image"
+        },
+        {
+          "id": "food_13_2",
+          "title": "Local pasta - homemade",
+          "score": 0.808,
+          "compliance_score": 0.774,
+          "alt_description": "High quality local pasta image"
+        }
+      ]
+    },
+    {
+      "query": "best smooth bloody mary recipe",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_29_0",
+          "title": "Smooth bloody mary - craft recipe",
+          "score": 0.876,
+          "compliance_score": 0.862,
+          "alt_description": "Professional smooth bloody mary cocktail"
+        },
+        {
+          "id": "cocktail_29_1",
+          "title": "Smooth bloody mary - craft recipe",
+          "score": 0.697,
+          "compliance_score": 0.768,
+          "alt_description": "Professional smooth bloody mary cocktail"
+        }
+      ]
+    },
+    {
+      "query": "luxury premium gin",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_9_0",
+          "title": "Premium gin - premium quality",
+          "score": 0.759,
+          "compliance_score": 0.835,
+          "alt_description": "High-end premium gin bottle"
+        },
+        {
+          "id": "alcohol_9_1",
+          "title": "Premium gin - limited edition",
+          "score": 0.878,
+          "compliance_score": 0.916,
+          "alt_description": "High-end premium gin bottle"
+        },
+        {
+          "id": "alcohol_9_2",
+          "title": "Premium gin - distillery special",
+          "score": 0.954,
+          "compliance_score": 0.921,
+          "alt_description": "High-end premium gin bottle"
+        },
+        {
+          "id": "alcohol_9_3",
+          "title": "Premium gin - premium quality",
+          "score": 0.855,
+          "compliance_score": 0.814,
+          "alt_description": "High-end premium gin bottle"
+        }
+      ]
+    },
+    {
+      "query": "craft whiskey photography",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_10_0",
+          "title": "Craft whiskey - premium quality",
+          "score": 0.859,
+          "compliance_score": 0.873,
+          "alt_description": "High-end craft whiskey bottle"
+        },
+        {
+          "id": "alcohol_10_1",
+          "title": "Craft whiskey - collector grade",
+          "score": 0.756,
+          "compliance_score": 0.765,
+          "alt_description": "High-end craft whiskey bottle"
+        },
+        {
+          "id": "alcohol_10_2",
+          "title": "Craft whiskey - collector grade",
+          "score": 0.917,
+          "compliance_score": 0.882,
+          "alt_description": "High-end craft whiskey bottle"
+        }
+      ]
+    },
+    {
+      "query": "signature moscow mule",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_20_0",
+          "title": "Signature moscow mule - bar style",
+          "score": 0.676,
+          "compliance_score": 0.607,
+          "alt_description": "Professional signature moscow mule cocktail"
+        },
+        {
+          "id": "cocktail_20_1",
+          "title": "Signature moscow mule - premium",
+          "score": 0.826,
+          "compliance_score": 0.933,
+          "alt_description": "Professional signature moscow mule cocktail"
+        },
+        {
+          "id": "cocktail_20_2",
+          "title": "Signature moscow mule - classic",
+          "score": 0.696,
+          "compliance_score": 0.777,
+          "alt_description": "Professional signature moscow mule cocktail"
+        }
+      ]
+    },
+    {
+      "query": "artisanal bloody mary",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_8_0",
+          "title": "Artisanal bloody mary - signature",
+          "score": 0.907,
+          "compliance_score": 0.924,
+          "alt_description": "Professional artisanal bloody mary cocktail"
+        },
+        {
+          "id": "cocktail_8_1",
+          "title": "Artisanal bloody mary - classic",
+          "score": 0.753,
+          "compliance_score": 0.84,
+          "alt_description": "Professional artisanal bloody mary cocktail"
+        },
+        {
+          "id": "cocktail_8_2",
+          "title": "Artisanal bloody mary - bar style",
+          "score": 0.843,
+          "compliance_score": 0.938,
+          "alt_description": "Professional artisanal bloody mary cocktail"
+        },
+        {
+          "id": "cocktail_8_3",
+          "title": "Artisanal bloody mary - bar style",
+          "score": 0.795,
+          "compliance_score": 0.849,
+          "alt_description": "Professional artisanal bloody mary cocktail"
+        }
+      ]
+    },
+    {
+      "query": "bar quality artisanal daiquiri",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_13_0",
+          "title": "Artisanal daiquiri - signature",
+          "score": 0.699,
+          "compliance_score": 0.791,
+          "alt_description": "Professional artisanal daiquiri cocktail"
+        },
+        {
+          "id": "cocktail_13_1",
+          "title": "Artisanal daiquiri - classic",
+          "score": 0.901,
+          "compliance_score": 0.934,
+          "alt_description": "Professional artisanal daiquiri cocktail"
+        },
+        {
+          "id": "cocktail_13_2",
+          "title": "Artisanal daiquiri - craft recipe",
+          "score": 0.766,
+          "compliance_score": 0.695,
+          "alt_description": "Professional artisanal daiquiri cocktail"
+        }
+      ]
+    },
+    {
+      "query": "fresh vegetables",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_29_0",
+          "title": "Fresh vegetables - professional",
+          "score": 0.927,
+          "compliance_score": 0.87,
+          "alt_description": "High quality fresh vegetables image"
+        },
+        {
+          "id": "food_29_1",
+          "title": "Fresh vegetables - restaurant style",
+          "score": 0.869,
+          "compliance_score": 0.894,
+          "alt_description": "High quality fresh vegetables image"
+        },
+        {
+          "id": "food_29_2",
+          "title": "Fresh vegetables - artisan",
+          "score": 0.685,
+          "compliance_score": 0.673,
+          "alt_description": "High quality fresh vegetables image"
+        }
+      ]
+    },
+    {
+      "query": "best trendy restaurant experience",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_1_0",
+          "title": "Trendy restaurant - stylish ambiance",
+          "score": 0.686,
+          "compliance_score": 0.72,
+          "alt_description": "Beautiful trendy restaurant setting"
+        },
+        {
+          "id": "dining_1_1",
+          "title": "Trendy restaurant - perfect setting",
+          "score": 0.695,
+          "compliance_score": 0.683,
+          "alt_description": "Beautiful trendy restaurant setting"
+        }
+      ]
+    },
+    {
+      "query": "vintage wine photography",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_0_0",
+          "title": "Vintage wine - limited edition",
+          "score": 0.875,
+          "compliance_score": 0.948,
+          "alt_description": "High-end vintage wine bottle"
+        },
+        {
+          "id": "alcohol_0_1",
+          "title": "Vintage wine - premium quality",
+          "score": 0.837,
+          "compliance_score": 0.791,
+          "alt_description": "High-end vintage wine bottle"
+        },
+        {
+          "id": "alcohol_0_2",
+          "title": "Vintage wine - premium quality",
+          "score": 0.969,
+          "compliance_score": 0.935,
+          "alt_description": "High-end vintage wine bottle"
+        }
+      ]
+    },
+    {
+      "query": "tequila single malt bottle",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_7_0",
+          "title": "Single Malt tequila - premium quality",
+          "score": 0.741,
+          "compliance_score": 0.739,
+          "alt_description": "High-end single malt tequila bottle"
+        },
+        {
+          "id": "alcohol_7_1",
+          "title": "Single Malt tequila - premium quality",
+          "score": 0.923,
+          "compliance_score": 0.88,
+          "alt_description": "High-end single malt tequila bottle"
+        }
+      ]
+    },
+    {
+      "query": "vintage gin photography",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_15_0",
+          "title": "Vintage gin - collector grade",
+          "score": 0.933,
+          "compliance_score": 0.912,
+          "alt_description": "High-end vintage gin bottle"
+        },
+        {
+          "id": "alcohol_15_1",
+          "title": "Vintage gin - limited edition",
+          "score": 0.887,
+          "compliance_score": 0.895,
+          "alt_description": "High-end vintage gin bottle"
+        }
+      ]
+    },
+    {
+      "query": "best local sandwich recipe",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_2_0",
+          "title": "Local sandwich - gourmet",
+          "score": 0.639,
+          "compliance_score": 0.649,
+          "alt_description": "High quality local sandwich image"
+        },
+        {
+          "id": "food_2_1",
+          "title": "Local sandwich - artisan",
+          "score": 0.757,
+          "compliance_score": 0.803,
+          "alt_description": "High quality local sandwich image"
+        }
+      ]
+    },
+    {
+      "query": "bar quality premium old fashioned",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_6_0",
+          "title": "Premium old fashioned - premium",
+          "score": 0.686,
+          "compliance_score": 0.722,
+          "alt_description": "Professional premium old fashioned cocktail"
+        },
+        {
+          "id": "cocktail_6_1",
+          "title": "Premium old fashioned - classic",
+          "score": 0.685,
+          "compliance_score": 0.682,
+          "alt_description": "Professional premium old fashioned cocktail"
+        },
+        {
+          "id": "cocktail_6_2",
+          "title": "Premium old fashioned - bar style",
+          "score": 0.937,
+          "compliance_score": 1.0,
+          "alt_description": "Professional premium old fashioned cocktail"
+        },
+        {
+          "id": "cocktail_6_3",
+          "title": "Premium old fashioned - classic",
+          "score": 0.777,
+          "compliance_score": 0.806,
+          "alt_description": "Professional premium old fashioned cocktail"
+        },
+        {
+          "id": "cocktail_6_4",
+          "title": "Premium old fashioned - bar style",
+          "score": 0.786,
+          "compliance_score": 0.795,
+          "alt_description": "Professional premium old fashioned cocktail"
+        }
+      ]
+    },
+    {
+      "query": "premium scotch",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_3_0",
+          "title": "Premium scotch - collector grade",
+          "score": 0.716,
+          "compliance_score": 0.773,
+          "alt_description": "High-end premium scotch bottle"
+        },
+        {
+          "id": "alcohol_3_1",
+          "title": "Premium scotch - distillery special",
+          "score": 0.915,
+          "compliance_score": 0.952,
+          "alt_description": "High-end premium scotch bottle"
+        },
+        {
+          "id": "alcohol_3_2",
+          "title": "Premium scotch - distillery special",
+          "score": 0.731,
+          "compliance_score": 0.739,
+          "alt_description": "High-end premium scotch bottle"
+        }
+      ]
+    },
+    {
+      "query": "classic gin fizz",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_5_0",
+          "title": "Classic gin fizz - premium",
+          "score": 0.795,
+          "compliance_score": 0.828,
+          "alt_description": "Professional classic gin fizz cocktail"
+        },
+        {
+          "id": "cocktail_5_1",
+          "title": "Classic gin fizz - classic",
+          "score": 0.8,
+          "compliance_score": 0.844,
+          "alt_description": "Professional classic gin fizz cocktail"
+        },
+        {
+          "id": "cocktail_5_2",
+          "title": "Classic gin fizz - craft recipe",
+          "score": 0.944,
+          "compliance_score": 0.973,
+          "alt_description": "Professional classic gin fizz cocktail"
+        },
+        {
+          "id": "cocktail_5_3",
+          "title": "Classic gin fizz - premium",
+          "score": 0.876,
+          "compliance_score": 0.838,
+          "alt_description": "Professional classic gin fizz cocktail"
+        },
+        {
+          "id": "cocktail_5_4",
+          "title": "Classic gin fizz - signature",
+          "score": 0.905,
+          "compliance_score": 0.894,
+          "alt_description": "Professional classic gin fizz cocktail"
+        }
+      ]
+    },
+    {
+      "query": "best classic moscow mule recipe",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_0_0",
+          "title": "Classic moscow mule - craft recipe",
+          "score": 0.888,
+          "compliance_score": 0.922,
+          "alt_description": "Professional classic moscow mule cocktail"
+        },
+        {
+          "id": "cocktail_0_1",
+          "title": "Classic moscow mule - bar style",
+          "score": 0.758,
+          "compliance_score": 0.683,
+          "alt_description": "Professional classic moscow mule cocktail"
+        },
+        {
+          "id": "cocktail_0_2",
+          "title": "Classic moscow mule - premium",
+          "score": 0.915,
+          "compliance_score": 0.886,
+          "alt_description": "Professional classic moscow mule cocktail"
+        },
+        {
+          "id": "cocktail_0_3",
+          "title": "Classic moscow mule - premium",
+          "score": 0.893,
+          "compliance_score": 0.976,
+          "alt_description": "Professional classic moscow mule cocktail"
+        },
+        {
+          "id": "cocktail_0_4",
+          "title": "Classic moscow mule - signature",
+          "score": 0.688,
+          "compliance_score": 0.684,
+          "alt_description": "Professional classic moscow mule cocktail"
+        }
+      ]
+    },
+    {
+      "query": "fresh vegetables",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_12_0",
+          "title": "Fresh vegetables - restaurant style",
+          "score": 0.607,
+          "compliance_score": 0.62,
+          "alt_description": "High quality fresh vegetables image"
+        },
+        {
+          "id": "food_12_1",
+          "title": "Fresh vegetables - professional",
+          "score": 0.896,
+          "compliance_score": 0.899,
+          "alt_description": "High quality fresh vegetables image"
+        },
+        {
+          "id": "food_12_2",
+          "title": "Fresh vegetables - restaurant style",
+          "score": 0.868,
+          "compliance_score": 0.934,
+          "alt_description": "High quality fresh vegetables image"
+        }
+      ]
+    },
+    {
+      "query": "cafe rustic atmosphere",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_11_0",
+          "title": "Rustic cafe - perfect setting",
+          "score": 0.768,
+          "compliance_score": 0.847,
+          "alt_description": "Beautiful rustic cafe setting"
+        },
+        {
+          "id": "dining_11_1",
+          "title": "Rustic cafe - premium experience",
+          "score": 0.76,
+          "compliance_score": 0.798,
+          "alt_description": "Beautiful rustic cafe setting"
+        },
+        {
+          "id": "dining_11_2",
+          "title": "Rustic cafe - premium experience",
+          "score": 0.907,
+          "compliance_score": 0.971,
+          "alt_description": "Beautiful rustic cafe setting"
+        },
+        {
+          "id": "dining_11_3",
+          "title": "Rustic cafe - memorable dining",
+          "score": 0.797,
+          "compliance_score": 0.845,
+          "alt_description": "Beautiful rustic cafe setting"
+        }
+      ]
+    },
+    {
+      "query": "brandy premium bottle",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_11_0",
+          "title": "Premium brandy - limited edition",
+          "score": 0.738,
+          "compliance_score": 0.709,
+          "alt_description": "High-end premium brandy bottle"
+        },
+        {
+          "id": "alcohol_11_1",
+          "title": "Premium brandy - distillery special",
+          "score": 0.762,
+          "compliance_score": 0.715,
+          "alt_description": "High-end premium brandy bottle"
+        },
+        {
+          "id": "alcohol_11_2",
+          "title": "Premium brandy - premium quality",
+          "score": 0.862,
+          "compliance_score": 0.814,
+          "alt_description": "High-end premium brandy bottle"
+        }
+      ]
+    },
+    {
+      "query": "best premium tequila collection",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_14_0",
+          "title": "Premium tequila - collector grade",
+          "score": 0.823,
+          "compliance_score": 0.833,
+          "alt_description": "High-end premium tequila bottle"
+        },
+        {
+          "id": "alcohol_14_1",
+          "title": "Premium tequila - distillery special",
+          "score": 0.74,
+          "compliance_score": 0.765,
+          "alt_description": "High-end premium tequila bottle"
+        },
+        {
+          "id": "alcohol_14_2",
+          "title": "Premium tequila - collector grade",
+          "score": 0.874,
+          "compliance_score": 0.895,
+          "alt_description": "High-end premium tequila bottle"
+        },
+        {
+          "id": "alcohol_14_3",
+          "title": "Premium tequila - collector grade",
+          "score": 0.886,
+          "compliance_score": 0.872,
+          "alt_description": "High-end premium tequila bottle"
+        }
+      ]
+    },
+    {
+      "query": "luxury vintage scotch",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_2_0",
+          "title": "Vintage scotch - collector grade",
+          "score": 0.843,
+          "compliance_score": 0.878,
+          "alt_description": "High-end vintage scotch bottle"
+        },
+        {
+          "id": "alcohol_2_1",
+          "title": "Vintage scotch - collector grade",
+          "score": 0.802,
+          "compliance_score": 0.76,
+          "alt_description": "High-end vintage scotch bottle"
+        }
+      ]
+    },
+    {
+      "query": "casual bistro",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_17_0",
+          "title": "Casual bistro - perfect setting",
+          "score": 0.8,
+          "compliance_score": 0.807,
+          "alt_description": "Beautiful casual bistro setting"
+        },
+        {
+          "id": "dining_17_1",
+          "title": "Casual bistro - memorable dining",
+          "score": 0.92,
+          "compliance_score": 0.901,
+          "alt_description": "Beautiful casual bistro setting"
+        },
+        {
+          "id": "dining_17_2",
+          "title": "Casual bistro - perfect setting",
+          "score": 0.828,
+          "compliance_score": 0.818,
+          "alt_description": "Beautiful casual bistro setting"
+        },
+        {
+          "id": "dining_17_3",
+          "title": "Casual bistro - stylish ambiance",
+          "score": 0.721,
+          "compliance_score": 0.751,
+          "alt_description": "Beautiful casual bistro setting"
+        }
+      ]
+    },
+    {
+      "query": "vodka single malt bottle",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_17_0",
+          "title": "Single Malt vodka - limited edition",
+          "score": 0.742,
+          "compliance_score": 0.705,
+          "alt_description": "High-end single malt vodka bottle"
+        },
+        {
+          "id": "alcohol_17_1",
+          "title": "Single Malt vodka - premium quality",
+          "score": 0.816,
+          "compliance_score": 0.768,
+          "alt_description": "High-end single malt vodka bottle"
+        }
+      ]
+    },
+    {
+      "query": "best casual restaurant experience",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_6_0",
+          "title": "Casual restaurant - memorable dining",
+          "score": 0.883,
+          "compliance_score": 0.921,
+          "alt_description": "Beautiful casual restaurant setting"
+        },
+        {
+          "id": "dining_6_1",
+          "title": "Casual restaurant - perfect setting",
+          "score": 0.78,
+          "compliance_score": 0.723,
+          "alt_description": "Beautiful casual restaurant setting"
+        }
+      ]
+    },
+    {
+      "query": "luxury craft bourbon",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_18_0",
+          "title": "Craft bourbon - limited edition",
+          "score": 0.702,
+          "compliance_score": 0.741,
+          "alt_description": "High-end craft bourbon bottle"
+        },
+        {
+          "id": "alcohol_18_1",
+          "title": "Craft bourbon - distillery special",
+          "score": 0.841,
+          "compliance_score": 0.912,
+          "alt_description": "High-end craft bourbon bottle"
+        }
+      ]
+    },
+    {
+      "query": "artisan bread",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_16_0",
+          "title": "Artisan bread - artisan",
+          "score": 0.767,
+          "compliance_score": 0.816,
+          "alt_description": "High quality artisan bread image"
+        },
+        {
+          "id": "food_16_1",
+          "title": "Artisan bread - restaurant style",
+          "score": 0.684,
+          "compliance_score": 0.638,
+          "alt_description": "High quality artisan bread image"
+        },
+        {
+          "id": "food_16_2",
+          "title": "Artisan bread - professional",
+          "score": 0.817,
+          "compliance_score": 0.746,
+          "alt_description": "High quality artisan bread image"
+        }
+      ]
+    },
+    {
+      "query": "bar quality artisanal old fashioned",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_27_0",
+          "title": "Artisanal old fashioned - premium",
+          "score": 0.652,
+          "compliance_score": 0.658,
+          "alt_description": "Professional artisanal old fashioned cocktail"
+        },
+        {
+          "id": "cocktail_27_1",
+          "title": "Artisanal old fashioned - signature",
+          "score": 0.76,
+          "compliance_score": 0.768,
+          "alt_description": "Professional artisanal old fashioned cocktail"
+        }
+      ]
+    },
+    {
+      "query": "aged bourbon photography",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_13_0",
+          "title": "Aged bourbon - limited edition",
+          "score": 0.807,
+          "compliance_score": 0.798,
+          "alt_description": "High-end aged bourbon bottle"
+        },
+        {
+          "id": "alcohol_13_1",
+          "title": "Aged bourbon - premium quality",
+          "score": 0.785,
+          "compliance_score": 0.753,
+          "alt_description": "High-end aged bourbon bottle"
+        }
+      ]
+    },
+    {
+      "query": "luxury artisan brandy",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_1_0",
+          "title": "Artisan brandy - premium quality",
+          "score": 0.74,
+          "compliance_score": 0.781,
+          "alt_description": "High-end artisan brandy bottle"
+        },
+        {
+          "id": "alcohol_1_1",
+          "title": "Artisan brandy - limited edition",
+          "score": 0.711,
+          "compliance_score": 0.686,
+          "alt_description": "High-end artisan brandy bottle"
+        }
+      ]
+    },
+    {
+      "query": "best fresh seafood recipe",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_6_0",
+          "title": "Fresh seafood - professional",
+          "score": 0.689,
+          "compliance_score": 0.679,
+          "alt_description": "High quality fresh seafood image"
+        },
+        {
+          "id": "food_6_1",
+          "title": "Fresh seafood - restaurant style",
+          "score": 0.741,
+          "compliance_score": 0.806,
+          "alt_description": "High quality fresh seafood image"
+        },
+        {
+          "id": "food_6_2",
+          "title": "Fresh seafood - homemade",
+          "score": 0.829,
+          "compliance_score": 0.771,
+          "alt_description": "High quality fresh seafood image"
+        }
+      ]
+    },
+    {
+      "query": "moscow mule with craft garnish",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_26_0",
+          "title": "Craft moscow mule - bar style",
+          "score": 0.882,
+          "compliance_score": 0.891,
+          "alt_description": "Professional craft moscow mule cocktail"
+        },
+        {
+          "id": "cocktail_26_1",
+          "title": "Craft moscow mule - premium",
+          "score": 0.862,
+          "compliance_score": 0.94,
+          "alt_description": "Professional craft moscow mule cocktail"
+        },
+        {
+          "id": "cocktail_26_2",
+          "title": "Craft moscow mule - classic",
+          "score": 0.916,
+          "compliance_score": 0.882,
+          "alt_description": "Professional craft moscow mule cocktail"
+        },
+        {
+          "id": "cocktail_26_3",
+          "title": "Craft moscow mule - premium",
+          "score": 0.674,
+          "compliance_score": 0.769,
+          "alt_description": "Professional craft moscow mule cocktail"
+        },
+        {
+          "id": "cocktail_26_4",
+          "title": "Craft moscow mule - classic",
+          "score": 0.655,
+          "compliance_score": 0.651,
+          "alt_description": "Professional craft moscow mule cocktail"
+        }
+      ]
+    },
+    {
+      "query": "elegant cosmopolitan photography",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_24_0",
+          "title": "Elegant cosmopolitan - craft recipe",
+          "score": 0.698,
+          "compliance_score": 0.652,
+          "alt_description": "Professional elegant cosmopolitan cocktail"
+        },
+        {
+          "id": "cocktail_24_1",
+          "title": "Elegant cosmopolitan - premium",
+          "score": 0.832,
+          "compliance_score": 0.815,
+          "alt_description": "Professional elegant cosmopolitan cocktail"
+        }
+      ]
+    },
+    {
+      "query": "mai tai with classic garnish",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_17_0",
+          "title": "Classic mai tai - premium",
+          "score": 0.777,
+          "compliance_score": 0.867,
+          "alt_description": "Professional classic mai tai cocktail"
+        },
+        {
+          "id": "cocktail_17_1",
+          "title": "Classic mai tai - premium",
+          "score": 0.654,
+          "compliance_score": 0.727,
+          "alt_description": "Professional classic mai tai cocktail"
+        },
+        {
+          "id": "cocktail_17_2",
+          "title": "Classic mai tai - bar style",
+          "score": 0.888,
+          "compliance_score": 0.904,
+          "alt_description": "Professional classic mai tai cocktail"
+        }
+      ]
+    },
+    {
+      "query": "vibrant cafe interior",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_5_0",
+          "title": "Vibrant cafe - stylish ambiance",
+          "score": 0.718,
+          "compliance_score": 0.7,
+          "alt_description": "Beautiful vibrant cafe setting"
+        },
+        {
+          "id": "dining_5_1",
+          "title": "Vibrant cafe - perfect setting",
+          "score": 0.741,
+          "compliance_score": 0.784,
+          "alt_description": "Beautiful vibrant cafe setting"
+        }
+      ]
+    },
+    {
+      "query": "vegetables with authentic ingredients",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_18_0",
+          "title": "Authentic vegetables - restaurant style",
+          "score": 0.887,
+          "compliance_score": 0.836,
+          "alt_description": "High quality authentic vegetables image"
+        },
+        {
+          "id": "food_18_1",
+          "title": "Authentic vegetables - professional",
+          "score": 0.624,
+          "compliance_score": 0.538,
+          "alt_description": "High quality authentic vegetables image"
+        }
+      ]
+    },
+    {
+      "query": "best cozy fine dining experience",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_18_0",
+          "title": "Cozy fine dining - stylish ambiance",
+          "score": 0.923,
+          "compliance_score": 0.931,
+          "alt_description": "Beautiful cozy fine dining setting"
+        },
+        {
+          "id": "dining_18_1",
+          "title": "Cozy fine dining - memorable dining",
+          "score": 0.802,
+          "compliance_score": 0.741,
+          "alt_description": "Beautiful cozy fine dining setting"
+        },
+        {
+          "id": "dining_18_2",
+          "title": "Cozy fine dining - stylish ambiance",
+          "score": 0.847,
+          "compliance_score": 0.888,
+          "alt_description": "Beautiful cozy fine dining setting"
+        },
+        {
+          "id": "dining_18_3",
+          "title": "Cozy fine dining - memorable dining",
+          "score": 0.728,
+          "compliance_score": 0.796,
+          "alt_description": "Beautiful cozy fine dining setting"
+        }
+      ]
+    },
+    {
+      "query": "cosmopolitan with premium garnish",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_9_0",
+          "title": "Premium cosmopolitan - classic",
+          "score": 0.709,
+          "compliance_score": 0.647,
+          "alt_description": "Professional premium cosmopolitan cocktail"
+        },
+        {
+          "id": "cocktail_9_1",
+          "title": "Premium cosmopolitan - bar style",
+          "score": 0.654,
+          "compliance_score": 0.738,
+          "alt_description": "Professional premium cosmopolitan cocktail"
+        }
+      ]
+    },
+    {
+      "query": "restaurant quality premium salad",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_14_0",
+          "title": "Premium salad - homemade",
+          "score": 0.914,
+          "compliance_score": 0.944,
+          "alt_description": "High quality premium salad image"
+        },
+        {
+          "id": "food_14_1",
+          "title": "Premium salad - homemade",
+          "score": 0.617,
+          "compliance_score": 0.606,
+          "alt_description": "High quality premium salad image"
+        }
+      ]
+    },
+    {
+      "query": "negroni with premium garnish",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_12_0",
+          "title": "Premium negroni - premium",
+          "score": 0.936,
+          "compliance_score": 0.865,
+          "alt_description": "Professional premium negroni cocktail"
+        },
+        {
+          "id": "cocktail_12_1",
+          "title": "Premium negroni - signature",
+          "score": 0.898,
+          "compliance_score": 0.96,
+          "alt_description": "Professional premium negroni cocktail"
+        },
+        {
+          "id": "cocktail_12_2",
+          "title": "Premium negroni - classic",
+          "score": 0.663,
+          "compliance_score": 0.675,
+          "alt_description": "Professional premium negroni cocktail"
+        },
+        {
+          "id": "cocktail_12_3",
+          "title": "Premium negroni - craft recipe",
+          "score": 0.744,
+          "compliance_score": 0.737,
+          "alt_description": "Professional premium negroni cocktail"
+        }
+      ]
+    },
+    {
+      "query": "best artisanal aperol spritz recipe",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_3_0",
+          "title": "Artisanal aperol spritz - signature",
+          "score": 0.681,
+          "compliance_score": 0.737,
+          "alt_description": "Professional artisanal aperol spritz cocktail"
+        },
+        {
+          "id": "cocktail_3_1",
+          "title": "Artisanal aperol spritz - classic",
+          "score": 0.921,
+          "compliance_score": 0.884,
+          "alt_description": "Professional artisanal aperol spritz cocktail"
+        },
+        {
+          "id": "cocktail_3_2",
+          "title": "Artisanal aperol spritz - signature",
+          "score": 0.876,
+          "compliance_score": 0.941,
+          "alt_description": "Professional artisanal aperol spritz cocktail"
+        }
+      ]
+    },
+    {
+      "query": "classic mojito",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_23_0",
+          "title": "Classic mojito - premium",
+          "score": 0.821,
+          "compliance_score": 0.753,
+          "alt_description": "Professional classic mojito cocktail"
+        },
+        {
+          "id": "cocktail_23_1",
+          "title": "Classic mojito - classic",
+          "score": 0.937,
+          "compliance_score": 0.927,
+          "alt_description": "Professional classic mojito cocktail"
+        },
+        {
+          "id": "cocktail_23_2",
+          "title": "Classic mojito - signature",
+          "score": 0.821,
+          "compliance_score": 0.795,
+          "alt_description": "Professional classic mojito cocktail"
+        },
+        {
+          "id": "cocktail_23_3",
+          "title": "Classic mojito - premium",
+          "score": 0.802,
+          "compliance_score": 0.914,
+          "alt_description": "Professional classic mojito cocktail"
+        },
+        {
+          "id": "cocktail_23_4",
+          "title": "Classic mojito - craft recipe",
+          "score": 0.67,
+          "compliance_score": 0.615,
+          "alt_description": "Professional classic mojito cocktail"
+        }
+      ]
+    },
+    {
+      "query": "fresh pasta photography",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_19_0",
+          "title": "Fresh pasta - professional",
+          "score": 0.925,
+          "compliance_score": 0.843,
+          "alt_description": "High quality fresh pasta image"
+        },
+        {
+          "id": "food_19_1",
+          "title": "Fresh pasta - homemade",
+          "score": 0.667,
+          "compliance_score": 0.724,
+          "alt_description": "High quality fresh pasta image"
+        },
+        {
+          "id": "food_19_2",
+          "title": "Fresh pasta - homemade",
+          "score": 0.738,
+          "compliance_score": 0.836,
+          "alt_description": "High quality fresh pasta image"
+        },
+        {
+          "id": "food_19_3",
+          "title": "Fresh pasta - restaurant style",
+          "score": 0.855,
+          "compliance_score": 0.794,
+          "alt_description": "High quality fresh pasta image"
+        }
+      ]
+    },
+    {
+      "query": "best organic seafood recipe",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_10_0",
+          "title": "Organic seafood - professional",
+          "score": 0.716,
+          "compliance_score": 0.715,
+          "alt_description": "High quality organic seafood image"
+        },
+        {
+          "id": "food_10_1",
+          "title": "Organic seafood - artisan",
+          "score": 0.906,
+          "compliance_score": 0.961,
+          "alt_description": "High quality organic seafood image"
+        }
+      ]
+    },
+    {
+      "query": "restaurant quality local cake",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_22_0",
+          "title": "Local cake - gourmet",
+          "score": 0.853,
+          "compliance_score": 0.812,
+          "alt_description": "High quality local cake image"
+        },
+        {
+          "id": "food_22_1",
+          "title": "Local cake - gourmet",
+          "score": 0.929,
+          "compliance_score": 1.0,
+          "alt_description": "High quality local cake image"
+        },
+        {
+          "id": "food_22_2",
+          "title": "Local cake - professional",
+          "score": 0.785,
+          "compliance_score": 0.812,
+          "alt_description": "High quality local cake image"
+        },
+        {
+          "id": "food_22_3",
+          "title": "Local cake - gourmet",
+          "score": 0.826,
+          "compliance_score": 0.802,
+          "alt_description": "High quality local cake image"
+        },
+        {
+          "id": "food_22_4",
+          "title": "Local cake - restaurant style",
+          "score": 0.764,
+          "compliance_score": 0.75,
+          "alt_description": "High quality local cake image"
+        }
+      ]
+    },
+    {
+      "query": "best local vegetables recipe",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_8_0",
+          "title": "Local vegetables - restaurant style",
+          "score": 0.82,
+          "compliance_score": 0.897,
+          "alt_description": "High quality local vegetables image"
+        },
+        {
+          "id": "food_8_1",
+          "title": "Local vegetables - professional",
+          "score": 0.623,
+          "compliance_score": 0.531,
+          "alt_description": "High quality local vegetables image"
+        },
+        {
+          "id": "food_8_2",
+          "title": "Local vegetables - gourmet",
+          "score": 0.662,
+          "compliance_score": 0.654,
+          "alt_description": "High quality local vegetables image"
+        },
+        {
+          "id": "food_8_3",
+          "title": "Local vegetables - homemade",
+          "score": 0.842,
+          "compliance_score": 0.854,
+          "alt_description": "High quality local vegetables image"
+        }
+      ]
+    },
+    {
+      "query": "restaurant quality delicious seafood",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_9_0",
+          "title": "Delicious seafood - professional",
+          "score": 0.966,
+          "compliance_score": 1.0,
+          "alt_description": "High quality delicious seafood image"
+        },
+        {
+          "id": "food_9_1",
+          "title": "Delicious seafood - artisan",
+          "score": 0.731,
+          "compliance_score": 0.685,
+          "alt_description": "High quality delicious seafood image"
+        },
+        {
+          "id": "food_9_2",
+          "title": "Delicious seafood - artisan",
+          "score": 0.762,
+          "compliance_score": 0.759,
+          "alt_description": "High quality delicious seafood image"
+        },
+        {
+          "id": "food_9_3",
+          "title": "Delicious seafood - restaurant style",
+          "score": 0.756,
+          "compliance_score": 0.758,
+          "alt_description": "High quality delicious seafood image"
+        }
+      ]
+    },
+    {
+      "query": "best artisan dessert recipe",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_21_0",
+          "title": "Artisan dessert - homemade",
+          "score": 0.757,
+          "compliance_score": 0.778,
+          "alt_description": "High quality artisan dessert image"
+        },
+        {
+          "id": "food_21_1",
+          "title": "Artisan dessert - artisan",
+          "score": 0.616,
+          "compliance_score": 0.583,
+          "alt_description": "High quality artisan dessert image"
+        }
+      ]
+    },
+    {
+      "query": "old fashioned with signature garnish",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_25_0",
+          "title": "Signature old fashioned - signature",
+          "score": 0.936,
+          "compliance_score": 0.988,
+          "alt_description": "Professional signature old fashioned cocktail"
+        },
+        {
+          "id": "cocktail_25_1",
+          "title": "Signature old fashioned - signature",
+          "score": 0.74,
+          "compliance_score": 0.742,
+          "alt_description": "Professional signature old fashioned cocktail"
+        },
+        {
+          "id": "cocktail_25_2",
+          "title": "Signature old fashioned - premium",
+          "score": 0.824,
+          "compliance_score": 0.825,
+          "alt_description": "Professional signature old fashioned cocktail"
+        },
+        {
+          "id": "cocktail_25_3",
+          "title": "Signature old fashioned - premium",
+          "score": 0.767,
+          "compliance_score": 0.688,
+          "alt_description": "Professional signature old fashioned cocktail"
+        }
+      ]
+    },
+    {
+      "query": "best creative martini recipe",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_28_0",
+          "title": "Creative martini - bar style",
+          "score": 0.714,
+          "compliance_score": 0.653,
+          "alt_description": "Professional creative martini cocktail"
+        },
+        {
+          "id": "cocktail_28_1",
+          "title": "Creative martini - craft recipe",
+          "score": 0.875,
+          "compliance_score": 0.915,
+          "alt_description": "Professional creative martini cocktail"
+        },
+        {
+          "id": "cocktail_28_2",
+          "title": "Creative martini - signature",
+          "score": 0.849,
+          "compliance_score": 0.905,
+          "alt_description": "Professional creative martini cocktail"
+        },
+        {
+          "id": "cocktail_28_3",
+          "title": "Creative martini - craft recipe",
+          "score": 0.867,
+          "compliance_score": 0.796,
+          "alt_description": "Professional creative martini cocktail"
+        },
+        {
+          "id": "cocktail_28_4",
+          "title": "Creative martini - craft recipe",
+          "score": 0.782,
+          "compliance_score": 0.795,
+          "alt_description": "Professional creative martini cocktail"
+        }
+      ]
+    },
+    {
+      "query": "fine dining classic atmosphere",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_9_0",
+          "title": "Classic fine dining - premium experience",
+          "score": 0.892,
+          "compliance_score": 0.953,
+          "alt_description": "Beautiful classic fine dining setting"
+        },
+        {
+          "id": "dining_9_1",
+          "title": "Classic fine dining - stylish ambiance",
+          "score": 0.883,
+          "compliance_score": 0.864,
+          "alt_description": "Beautiful classic fine dining setting"
+        },
+        {
+          "id": "dining_9_2",
+          "title": "Classic fine dining - memorable dining",
+          "score": 0.796,
+          "compliance_score": 0.784,
+          "alt_description": "Beautiful classic fine dining setting"
+        },
+        {
+          "id": "dining_9_3",
+          "title": "Classic fine dining - stylish ambiance",
+          "score": 0.833,
+          "compliance_score": 0.859,
+          "alt_description": "Beautiful classic fine dining setting"
+        }
+      ]
+    },
+    {
+      "query": "cozy restaurant interior",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_0_0",
+          "title": "Cozy restaurant - premium experience",
+          "score": 0.687,
+          "compliance_score": 0.756,
+          "alt_description": "Beautiful cozy restaurant setting"
+        },
+        {
+          "id": "dining_0_1",
+          "title": "Cozy restaurant - stylish ambiance",
+          "score": 0.861,
+          "compliance_score": 0.907,
+          "alt_description": "Beautiful cozy restaurant setting"
+        }
+      ]
+    },
+    {
+      "query": "upscale brunch",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_15_0",
+          "title": "Upscale brunch - perfect setting",
+          "score": 0.763,
+          "compliance_score": 0.862,
+          "alt_description": "Beautiful upscale brunch setting"
+        },
+        {
+          "id": "dining_15_1",
+          "title": "Upscale brunch - premium experience",
+          "score": 0.855,
+          "compliance_score": 0.874,
+          "alt_description": "Beautiful upscale brunch setting"
+        },
+        {
+          "id": "dining_15_2",
+          "title": "Upscale brunch - stylish ambiance",
+          "score": 0.863,
+          "compliance_score": 0.876,
+          "alt_description": "Beautiful upscale brunch setting"
+        }
+      ]
+    },
+    {
+      "query": "wine premium bottle",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_6_0",
+          "title": "Premium wine - collector grade",
+          "score": 0.701,
+          "compliance_score": 0.708,
+          "alt_description": "High-end premium wine bottle"
+        },
+        {
+          "id": "alcohol_6_1",
+          "title": "Premium wine - collector grade",
+          "score": 0.763,
+          "compliance_score": 0.748,
+          "alt_description": "High-end premium wine bottle"
+        }
+      ]
+    },
+    {
+      "query": "homemade steak photography",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_20_0",
+          "title": "Homemade steak - homemade",
+          "score": 0.856,
+          "compliance_score": 0.915,
+          "alt_description": "High quality homemade steak image"
+        },
+        {
+          "id": "food_20_1",
+          "title": "Homemade steak - homemade",
+          "score": 0.835,
+          "compliance_score": 0.875,
+          "alt_description": "High quality homemade steak image"
+        }
+      ]
+    },
+    {
+      "query": "best smooth manhattan recipe",
+      "domain": "cocktails",
+      "candidates": [
+        {
+          "id": "cocktail_11_0",
+          "title": "Smooth manhattan - bar style",
+          "score": 0.824,
+          "compliance_score": 0.818,
+          "alt_description": "Professional smooth manhattan cocktail"
+        },
+        {
+          "id": "cocktail_11_1",
+          "title": "Smooth manhattan - bar style",
+          "score": 0.823,
+          "compliance_score": 0.833,
+          "alt_description": "Professional smooth manhattan cocktail"
+        },
+        {
+          "id": "cocktail_11_2",
+          "title": "Smooth manhattan - signature",
+          "score": 0.717,
+          "compliance_score": 0.749,
+          "alt_description": "Professional smooth manhattan cocktail"
+        }
+      ]
+    },
+    {
+      "query": "classic dinner interior",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_4_0",
+          "title": "Classic dinner - memorable dining",
+          "score": 0.724,
+          "compliance_score": 0.796,
+          "alt_description": "Beautiful classic dinner setting"
+        },
+        {
+          "id": "dining_4_1",
+          "title": "Classic dinner - premium experience",
+          "score": 0.701,
+          "compliance_score": 0.701,
+          "alt_description": "Beautiful classic dinner setting"
+        },
+        {
+          "id": "dining_4_2",
+          "title": "Classic dinner - premium experience",
+          "score": 0.735,
+          "compliance_score": 0.808,
+          "alt_description": "Beautiful classic dinner setting"
+        },
+        {
+          "id": "dining_4_3",
+          "title": "Classic dinner - memorable dining",
+          "score": 0.81,
+          "compliance_score": 0.862,
+          "alt_description": "Beautiful classic dinner setting"
+        }
+      ]
+    },
+    {
+      "query": "restaurant quality premium fruits",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_26_0",
+          "title": "Premium fruits - artisan",
+          "score": 0.857,
+          "compliance_score": 0.777,
+          "alt_description": "High quality premium fruits image"
+        },
+        {
+          "id": "food_26_1",
+          "title": "Premium fruits - artisan",
+          "score": 0.686,
+          "compliance_score": 0.6,
+          "alt_description": "High quality premium fruits image"
+        },
+        {
+          "id": "food_26_2",
+          "title": "Premium fruits - homemade",
+          "score": 0.745,
+          "compliance_score": 0.822,
+          "alt_description": "High quality premium fruits image"
+        }
+      ]
+    },
+    {
+      "query": "gourmet pizza photography",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_23_0",
+          "title": "Gourmet pizza - professional",
+          "score": 0.658,
+          "compliance_score": 0.566,
+          "alt_description": "High quality gourmet pizza image"
+        },
+        {
+          "id": "food_23_1",
+          "title": "Gourmet pizza - restaurant style",
+          "score": 0.733,
+          "compliance_score": 0.707,
+          "alt_description": "High quality gourmet pizza image"
+        },
+        {
+          "id": "food_23_2",
+          "title": "Gourmet pizza - gourmet",
+          "score": 0.856,
+          "compliance_score": 0.873,
+          "alt_description": "High quality gourmet pizza image"
+        },
+        {
+          "id": "food_23_3",
+          "title": "Gourmet pizza - artisan",
+          "score": 0.904,
+          "compliance_score": 0.933,
+          "alt_description": "High quality gourmet pizza image"
+        },
+        {
+          "id": "food_23_4",
+          "title": "Gourmet pizza - gourmet",
+          "score": 0.783,
+          "compliance_score": 0.723,
+          "alt_description": "High quality gourmet pizza image"
+        }
+      ]
+    },
+    {
+      "query": "best premium fruits recipe",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_4_0",
+          "title": "Premium fruits - homemade",
+          "score": 0.663,
+          "compliance_score": 0.619,
+          "alt_description": "High quality premium fruits image"
+        },
+        {
+          "id": "food_4_1",
+          "title": "Premium fruits - homemade",
+          "score": 0.902,
+          "compliance_score": 0.817,
+          "alt_description": "High quality premium fruits image"
+        },
+        {
+          "id": "food_4_2",
+          "title": "Premium fruits - restaurant style",
+          "score": 0.739,
+          "compliance_score": 0.67,
+          "alt_description": "High quality premium fruits image"
+        },
+        {
+          "id": "food_4_3",
+          "title": "Premium fruits - professional",
+          "score": 0.677,
+          "compliance_score": 0.755,
+          "alt_description": "High quality premium fruits image"
+        },
+        {
+          "id": "food_4_4",
+          "title": "Premium fruits - professional",
+          "score": 0.94,
+          "compliance_score": 1.0,
+          "alt_description": "High quality premium fruits image"
+        }
+      ]
+    },
+    {
+      "query": "authentic sushi",
+      "domain": "food",
+      "candidates": [
+        {
+          "id": "food_1_0",
+          "title": "Authentic sushi - artisan",
+          "score": 0.789,
+          "compliance_score": 0.788,
+          "alt_description": "High quality authentic sushi image"
+        },
+        {
+          "id": "food_1_1",
+          "title": "Authentic sushi - artisan",
+          "score": 0.849,
+          "compliance_score": 0.882,
+          "alt_description": "High quality authentic sushi image"
+        },
+        {
+          "id": "food_1_2",
+          "title": "Authentic sushi - restaurant style",
+          "score": 0.666,
+          "compliance_score": 0.572,
+          "alt_description": "High quality authentic sushi image"
+        },
+        {
+          "id": "food_1_3",
+          "title": "Authentic sushi - professional",
+          "score": 0.72,
+          "compliance_score": 0.819,
+          "alt_description": "High quality authentic sushi image"
+        },
+        {
+          "id": "food_1_4",
+          "title": "Authentic sushi - homemade",
+          "score": 0.922,
+          "compliance_score": 0.908,
+          "alt_description": "High quality authentic sushi image"
+        }
+      ]
+    },
+    {
+      "query": "classic happy hour interior",
+      "domain": "dining",
+      "candidates": [
+        {
+          "id": "dining_14_0",
+          "title": "Classic happy hour - premium experience",
+          "score": 0.769,
+          "compliance_score": 0.805,
+          "alt_description": "Beautiful classic happy hour setting"
+        },
+        {
+          "id": "dining_14_1",
+          "title": "Classic happy hour - stylish ambiance",
+          "score": 0.72,
+          "compliance_score": 0.785,
+          "alt_description": "Beautiful classic happy hour setting"
+        },
+        {
+          "id": "dining_14_2",
+          "title": "Classic happy hour - stylish ambiance",
+          "score": 0.805,
+          "compliance_score": 0.819,
+          "alt_description": "Beautiful classic happy hour setting"
+        },
+        {
+          "id": "dining_14_3",
+          "title": "Classic happy hour - memorable dining",
+          "score": 0.772,
+          "compliance_score": 0.87,
+          "alt_description": "Beautiful classic happy hour setting"
+        }
+      ]
+    },
+    {
+      "query": "vodka collection bottle",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_8_0",
+          "title": "Collection vodka - premium quality",
+          "score": 0.841,
+          "compliance_score": 0.848,
+          "alt_description": "High-end collection vodka bottle"
+        },
+        {
+          "id": "alcohol_8_1",
+          "title": "Collection vodka - distillery special",
+          "score": 0.927,
+          "compliance_score": 0.882,
+          "alt_description": "High-end collection vodka bottle"
+        },
+        {
+          "id": "alcohol_8_2",
+          "title": "Collection vodka - collector grade",
+          "score": 0.781,
+          "compliance_score": 0.834,
+          "alt_description": "High-end collection vodka bottle"
+        }
+      ]
+    },
+    {
+      "query": "best distillery tequila collection",
+      "domain": "alcohol",
+      "candidates": [
+        {
+          "id": "alcohol_19_0",
+          "title": "Distillery tequila - distillery special",
+          "score": 0.955,
+          "compliance_score": 1.0,
+          "alt_description": "High-end distillery tequila bottle"
+        },
+        {
+          "id": "alcohol_19_1",
+          "title": "Distillery tequila - limited edition",
+          "score": 0.879,
+          "compliance_score": 0.943,
+          "alt_description": "High-end distillery tequila bottle"
+        }
+      ]
+    }
+  ]
+}

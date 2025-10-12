@@ -228,7 +228,7 @@ def main():
         
         # YOLO detection
         run_command([
-            'python', 'scripts/image_model.py',
+            sys.executable, 'scripts/image_model.py',
             '--in', args.input,
             '--out', str(detected_file),
             '--threshold', str(config.get('detection_threshold', 0.5))
@@ -238,7 +238,7 @@ def main():
         probe_model = config.get('clip_probe_model')
         if probe_model and os.path.exists(probe_model):
             run_command([
-                'python', 'scripts/clip_probe/run_clip_probe_inference.py',
+                sys.executable, 'scripts/clip_probe/run_clip_probe_inference.py',
                 '--model', probe_model,
                 '--test-data', str(detected_file),
                 '--output', str(scored_file)

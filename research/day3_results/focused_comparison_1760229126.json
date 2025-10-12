@@ -1,0 +1,92 @@
+{
+  "test_metadata": {
+    "timestamp": "2025-10-11 20:32:06",
+    "queries_tested": 2,
+    "successful_comparisons": 1
+  },
+  "individual_results": [
+    {
+      "query": "pink floral cocktail",
+      "candidates_count": 2,
+      "timing": {
+        "baseline_time": 0.0001251697540283203,
+        "cotrr_time": 0.037637948989868164,
+        "overhead_ratio": 300.6952380952381
+      },
+      "rankings": {
+        "original_order": [
+          "sample_001",
+          "sample_002"
+        ],
+        "baseline_order": [
+          "sample_002",
+          "sample_001"
+        ],
+        "cotrr_order": [
+          "sample_001",
+          "sample_002"
+        ]
+      },
+      "scores": {
+        "original_scores": [
+          0.85,
+          0.78
+        ],
+        "baseline_scores": [
+          0.9339999999999999,
+          0.675
+        ],
+        "cotrr_scores": [
+          -0.17001216113567352,
+          -0.17403966188430786
+        ]
+      },
+      "quality_metrics": {
+        "score_stats": {
+          "original_mean": 0.815,
+          "baseline_mean": 0.8045,
+          "cotrr_mean": -0.1720259115099907,
+          "baseline_improvement": -0.010499999999999954,
+          "cotrr_improvement": -0.9870259115099906
+        },
+        "ranking_changes": {
+          "baseline_vs_original": true,
+          "cotrr_vs_original": false,
+          "cotrr_vs_baseline": true
+        },
+        "top1_analysis": {
+          "original_top1": "sample_001",
+          "baseline_top1": "sample_002",
+          "cotrr_top1": "sample_001"
+        }
+      }
+    },
+    {
+      "query": "golden whiskey cocktail",
+      "candidates_count": 1,
+      "skipped": true,
+      "reason": "insufficient_candidates"
+    }
+  ],
+  "summary": {
+    "performance_summary": {
+      "avg_baseline_time": 0.0001251697540283203,
+      "avg_cotrr_time": 0.037637948989868164,
+      "avg_overhead_ratio": 300.6952380952381,
+      "overhead_acceptable": false
+    },
+    "quality_summary": {
+      "avg_baseline_improvement": -0.010499999999999954,
+      "avg_cotrr_improvement": -0.9870259115099906,
+      "cotrr_vs_baseline": -0.9765259115099907,
+      "cotrr_superior": false
+    },
+    "ranking_summary": {
+      "queries_reranked_by_baseline": 1,
+      "queries_reranked_by_cotrr": 0,
+      "baseline_rerank_rate": 1.0,
+      "cotrr_rerank_rate": 0.0
+    },
+    "overall_verdict": "COTRR_TOO_SLOW"
+  }
+}
