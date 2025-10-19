@@ -1,0 +1,127 @@
+# Multi-Agent Meeting Configuration
+
+meeting:
+  name: "Computer Vision Project Analysis"
+  rounds: 3
+  max_tokens_per_response: 1500
+
+file_access:
+  enable_file_bridge: true
+  tracked_directories:
+    - results
+    - logs
+    - benchmarks
+    - research/day3_results
+    - research/day4_results
+    - runs/report
+  accessible_directories:
+    planning_agents:
+      - ./results
+      - ./logs
+      - ./benchmarks
+      - ./data
+      - ./research
+      - ./docs
+      - ./analysis
+    tech_analysis:
+      - ./results
+      - ./logs
+      - ./benchmarks
+      - ./data
+      - ./research
+      - ./docs
+      - ./analysis
+      - ./runs
+      - ./checkpoints
+      - ./cache
+    moderator:
+      - ./results
+      - ./logs
+      - ./benchmarks
+      - ./data
+      - ./research
+      - ./docs
+      - ./analysis
+      - ./multi-agent/reports
+      - ./multi-agent/decisions
+
+agents:
+  pre_architect:
+    name: "Pre-Architect"
+    model: "claude-opus-4-20250514"
+    provider: "anthropic"
+    role: "System architect and high-level design"
+    prompt_file: "pre_arch_opus.md"
+
+  v1_production:
+    name: "V1 Production Team"
+    model: "gpt-4-turbo"
+    provider: "openai"
+    role: "Production system advocate"
+    prompt_file: "v1_prod_team.md"
+
+  v2_scientific:
+    name: "V2 Scientific Team"
+    model: "claude-sonnet-4-20250514"
+    provider: "anthropic"
+    role: "Research and experimental approaches"
+    prompt_file: "v2_scientific_team.md"
+
+  cotrr_team:
+    name: "CoTRR Team"
+    model: "gemini-2.0-flash-exp"
+    provider: "google"
+    role: "Lightweight optimization specialist"
+    prompt_file: "cotrr_team.md"
+
+  tech_analysis:
+    name: "Tech Analysis Team"
+    model: "gpt-4-turbo"
+    provider: "openai"
+    role: "Technical evaluation"
+    prompt_file: "tech_analysis_team.md"
+
+  critic:
+    name: "Critic"
+    model: "gpt-4-turbo"
+    provider: "openai"
+    role: "Critical evaluation and devil's advocate"
+    prompt_file: "critic_openai.md"
+
+  integrity_guardian:
+    name: "Integrity Guardian"
+    model: "claude-sonnet-4-20250514"
+    provider: "anthropic"
+    role: "Quality and consistency checks"
+    prompt_file: "integrity_claude.md"
+
+  data_analyst:
+    name: "Data Analyst"
+    model: "claude-sonnet-4-20250514"
+    provider: "anthropic"
+    role: "Data-driven insights"
+    prompt_file: "claude_data_analyst.md"
+
+  moderator:
+    name: "Roundtable Moderator"
+    model: "claude-opus-4-20250514"
+    provider: "anthropic"
+    role: "Meeting orchestration and synthesis"
+    prompt_file: "roundtable_moderator.md"
+
+tools:
+  - name: "gemini_search"
+    enabled: true
+  - name: "integrity_rules"
+    enabled: true
+  - name: "parse_actions"
+    enabled: true
+  - name: "apply_patches"
+    enabled: false
+  - name: "collect_artifacts"
+    enabled: true
+
+output:
+  report_format: "markdown"
+  save_artifacts: true
+  transcript: true

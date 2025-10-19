@@ -1,0 +1,44 @@
+========================================
+QUICK FIX: Cell 12 Line 101
+========================================
+
+BROKEN (what you have now):
+print(f"{response)")
+
+FIXED (what it should be):
+print(f"{response[:500]}..." if len(response) > 500 else response)
+
+========================================
+HOW TO FIX IN COLAB:
+========================================
+
+1. Open Cell 12
+2. Find line ~101 (search for "Display response")
+3. Replace broken line with fixed line above
+4. Run cell to verify syntax
+5. Done!
+
+========================================
+COMPLETE SECTION (Lines 96-103):
+========================================
+
+        # Log all agent responses
+        for agent_name, response in responses.items():
+            tracker.log_agent_response(agent_name, response)
+
+            # Display response preview
+            print(f"\n📝 Response from {agent_name}:")
+            print(f"{response[:500]}..." if len(response) > 500 else response)
+
+========================================
+AFTER FIXING THIS:
+========================================
+
+1. ✅ Fix Cell 12 (this fix)
+2. ✅ Update Cell 15 (remove truncation)
+3. ✅ Add Cell 11.5 (code executor)
+4. ✅ Re-run Cycle 2
+
+See: CODE_EXECUTOR_DEPLOYMENT_GUIDE.md
+
+========================================

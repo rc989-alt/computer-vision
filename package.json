@@ -26,6 +26,7 @@
     "url": "https://github.com/rc989-alt/computer-vision.git"
   },
   "dependencies": {
+    "async-mutex": "^0.5.0",
     "dotenv": "^16.3.1"
   },
   "engines": {

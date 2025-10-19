@@ -1,0 +1,486 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Courier New}
+  \setmonofont[]{Courier New}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Complete System Flow},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Complete System Flow}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+┌─────────────────────────────────────────────────────────────────┐ │
+Phase 1: Read Planning Team's Decisions │ │ Cell 6: Load
+pending\_actions.json │
+└─────────────────────────────────────────────────────────────────┘ ↓
+┌─────────────────────────────────────────────────────────────────┐ │
+Phase 2: Initialize Executive Team (3 Agents) │ │ Cell 8: Create Ops
+Commander, Quality \& Safety, Infrastructure │
+└─────────────────────────────────────────────────────────────────┘ ↓ │
+Step 1: Load core agent modules │ │ ├─→ Import multi-agent orchestration
+system │ │ ├─→ Load model configs, environment variables (.env) │ │ └─→
+Mount MLflow + Drive paths │ │ │ │ Step 2: Create Agents │ │ ├─→ 🧭 Ops
+Commander -- implementation \& code generation │ │ ├─→ 🧩 Quality \&
+Safety -- logic review \& compliance check │ │ └─→ ⚙️ Infrastructure --
+runtime \& resource validation │ │ │ │ Step 3: Assign Structured Output
+Contracts │ │ ├─→ Each agent emits JSON schema \{verdict, flags,
+checks\ldots\} │ │ └─→ Ensures downstream gating uses typed fields, not
+text │ │ │ │ Step 4: Environment \& Dependency Check │ │ ├─→ Verify all
+required APIs and credentials loaded │ │ ├─→ Confirm MLflow tracking URI
+reachable │ │ └─→ Confirm storage \& logging directories exist │ │ │ │
+Step 5: READY Verification │ │ ├─→ All 3 agents must return status =
+``READY'' │ │ └─→ If any agent fails, halt initialization │ │ │ │
+OUTPUT: Initialization log written to │ │
+/multi-agent/logs/system\_init/exec\_team\_init.log │ │ │ │ → Continue
+to Phase 3: Approval Gate once all agents READY ✅ │
+└─────────────────────────────────────────────────────────────────┘
+──────────────────────────────────────────────────────────────────
+Parallel System: Reflection Service (runs during Phases 3--6) Emits →
+reflections.jsonl \textbar{} job\_spec\_patch.json \textbar{}
+risk\_scores.json Consumed by → Phase 3.5 (Approval Retry), 4.5 (Exec
+Retry), 6.5 (Verification Retry)
+──────────────────────────────────────────────────────────────────
+
+\begin{verbatim}
+                       ↓
+\end{verbatim}
+
+┌─────────────────────────────────────────────────────────────────┐ │
+Phase 3: Task Implementation \& Agent Response Collection │ │ (No
+execution -- agents produce drafts + structured contracts) │
+└─────────────────────────────────────────────────────────────────┘
+──────────────────────────────────────────────────────────────────
+Parallel Reflection Listening Layer (R0: Signal Subscription) •
+Subscribes to live agent responses and inter-agent discrepancies •
+Captures early reasoning traces, draft risk flags, and schema quality •
+Streams to Reflection Service (Phases R1--R2) for pre-approval
+diagnostics
+────────────────────────────────────────────────────────────────── ↓ │
+FOR EACH TASK (HIGH → MEDIUM → LOW priority): │ │ │ │ Step 1: Dispatch
+task to 3 agents │ │ ├─→ Ops Commander -- ``Propose implementation (code
+as text)'' │ │ ├─→ Quality \& Safety -- ``Assess logic \& risks'' │ │
+└─→ Infrastructure -- ``Assess env/resources \& performance'' │ │ │ │
+Step 2: Agents respond (no execution) │ │ ├─→ Ops Commander: draft
+Python/code + rationale │ │ ├─→ Quality \& Safety: review notes \& risk
+flags │ │ └─→ Infrastructure: resource/perf analysis │ │ (All 3 emit
+\textbf{structured JSON contracts} + commentary) │ │ Contract schema
+(example): │ │ \{ verdict, flags:\{critical{[}{]}, warnings{[}{]}\}, │ │
+checks:\{requirements\_passed, mlflow\_required\}, │ │
+proposed\_jobs:{[}\{id, entry, args, expected\_artifacts\}{]} \} │ │ │ │
+Step 3: Emit Reflection Snapshot (Async Event) │ │ ├─→ Publish
+mini-event to reflection\_stream: │ │ \{task\_id,
+phase:``implementation'', risk\_flags, divergence\} │ │ ├─→ Enables
+early pattern detection (R2: Error \& Signal Mining) │ │ └─→ Logged to
+reflections.jsonl with timestamp \& checksum │ │ │ │ END FOR EACH TASK │
+│ │ │ OUTPUT → task\_drafts = {[} │ │ \{task
+└─────────────────────────────────────────────────────────────────┘ ↓
+┌─────────────────────────────────────────────────────────────────┐ │
+Phase 4: APPROVAL (Cell 11) │ │ 3-Agent Approval Gate -- Contract-Driven
+Decision │
+└─────────────────────────────────────────────────────────────────┘
+──────────────────────────────────────────────────────────────────
+Parallel Reflection Listening Layer (R0: Signal Subscription) •
+Subscribes to real-time Approval logs (verdicts, flags, rationale) •
+Streams non-blocking events → Reflection Service (Phases 3--6) • Used to
+trigger early diagnostic signals and confidence updates
+──────────────────────────────────────────────────────────────────
+
+│ FOR EACH task\_draft: │ │ │ │ Step 1: Gate on structured verdicts │ │
+├─→ Ops Commander verdict == ``APPROVE''? │ │ ├─→ Quality \& Safety
+verdict == ``APPROVE''? │ │ └─→ Infrastructure verdict == ``APPROVE''? │
+│ Decision uses \textbf{explicit JSON fields}, not text search │ │ │ │
+Step 2: Apply strict rule │ │ ├─→ IF (all three APPROVE) AND (no
+critical flags) → │ │ │ preliminary\_status = ``approved'' │ │ └─→ ELSE
+→ preliminary\_status = ``rejected'' │ │ │ │ Step 3: Persist decision │
+│ └─→ Store \{task\_id, preliminary\_status, contracts, reasons,
+approved\_jobs{[}{]}\} │ │ (No execution here --- handoff to Phase 5:
+Execution) │ │ (If rejected → send to Phase 4.5 Approval Retry) │ │ │ │
+Step 4: Emit reflection signal snapshot │ │ ├─→ Publish minimal event →
+reflection\_stream: │ │ \{task\_id, phase: ``approval'', verdicts,
+flags, status\} │ │ ├─→ Enables reflection R1--R2 modules to start
+root-cause mining │ │ └─→ Logged to reflections.jsonl with timestamp \&
+checksum │ │ │ │ END FOR EACH │ │ │ │ OUTPUT → task\_results = {[} │ │
+\{task\_id: 1, preliminary\_status: ``approved'',
+approved\_jobs\ldots\}, │ │ \{task\_id: 2, preliminary\_status:
+``rejected'', reasons\ldots\}, │ │ \ldots{} │ │ {]}
+└─────────────────────────────────────────────────────────────────┘
+
+\begin{verbatim}
+                         ↓
+\end{verbatim}
+
+┌─────────────────────────────────────────────────────────────────┐ │
+Phase 4.5: Approval Retry Mechanism │ │ (Triggered when any agent
+rejects or flags critical issues) │
+└─────────────────────────────────────────────────────────────────┘ ↓ │
+FOR EACH task\_result WHERE preliminary\_status == ``rejected'': │ │ │ │
+Step 1: Collect Reflection Feedback │ │ ├─→ Pull from Reflection
+Service: │ │ │ • reflections.jsonl (notes \& root-cause) │ │ │ •
+job\_spec\_patch.json (safe diffs for plan/args/env) │ │ │ •
+risk\_scores.json (confidence, severity, cost) │ │ └─→ Parse:
+failure\_reason, proposed\_fix, confidence\_score │ │ │ │ Step 2: Retry
+Eligibility Gate │ │ ├─→ IF confidence\_score ≥ τ (default 0.70) →
+proceed │ │ ├─→ ELSE → mark non-retriable; log reason; continue to Phase
+7 │ │ └─→ Enforce guardrails (no permission scope expansion, etc.) │ │ │
+│ Step 3: Apply Patch (Sandboxed) │ │ ├─→ Merge job\_spec\_patch.json
+into task draft (safe diff-scan) │ │ ├─→ Update contract metadata:
+retry\_attempt += 1 │ │ └─→ Generate provenance IDs (attempt\_id,
+patch\_id, checksum) │ │ │ │ Step 4: Re-submit to Approval Gate │ │ ├─→
+Send revised draft back to the 3 agents (Ops/Quality/Infra)│ │ ├─→ Run
+Phase 4 checks (explicit verdict fields, flags) │ │ └─→ Persist new
+verdicts under attempt\_id + timestamp │ │ │ │ Step 5: Limit Enforcement
+│ │ ├─→ IF retry\_attempt \textgreater{} MAX\_RETRIES (default = 2) →
+abort │ │ └─→ Record terminal reason: ``Exceeded retry limit'' │ │ │ │
+Step 6: Artifact Emission \& Traceability (Reflection Output) │ │ ├─→
+Emit to /ledgers/ and /memory/: │ │ │ • /ledgers/reflections.jsonl
+(append attempt record) │ │ │ • /patches/job\_spec\_patch.json (applied
+patch snapshot) │ │ │ • /ledgers/risk\_scores.json (decision features) │
+│ │ • /ledgers/contract\_delta.json (pre→post gate diff) │ │ │ •
+/ledgers/patch\_applied.diff (unified diff) │ │ ├─→ Link MLflow evidence
+if any pre-check runs were simulated: │ │ │ • mlflow.link: \{task\_id,
+attempt\_id, related\_run\_ids{[}{]}\} │ │ └─→ Update memory for
+learning: │ │ • /memory/episodic.jsonl (attempt-level reflection) │ │ •
+/memory/semantic.yml (if pattern recurs → rule) │ │ •
+/memory/procedural\_cache/ (if patch stabilizes) │ │ │ │ END FOR EACH │
+│ │ │ OUTPUT → updated\_task\_results = {[} │ │ \{task\_id: 1,
+retry\_attempts: 1, status: ``approved\_after\_patch''\},│ │ \{task\_id:
+2, retry\_attempts: 2, status: ``failed\_final''\}, │ │ \ldots{} │ │ {]}
+│ │ │ │ NOTE: All emitted artifacts are batch-flushed and versioned; │ │
+checksums enable end-to-end provenance from reflection → gate. │
+└─────────────────────────────────────────────────────────────────┘
+
+\begin{verbatim}
+                        ↓
+                        
+                        
+\end{verbatim}
+
+┌─────────────────────────────────────────────────────────────────┐ │
+Phase 5: EXECUTION (Cell 11.5) │ │ Automatic Code Executor -- Run
+Approved Plans │
+└─────────────────────────────────────────────────────────────────┘
+──────────────────────────────────────────────────────────────────
+Parallel Reflection Listening Layer (R0: Signal Subscription) •
+Subscribes to runtime logs (stdout/stderr), exit codes, MLflow • Streams
+non-blocking telemetry → Reflection Service (R1--R6) • Enables rapid
+root-cause mining before 5.5 retry
+────────────────────────────────────────────────────────────────── ↓ │
+FOR EACH task\_result IN task\_results: │ │ │ │ Step 1: Check
+Preliminary Status │ │ ├─→ If preliminary\_status != ``approved'' → Skip
+(⏭️) │ │ └─→ Else → Continue to execution │ │ │ │ Step 2: Retrieve Job
+Specification │ │ ├─→ Extract from Ops Commander's structured JSON │ │
+├─→ job\_spec = \{entry, args, expected\_artifacts, env\_keys{[}{]}\} │
+│ └─→ Verify all required artifacts \& MLflow keys declared │ │ │ │ Step
+3: Safe Job Execution (Sandboxed) │ │ ├─→ Spawn isolated
+subprocess/container │ │ ├─→ Apply timeouts, CPU/GPU/memory quotas │ │
+├─→ Stream stdout/stderr → /logs/execution\_cycles/\ldots{} │ │ ├─→
+Capture telemetry lines: │ │ │ MLFLOW\_RUN\_ID=\ldots, ARTIFACT=\ldots,
+METRIC=\ldots{} │ │ ├─→ On crash → tag as RETRYABLE\_FAILURE or ERROR │
+│ └─→ No direct \texttt{exec()} in kernel (security isolation) │ │ │ │
+Step 4: Record Execution Results │ │ ├─→ execution.status = SUCCEEDED
+\textbar{} FAILED \textbar{} RETRYABLE\_FAILURE │ │ ├─→ Persist run\_id,
+artifacts{[}{]}, metrics\{\} │ │ ├─→ Update task\_result with telemetry
++ log path │ │ └─→ Append ledger: /multi-agent/ledgers/run\_log.json │ │
+│ │ Step 5: Post-Execution Routing │ │ ├─→ IF execution.status ==
+SUCCEEDED → │ │ │ • Emit success snapshot → reflection\_stream
+(non-block) │ │ │ • Mark executed\_ready\_for\_verification = True │ │ │
+• Enqueue to Phase 6: Verification │ │ │ │ │ └─→ IF execution.status ∈
+\{FAILED, RETRYABLE\_FAILURE\} → │ │ • Emit failure snapshot →
+reflections.jsonl │ │ • Include: exit\_code, stderr\_tail, run\_id?,
+artifacts │ │ • Route to Phase 5.5: Reflection-Guided Retry │ │ •
+Increment attempt counter (attempt\_id += 1) │ │ │ │ END FOR EACH │ │ │
+│ OUTPUT: │ │ • Successful jobs → queued for Phase 6 (Verification) │ │
+• Unsuccessful jobs → routed to Phase 5.5 (Retry) with │ │ complete
+telemetry for reflection (patch + risk scoring) │
+└─────────────────────────────────────────────────────────────────┘
+
+\begin{verbatim}
+                        ↓
+                        
+\end{verbatim}
+
+┌─────────────────────────────────────────────────────────────────┐ │
+Phase 5.5: Reflection-Guided Retry (During Execution) │ │ (Triggered
+when Phase 5 status ∈ \{FAILED, RETRYABLE\_FAILURE\}) │
+└─────────────────────────────────────────────────────────────────┘ ↓ │
+FOR EACH failed\_attempt FROM Phase 5: │ │ │ │ Step 1: Collect
+Reflection Outputs │ │ ├─→ Pull artifacts from Reflection Service: │ │ │
+• reflections.jsonl (root cause, notes) │ │ │ • job\_spec\_patch.json
+(safe diffs: args/code/env) │ │ │ • risk\_scores.json (confidence,
+severity, cost) │ │ └─→ Parse: failure\_reason, proposed\_fix,
+confidence\_score │ │ │ │ Step 2: Eligibility \& Guardrails │ │ ├─→
+Require confidence\_score ≥ τ (default 0.70) │ │ ├─→ Enforce safety: no
+permission scope expansion, │ │ │ no network/domain list changes, no
+write-path widening │ │ └─→ If not eligible → skip retry; mark for Phase
+7 reporting │ │ │ │ Step 3: Apply Patch (Versioned + Sandboxed) │ │ ├─→
+Merge job\_spec\_patch.json → new job\_spec\_v\{n+1\} │ │ ├─→ Generate
+provenance IDs: attempt\_id, patch\_id, checksum │ │ └─→ Diff-scan \&
+sign patch; persist under /patches/ │ │ │ │ Step 4: Retry Execution
+(Isolated) │ │ ├─→ Run in the same sandbox constraints (timeouts/quotas)
+│ │ ├─→ Stream logs; capture MLflow run\_id, metrics, artifacts │ │ ├─→
+On success → tag as RETRY\_SUCCEEDED │ │ └─→ On failure → tag as
+RETRY\_FAILED │ │ │ │ Step 5: Regression \& Rollback Check │ │ ├─→
+Compare key metrics/artifacts vs previous attempt │ │ ├─→ If regression
+detected (lower quality / missing files) │ │ │ → rollback to last best
+artifacts; keep retry outcome log │ │ └─→ Store regression\_reason in
+run ledger │ │ │ │ Step 6: Loop Control │ │ ├─→ If RETRY\_SUCCEEDED →
+enqueue to Phase 6 (Verification) │ │ ├─→ Else if attempts ≥
+MAX\_EXEC\_RETRIES (default = 2) │ │ │ → stop; mark ``failed\_final'';
+escalate in Phase 7 │ │ └─→ Else → request fresh reflection; iterate
+again │ │ │ │ Step 7: Artifact Emission \& Memory Update │ │ ├─→ Emit: │
+│ │ • /ledgers/reflections.jsonl (attempt snapshot) │ │ │ •
+/ledgers/risk\_scores.json (decision features) │ │ │ •
+/patches/job\_spec\_patch.json (applied patch copy) │ │ │ •
+/ledgers/run\_log.json (append retry run) │ │ ├─→ Link MLflow:
+\{task\_id, attempt\_id, run\_id(s)\} │ │ └─→ Update memory: │ │ •
+/memory/episodic.jsonl (attempt-level record) │ │ • /memory/semantic.yml
+(add rule if pattern recurs) │ │ • /memory/procedural\_cache/ (store
+stable template) │ │ │ │ END FOR EACH │ │ │ │ OUTPUT → retry\_results =
+{[} │ │ \{task\_id: T1, attempt: 2, status: ``RETRY\_SUCCEEDED'',
+run\_id\ldots\},│ │ \{task\_id: T2, attempt: 3, status:
+``failed\_final'', reasons\ldots\}, │ │ \ldots{} │ │ {]} │ │ NOTE: All
+retries remain sandboxed; every iteration must change │ │ job\_spec (no
+identical reruns). Confidence τ \& max retries│ │ are configurable per
+task class/priority. │
+└─────────────────────────────────────────────────────────────────┘
+
+\begin{verbatim}
+                         ↓
+\end{verbatim}
+
+┌─────────────────────────────────────────────────────────────────┐ │
+Phase 6: VERIFICATION (Cell 17) │ │ Evidence Check -- Verify Real
+Results Exist │
+└─────────────────────────────────────────────────────────────────┘
+──────────────────────────────────────────────────────────────────
+Parallel Reflection Listening Layer (R0: Signal Subscription) •
+Subscribes to MLflow telemetry \& artifact validation events • Streams
+non-blocking verification logs → Reflection Service (R1--R6) • Enables
+early detection of missing runs or incomplete outputs
+────────────────────────────────────────────────────────────────── ↓ │
+FOR EACH task WITH preliminary\_status == ``approved'': │ │ │ │ Step 1:
+Determine Task Type │ │ ├─→ EXPERIMENTAL? (execute, run, diagnostic,
+gpu, model) → │ │ │ Requires MLflow run\_id + declared result artifacts
+│ │ └─→ DOCUMENTATION? (write, design, draft, doc) → │ │ Requires output
+files only (MLflow optional) │ │ │ │ Step 2: Verify MLflow Evidence (if
+required) │ │ ├─→ Retrieve run\_id from structured telemetry │ │ ├─→
+Query MLflow: mlflow.get\_run(run\_id) │ │ ├─→ If run exists → ✅
+Evidence confirmed │ │ └─→ If missing or invalid → ❌ Evidence missing │
+│ │ │ Step 3: Verify Artifact Evidence │ │ ├─→ Load
+expected\_artifacts{[}{]} from task\_result schema │ │ ├─→ For each
+path: Path.exists() and size \textgreater{} 0 ? │ │ ├─→ If all exist →
+✅ Files verified │ │ └─→ If any missing → ❌ Incomplete evidence │ │ │
+│ Step 4: Combine Results → Verification Verdict │ │ ├─→ If all required
+evidence present → verification = ``pass'' │ │ └─→ Else → verification =
+``fail'' │ │ │ │ Step 5: Emit Reflection Snapshot │ │ ├─→ Publish
+\{task\_id, phase:``verification'', status, missing{[}{]}\} │ │ →
+reflection\_stream for post-run analysis │ │ └─→ Logged to
+reflections.jsonl with timestamp \& checksum │ │ │ │ Step 6: Routing │ │
+├─→ If verification == ``pass'' → continue to Phase 7 │ │ └─→ If
+verification == ``fail'' → send to Phase 6.5 (Retry) │ │ │ │ END FOR
+EACH │ │ │ │ OUTPUT: Structured verification report per approved task │
+│ \{task\_id, verification:``pass''\textbar{}``fail'',
+evidence:\{\ldots\}\} │
+└─────────────────────────────────────────────────────────────────┘
+
+\begin{verbatim}
+                        ↓
+\end{verbatim}
+
+┌─────────────────────────────────────────────────────────────────┐ │
+Phase 6.5: Verification Retry Mechanism │ │ (Triggered when verification
+== ``fail'') │
+└─────────────────────────────────────────────────────────────────┘ ↓ │
+FOR EACH task FAILED VERIFICATION: │ │ │ │ Step 1: Collect Reflection
+Outputs │ │ ├─→ Pull from Reflection Service: │ │ │ • reflections.jsonl
+(missing artifacts, failure notes) │ │ │ • job\_spec\_patch.json
+(regenerate logic / fix targets) │ │ │ • risk\_scores.json (confidence,
+severity, cost) │ │ └─→ Parse root cause and confidence score │ │ │ │
+Step 2: Eligibility Check │ │ ├─→ If confidence ≥ τ (default 0.7) →
+continue │ │ └─→ Else → mark non-retriable; log reason; Phase 7 │ │ │ │
+Step 3: Rebuild Artifacts / Re-Query Evidence (Sandboxed) │ │ ├─→ Apply
+patch to job\_spec or re-run MLflow query │ │ ├─→ Regenerate missing
+files from cached inputs or logs │ │ └─→ Capture new run\_id and
+artifacts │ │ │ │ Step 4: Verification Re-Check │ │ ├─→ Repeat Phase 6
+steps (MLflow + artifact validation) │ │ └─→ If all pass → mark
+``verification\_passed\_after\_retry'' │ │ │ │ Step 5: Limit and
+Escalation │ │ ├─→ If retry\_attempt \textgreater{} MAX\_VERIF\_RETRIES
+(default = 2) → abort │ │ └─→ Store terminal reason = ``Verification
+failed after retries''│ │ │ │ Step 6: Artifact Emission \& Memory Update
+│ │ ├─→ Emit to ledgers/: │ │ │ • reflections.jsonl (verification retry
+record) │ │ │ • risk\_scores.json (updated confidence) │ │ │ •
+verification\_log.json (full validation trace) │ │ └─→ Update /memory/:
+│ │ • episodic.jsonl (attempt-level) │ │ • semantic.yml (new pattern
+rule) │ │ • procedural\_cache/ (stable check templates) │ │ │ │ END FOR
+EACH │ │ │ │ OUTPUT → verification\_retry\_results = {[} │ │
+\{task\_id:T1, attempt:2,
+status:``verification\_passed\_after\_retry''\},│ │ \{task\_id:T2,
+attempt:3, status:``failed\_final''\} \ldots{} {]} │ │ NOTE: All
+verification retries remain sandboxed; evidence must │ │ │ │ │ │ │ │ │ │
+│ │ │
+└─────────────────────────────────────────────────────────────────┘
+
+\begin{verbatim}
+                        ↓
+\end{verbatim}
+
+┌─────────────────────────────────────────────────────────────────┐ │
+Phase 7: FINAL STATUS DETERMINATION (Cell 17) │ │ Retroactive Status
+Assignment Based on Verification \& Retries │
+└─────────────────────────────────────────────────────────────────┘
+──────────────────────────────────────────────────────────────────
+Parallel Reflection Snapshot (non-blocking) • Publish terminal event →
+reflection\_stream: \{task\_id, phase:``finalize'', final\_status,
+reasons{[}{]}, attempts\}
+────────────────────────────────────────────────────────────────── ↓ │
+FOR EACH task\_result: │ │ │ │ Step 1: Normalize Upstream Signals │ │
+├─→ Read: preliminary\_status, verification
+(pass\textbar fail\textbar na), │ │ │ retry\_summaries\{approval, exec,
+verify\}, attempts.count │ │ ├─→ Derive flags: │ │ │
+approved\_after\_patch?, retry\_exhausted?, evidence\_ready?│ │ └─→
+Ingest last reflection note (if present) for context │ │ │ │ Step 2:
+Terminal Status Rules (ordered) │ │ ├─→ IF preliminary\_status ==
+``rejected'' │ │ │ → final\_status = ``failed'' │ │ │ → reason = ``Did
+not pass 3-agent approval gate'' │ │ │ │ │ ├─→ ELIF verification ==
+``pass'' │ │ │ → final\_status = ``completed'' │ │ │ → reason =
+(approved\_after\_patch? │ │ │ ``Approved after retry + evidence
+verified'' : │ │ │ ``Approved + evidence verified'') │ │ │ │ │ ├─→ ELIF
+verification == ``fail'' AND retry\_exhausted == true │ │ │ →
+final\_status = ``failed\_final'' │ │ │ → reason = ``Evidence missing
+after max retries'' │ │ │ │ │ ├─→ ELIF verification == ``fail'' │ │ │ →
+final\_status = ``failed'' │ │ │ → reason = ``Approved but no evidence
+(execution failed)''│ │ │ │ │ └─→ ELSE (fallback) │ │ final\_status =
+``failed'' │ │ reason = ``Unresolved state; see logs'' │ │ │ │ Step 3:
+Persist Canonical Close-Out Record │ │ ├─→ task\_result{[}`status'{]} =
+final\_status │ │ ├─→ task\_result{[}`status\_reason'{]} = reason │ │
+├─→ task\_result{[}`attempts\_total'{]} = attempts.count │ │ ├─→
+task\_result{[}`provenance'{]} = \{ │ │ │
+approval:\{approved\_after\_patch,
+attempts:retry\_summaries.approval\},│ │ │
+execution:\{attempts:retry\_summaries.exec\}, │ │ │
+verification:\{attempts:retry\_summaries.verify\}, │ │ │
+mlflow\_run\_ids: {[}\ldots{]}, artifacts: {[}\ldots{]}, │ │ │
+reflection\_digest\_id, ledger\_paths:{[}\ldots{]}\} │ │ └─→ Append JSON
+line to /multi-agent/logs/final\_status/phase7.jsonl │ │ │ │ Step 4:
+Emit Planning/Reporting Event │ │ ├─→ Publish compact summary →
+/reports/final\_events.jsonl │ │ │ \{task\_id, final\_status,
+key\_metrics, missing\_gaps{[}{]}\} │ │ └─→ Used by Phase 8 and Planning
+Phase 1 (next cycle) │ │ │ │ Step 5: Memory Hooks (non-blocking) │ │ ├─→
+If final\_status in \{``failed\_final'',``failed''\} and │ │ │ repeated
+root cause → update /memory/semantic.yml rule │ │ └─→ If ``completed''
+with strong uplift → cache template in │ │ /memory/procedural\_cache/ │
+│ │ │ END FOR EACH │ │ │ │ OUTPUT: Finalized task\_results (terminal,
+auditable) │ │ task\_results = {[} │ │ \{task\_id: 1,
+status:``completed'', status\_reason:``Approved + evidence verified''\},
+│ │ \{task\_id: 2, status:``failed\_final'', status\_reason:``Evidence
+missing after max retries''\}, │ │ \{task\_id: 3, status:``failed'',
+status\_reason:``Did not pass 3-agent approval gate''\} │ │ {]} │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐ │
+Phase 8: REPORTING \& HANDOFF │ │ Cells 14, 16, 19 -- Generate Reports
+and Trigger Next Cycle │
+└─────────────────────────────────────────────────────────────────┘
+──────────────────────────────────────────────────────────────────
+Parallel Reflection Snapshot (non-blocking) • Roll up reflections →
+reflection\_summary.md • Update memory: semantic.yml (rules),
+procedural\_cache/ (templates)
+────────────────────────────────────────────────────────────────── ↓ │
+Step 1: Aggregate Results │ │ ├─→ Collect finalized task\_results from
+Phase 7 (canonical JSON) │ │ ├─→ Join with run ledger, MLflow metadata,
+artifacts index │ │ └─→ Compute KPIs: completed\%, retry\_success\%,
+evidence\_rate, │ │ avg\_attempts\_to\_success, top\_root\_causes │ │ │
+│ Step 2: Generate Reports │ │ ├─→ Write machine report:
+/reports/execution\_summary/summary.json│ │ ├─→ Write human report:
+/reports/execution\_summary/report.md(PDF)│ │ ├─→ Include links: MLflow
+runs, artifact manifests, log bundles │ │ └─→ Attach
+reflection\_summary.md (patterns, fixes, confidence) │ │ │ │ Step 3:
+Archive Logs \& Artifacts │ │ ├─→ Bundle
+/logs/execution\_cycles/cycle\_N → tar.gz + checksum │ │ ├─→ Snapshot
+/multi-agent/ledgers/*.jsonl (immutable) │ │ ├─→ Persist artifact
+manifest with sizes and SHA256 │ │ └─→ Record retention window \& access
+policy │ │ │ │ Step 4: Memory Promotion (Learning) │ │ ├─→ From
+reflections.jsonl → update /memory/semantic.yml (rules) │ │ ├─→ Promote
+stable job\_specs → /memory/procedural\_cache/ │ │ └─→ Prune
+/memory/episodic.jsonl to top-K recent per task │ │ │ │ Step 5:
+Governance \& Redaction Checks │ │ ├─→ PII/secret scan on reports \&
+logs; redact or block as needed │ │ ├─→ Verify schema versions \&
+provenance IDs across outputs │ │ └─→ Sign summary.json + report.md with
+release tag (vX.Y.cycleN) │ │ │ │ Step 6: Trigger Next Planning Cycle │
+│ ├─→ Compose /reports/handoff/pending\_actions.json (vNext) │ │ │ •
+include unresolved/failed\_final tasks with reasons │ │ │ • include
+pre-patch hints from semantic.yml │ │ ├─→ Write handoff manifest:
+\{version, checksums, URIs, counts\} │ │ └─→ Notify Planning Team:
+``Execution cycle complete'' │ │ │ │ OUTPUT: │ │ • summary.json,
+report.md/PDF, reflection\_summary.md │ │ • updated memory:
+semantic.yml, procedural\_cache/, episodic.jsonl│ │ • archived
+logs/artifacts with checksums │ │ • handoff: pending\_actions.json (for
+Phase 1: Planning) │
+└─────────────────────────────────────────────────────────────────┘
+
+\end{document}

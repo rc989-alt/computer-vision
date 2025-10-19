@@ -1,0 +1,53 @@
+cocktails:
+  forbid:
+  - threshold: 0.1
+    type: watermark
+  - coverage: 0.05
+    type: text_overlay
+  - size_ratio: 0.02
+    type: logo
+  - confidence: 0.1
+    type: nsfw_content
+  relations:
+  - min_ratio: 0.1
+    subject: cocktail
+    type: size_ratio
+  - constraint: centered
+    subject: glass
+    type: position
+  require:
+  - confidence: 0.7
+    subject: cocktail
+  - confidence: 0.5
+    subject: glass
+  thresholds:
+    delta_e_threshold: 15.0
+    max_aspect_ratio: 3.0
+    min_resolution: 512
+    min_subject_ratio: 0.05
+flowers:
+  forbid:
+  - confidence: 0.3
+    type: artificial
+  - confidence: 0.2
+    type: plastic
+  require:
+  - confidence: 0.8
+    subject: flower
+  thresholds:
+    min_resolution: 512
+    natural_score: 0.7
+professional:
+  forbid:
+  - confidence: 0.7
+    type: casual_attire
+  - confidence: 0.1
+    type: inappropriate
+  require:
+  - confidence: 0.9
+    subject: person
+  - confidence: 0.6
+    subject: business_attire
+  thresholds:
+    min_resolution: 800
+    professionalism_score: 0.8
