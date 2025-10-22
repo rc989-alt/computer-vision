@@ -763,15 +763,13 @@ def ensure_phase_0() -> None:
     if _phase0_state["completed"]:
         return
 
-    print("\n🛠️ PHASE 0: Pre-Execution Infrastructure Setup")
+    print("
+🛠️ PHASE 0: Pre-Execution Infrastructure Setup")
     try:
         from PIL import Image
         import numpy as np
 
-        if Path("/content").exists():
-            test_dir = Path("/content/test_data")
-        else:
-            test_dir = MULTI_AGENT_ROOT / "test_data"
+        test_dir = Path("/content/test_data")
         test_dir.mkdir(exist_ok=True)
 
         print("   🖼️ Creating test images for model validation...")
@@ -785,47 +783,8 @@ def ensure_phase_0() -> None:
         print(f"   ✅ Created {len(test_images)} test images at {test_dir}")
         print(f"   📍 Primary test image: {test_dir / 'test_image_0.png'}")
 
-        os.environ['TEST_IMAGE_PATH'] = str((test_dir / "test_image_0.png").resolve())
-        os.environ['TEST_DATA_DIR'] = str(test_dir.resolve())
-
-        # Attempt to fetch a real image via Pexels if API key available
-        pexels_key = os.environ.get("PEXELS_API_KEY")
-        if pexels_key:
-            try:
-                try:
-                    import requests  # type: ignore
-                except ImportError:
-                    requests = None
-
-                search_url = "https://api.pexels.com/v1/search"
-                params = {"query": "architecture", "per_page": 1}
-                headers = {"Authorization": pexels_key}
-
-                if requests is not None:
-                    resp = requests.get(search_url, params=params, headers=headers, timeout=10)
-                    resp.raise_for_status()
-                    data = resp.json()
-                    image_url = data["photos"][0]["src"]["medium"]
-                    image_bytes = requests.get(image_url, timeout=10).content
-                else:
-                    from urllib.request import Request, urlopen
-                    import json as _json
-
-                    req = Request(search_url + "?query=architecture&per_page=1", headers=headers)
-                    with urlopen(req, timeout=10) as resp:
-                        data = _json.loads(resp.read().decode("utf-8"))
-                    image_url = data["photos"][0]["src"]["medium"]
-                    with urlopen(image_url, timeout=10) as img_resp:
-                        image_bytes = img_resp.read()
-
-                real_path = test_dir / "test_image_pexels.jpg"
-                with open(real_path, "wb") as f:
-                    f.write(image_bytes)
-
-                os.environ['TEST_IMAGE_PATH'] = str(real_path.resolve())
-                print(f"   📷 Downloaded Pexels test image → {real_path}")
-            except Exception as dl_err:
-                print(f"   ⚠️ Unable to download Pexels image: {dl_err}")
+        os.environ['TEST_IMAGE_PATH'] = str(test_dir / "test_image_0.png")
+        os.environ['TEST_DATA_DIR'] = str(test_dir)
 
         _phase0_state["completed"] = True
         _phase0_state["data_dir"] = str(test_dir)
@@ -834,6 +793,7 @@ def ensure_phase_0() -> None:
         print(f"   ⚠️ Phase 0 setup warning: {e}")
         print("   ℹ️ Continuing execution - agents will handle infrastructure setup")
     print()
+
 
 
 def _ensure_numpy_json_patch() -> None:
