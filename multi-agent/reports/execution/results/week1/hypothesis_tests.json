@@ -1,0 +1,14 @@
+{
+  "entropy_test": {
+    "test_type": "paired_t_test",
+    "statistic": NaN,
+    "p_value": NaN,
+    "normality_p": 1.0
+  },
+  "dispersion_test": {
+    "test_type": "paired_t_test",
+    "statistic": NaN,
+    "p_value": NaN,
+    "normality_p": 1.0
+  }
+}
