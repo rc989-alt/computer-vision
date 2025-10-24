@@ -56,8 +56,18 @@ def load_execution_module() -> ModuleType:
         module = ModuleType("system_merged_execution_v3_6_notebook")
         env: dict = {}
         for cell in notebook.cells:
-            if cell.get("cell_type") == "code":
-                exec(cell.get("source", ""), env)  # noqa: S102
+            if cell.get("cell_type") != "code":
+                continue
+
+            source = cell.get("source", "") or ""
+            if "drive.mount" in source:
+                print(
+                    "⚠️  Skipping notebook cell that calls `drive.mount`. "
+                    "Mount Drive manually in the notebook before running this script."
+                )
+                continue
+
+            exec(source, env)  # noqa: S102
 
         for attr in (
             "prepare_execution_cycle",
