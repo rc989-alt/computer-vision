@@ -1,0 +1,24 @@
+{
+  "tier": 2,
+  "description": "Core capabilities - CLIP attention, visualization",
+  "tasks": [
+    {
+      "task_id": "T01",
+      "description": "Export CLIP cross-attention maps",
+      "acceptance_criteria": "MLflow run with attentions/*.npy and attn_grid.png",
+      "owner": "Ops Agent",
+      "deadline": "2025-10-25",
+      "inputs": {
+        "image_path": "TEST_IMAGE_PATH",
+        "prompt": "a dog on a beach"
+      }
+    },
+    {
+      "task_id": "T13",
+      "description": "Generate bar chart visualization",
+      "acceptance_criteria": "summary.png in MLflow artifacts, linked in Markdown",
+      "owner": "Ops Agent",
+      "deadline": "2025-10-25"
+    }
+  ]
+}

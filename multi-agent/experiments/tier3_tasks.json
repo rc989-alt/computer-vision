@@ -1,0 +1,31 @@
+{
+  "tier": 3,
+  "description": "Retry logic - Phase 4.5/5.5/6.5 validation",
+  "tasks": [
+    {
+      "task_id": "T03",
+      "description": "Recover from import error",
+      "acceptance_criteria": "Patch applied at Phase 5.5, execution succeeds",
+      "owner": "Ops Agent",
+      "deadline": "2025-10-26",
+      "inject_error": {
+        "type": "ModuleNotFoundError",
+        "module": "sklearn"
+      }
+    },
+    {
+      "task_id": "T06",
+      "description": "Enforce approval contract",
+      "acceptance_criteria": "Rejection at Phase 4, fix at 4.5, approval succeeds",
+      "owner": "Quality Agent",
+      "deadline": "2025-10-26"
+    },
+    {
+      "task_id": "T09",
+      "description": "Verify MLflow run via API",
+      "acceptance_criteria": "Valid run_id passes, invalid triggers 6.5",
+      "owner": "Ops Agent",
+      "deadline": "2025-10-26"
+    }
+  ]
+}

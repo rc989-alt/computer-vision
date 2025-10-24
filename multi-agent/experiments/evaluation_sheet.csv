@@ -1,0 +1,9 @@
+Task_ID,Task_Name,Domain,Acceptance_Criteria,Baseline_A_Success,Baseline_A_Hallucinated_Success,Baseline_A_Num_Attempts,Baseline_A_Human_Intervention_Minutes,Baseline_A_Verification_Pass,Baseline_A_Final_Run_ID,Baseline_B_Success,Baseline_B_Hallucinated_Success,Baseline_B_Num_Attempts,Baseline_B_Human_Intervention_Minutes,Baseline_B_Verification_Pass,Baseline_B_Final_Run_ID,Ours_Success,Ours_Hallucinated_Success,Ours_Num_Attempts,Ours_Human_Intervention_Minutes,Ours_Verification_Pass,Ours_Final_Run_ID,Critical_Failure,Notes
+T04,Data Path Validation,Infrastructure,Fallback synthetic data created and logged,,,,,,,,,,,,,,,,,,,,
+T05,Results Report Persistence,Artifacts,Files generated under reports/execution_summary/ with MLflow tags,,,,,,,,,,,,,,,,,,,,
+T12,Environment Pinning,Reproducibility,Python version and packages logged to MLflow and JSON,,,,,,,,,,,,,,,,,,,,
+T01,CLIP Attention Extraction,Vision Safety,MLflow run contains attentions/*.npy and attn_grid.png,,,,,,,,,,,,,,,,,,,,
+T13,Minimal Visualization Export,Reporting,summary.png artifact generated and linked,,,,,,,,,,,,,,,,,,,,
+T03,Import Error Recovery,Execution Retry,Phase 5.5 patch applied; execution succeeds,,,,,,,,,,,,,,,,,,,,
+T06,Approval Contract Enforcement,Approval Gate,Phase 4 rejection resolved at 4.5; approval succeeds,,,,,,,,,,,,,,,,,,,,
+T09,API Evidence Check,Verification,Valid run_id passes; invalid triggers Phase 6.5,,,,,,,,,,,,,,,,,,,,
